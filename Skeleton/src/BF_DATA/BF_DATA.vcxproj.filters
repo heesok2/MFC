@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="..Common">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="..Common\Linker">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="DATA_FILE_BLOCK">
+      <UniqueIdentifier>{ae0f1fa0-9d65-4ba5-be0a-3855926e869c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_DB">
+      <UniqueIdentifier>{93943129-a0d6-47f1-a583-c65ae7fbfb63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_DB\DataPool">
+      <UniqueIdentifier>{8c9a128e-284b-4a78-b657-3aadbaabc810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_FILE_BLOCK\v100">
+      <UniqueIdentifier>{30ab4e0f-4ec1-49f8-baf3-33704095057d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_DB\DataPool\Sample">
+      <UniqueIdentifier>{c25e589d-d146-412f-af66-8bb286a41a99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_DB\DataPool\Sample\Default Data">
+      <UniqueIdentifier>{e5abac09-1c35-4f15-9f3a-a4d006f1f621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_DB\DataPool\Sample\Array&gt;Array Data">
+      <UniqueIdentifier>{b687e76a-fa3d-451d-8298-8d62f71e793c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BF_DATA.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseFileBlockDPool.cpp">
+      <Filter>DATA_FILE_BLOCK\v100</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseFileBlockInfo.cpp">
+      <Filter>DATA_FILE_BLOCK\v100</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseFileBlock.cpp">
+      <Filter>DATA_FILE_BLOCK</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseFileBlockHelper.cpp">
+      <Filter>DATA_FILE_BLOCK</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseFileBlockEOF.cpp">
+      <Filter>DATA_FILE_BLOCK\v100</Filter>
+    </ClCompile>
+    <ClCompile Include="DPoolTest.cpp">
+      <Filter>DATA_DB\DataPool\Sample\Array&gt;Array Data</Filter>
+    </ClCompile>
+    <ClCompile Include="DPoolTest2.cpp">
+      <Filter>DATA_DB\DataPool\Sample\Default Data</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BF_DATA.def">
+      <Filter>..Common</Filter>
+    </None>
+    <None Include="res\BF_DATA.rc2">
+      <Filter>..Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>..Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BFDataInfo.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="BFDataVer.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPost.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPre.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="BFDataType.h">
+      <Filter>DATA_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileBlockInfo.h">
+      <Filter>DATA_FILE_BLOCK\v100</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileBlockDPool.h">
+      <Filter>DATA_FILE_BLOCK\v100</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileBlockDef.h">
+      <Filter>DATA_FILE_BLOCK</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileBlock.h">
+      <Filter>DATA_FILE_BLOCK</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileBlockHelper.h">
+      <Filter>DATA_FILE_BLOCK</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileBlockEOF.h">
+      <Filter>DATA_FILE_BLOCK\v100</Filter>
+    </ClInclude>
+    <ClInclude Include="DPoolTest.h">
+      <Filter>DATA_DB\DataPool\Sample\Array&gt;Array Data</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDef.h">
+      <Filter>DATA_DB\DataPool\Sample\Array&gt;Array Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DPoolTest2.h">
+      <Filter>DATA_DB\DataPool\Sample\Default Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Test2Def.h">
+      <Filter>DATA_DB\DataPool\Sample\Default Data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BF_DATA.rc">
+      <Filter>..Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>..Common</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

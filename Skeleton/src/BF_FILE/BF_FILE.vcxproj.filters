@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..Common">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="..Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="KR">
+      <UniqueIdentifier>{62f7d374-64b0-4b08-b7f3-4dc55138b303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="US">
+      <UniqueIdentifier>{1615bd1c-f114-4cc2-b13f-674b30974820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FILE">
+      <UniqueIdentifier>{1adb57b3-01da-4f06-bd0f-4c202cf3b860}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BF_FILE.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BF_FILE.def">
+      <Filter>..Common</Filter>
+    </None>
+    <None Include="res\BF_FILE.rc2">
+      <Filter>..Resource</Filter>
+    </None>
+    <None Include="..\..\bin\Language\KR\BFP_APPS.ini">
+      <Filter>KR</Filter>
+    </None>
+    <None Include="..\..\bin\Language\KR\BFP_BASE.ini">
+      <Filter>KR</Filter>
+    </None>
+    <None Include="..\..\bin\Language\KR\BFP_MAIN.ini">
+      <Filter>KR</Filter>
+    </None>
+    <None Include="..\..\bin\Language\US\BFP_APPS.ini">
+      <Filter>US</Filter>
+    </None>
+    <None Include="..\..\bin\Language\US\BFP_BASE.ini">
+      <Filter>US</Filter>
+    </None>
+    <None Include="..\..\bin\Language\US\BFP_MAIN.ini">
+      <Filter>US</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BF_FILERes.h">
+      <Filter>..Resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BF_FILE.rc">
+      <Filter>..Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>..Common</Filter>
+    </Text>
+    <Text Include="Project 관리.txt">
+      <Filter>FILE</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+# Project 순서 및 종속성
+
+BF_FILE		: 메시지 및 파일관리 
+
+BF_LIB		: 외부 라이브러리, 최상위 프로젝트
+	
+BF_DATA		: 데이터베이스 ( BF - BaseFrame )
+	BF_LIB
+
+BF_BASE		: 기본 객체 정의
+	BF_LIB
+	BF_DATA
+
+BFP_DATA	: 데이터베이스 ( BFP - BaseFrameProgram )
+	BF_LIB
+	BF_DATA
+
+BFP			: 메인 ( BFP - BaseFrameProgram )
+	BF_LIB
+	BF_DATA
+	BF_BASE
+	BFP_DATA
+
+
+

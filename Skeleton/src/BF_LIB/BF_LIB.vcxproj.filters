@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="..Common">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="..Common\..Linker">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="LIB_DEFINE">
+      <UniqueIdentifier>{63783a32-5210-400c-a855-9be782ded7d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIB_LIBRARY">
+      <UniqueIdentifier>{8a585c4a-f92f-4106-bb67-7cb30409d9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIB_INTERFACE">
+      <UniqueIdentifier>{e2dfa27e-0f20-439f-93ba-0bc96036d853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIB_FILE_IO">
+      <UniqueIdentifier>{16c227b6-4136-490d-a9d7-09c6a3fed08d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIB_DB">
+      <UniqueIdentifier>{c57695b0-e9c2-45e2-b9be-c82359448359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIB_NOTIFY">
+      <UniqueIdentifier>{76519d2a-cc7d-4731-932d-b17b917f9b4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BF_LIB.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NSElemType.cpp">
+      <Filter>LIB_DEFINE</Filter>
+    </ClCompile>
+    <ClCompile Include="FileCtrl.cpp">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDialogEx.cpp">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClCompile>
+    <ClCompile Include="IBFProduct.cpp">
+      <Filter>LIB_INTERFACE</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseFileIO.cpp">
+      <Filter>LIB_FILE_IO</Filter>
+    </ClCompile>
+    <ClCompile Include="DPoolBase.cpp">
+      <Filter>LIB_DB</Filter>
+    </ClCompile>
+    <ClCompile Include="BFDBSession.cpp">
+      <Filter>LIB_DB</Filter>
+    </ClCompile>
+    <ClCompile Include="BFNotifyManager.cpp">
+      <Filter>LIB_NOTIFY</Filter>
+    </ClCompile>
+    <ClCompile Include="BFNotifyObserver.cpp">
+      <Filter>LIB_NOTIFY</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BF_LIB.def">
+      <Filter>..Common</Filter>
+    </None>
+    <None Include="res\BF_LIB.rc2">
+      <Filter>..Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>..Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BFLibInfo.h">
+      <Filter>..Common\..Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="BFLibVer.h">
+      <Filter>..Common\..Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPost.h">
+      <Filter>..Common\..Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPre.h">
+      <Filter>..Common\..Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="TArray.hpp">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="TVector.hpp">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="TShortStr.h">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="NSElemType.h">
+      <Filter>LIB_DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="FileCtrl.h">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDialogEx.h">
+      <Filter>LIB_LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="IBFProduct.h">
+      <Filter>LIB_INTERFACE</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileIO.h">
+      <Filter>LIB_FILE_IO</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseFileDef.h">
+      <Filter>LIB_FILE_IO</Filter>
+    </ClInclude>
+    <ClInclude Include="AllProjectInclude.h">
+      <Filter>LIB_DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="DataLinker.hpp">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DPoolBase.h">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="BFDBSession.h">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBase.hpp">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="DPool.hpp">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseDataDef.h">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseDataIO.h">
+      <Filter>LIB_DB</Filter>
+    </ClInclude>
+    <ClInclude Include="BFNotifyManager.h">
+      <Filter>LIB_NOTIFY</Filter>
+    </ClInclude>
+    <ClInclude Include="BFNotifyObserver.h">
+      <Filter>LIB_NOTIFY</Filter>
+    </ClInclude>
+    <ClInclude Include="BFNotifyDef.h">
+      <Filter>LIB_NOTIFY</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BF_LIB.rc">
+      <Filter>..Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>..Common</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

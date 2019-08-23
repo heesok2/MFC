@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..Resource File">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="..Common">
+      <UniqueIdentifier>{6919c8e3-0ed1-4e03-8dc4-d7604858dd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..Resource">
+      <UniqueIdentifier>{7857571c-8088-43f2-8b2b-28a2c44718ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN">
+      <UniqueIdentifier>{7cbc3bb9-7f56-42cc-a335-5efce65cba8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_DB">
+      <UniqueIdentifier>{17824565-12f2-43c6-8b67-e6cf88327a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_FRAIM">
+      <UniqueIdentifier>{e06ef726-983a-49e4-84eb-687a906c8457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_FRAIM\Category">
+      <UniqueIdentifier>{4ecf0990-47fe-4bc1-a1c9-6a72f24621e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_FRAIM\Category\Child">
+      <UniqueIdentifier>{d40d2d13-2e5b-4656-8678-bbb04f8db473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_FILE">
+      <UniqueIdentifier>{58a3671b-a1e8-4b19-8486-78bc294f2994}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_IMPL">
+      <UniqueIdentifier>{b4baa227-7771-4cba-a64b-e4c4b1699b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN_DEFINE">
+      <UniqueIdentifier>{e7a60592-71e2-47fa-8fbd-1419cb29eda2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BFP.h">
+      <Filter>MAIN</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPDoc.h">
+      <Filter>MAIN</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPView.h">
+      <Filter>MAIN</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPMainCategoryBase.h">
+      <Filter>MAIN_FRAIM\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPMainCategoryManager.h">
+      <Filter>MAIN_FRAIM\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPMainCategorySample.h">
+      <Filter>MAIN_FRAIM\Category\Child</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPMainCategorySample2.h">
+      <Filter>MAIN_FRAIM\Category\Child</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPRes.h">
+      <Filter>..Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassView.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="FileView.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputWnd.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesWnd.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewTree.h">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveNLoad.h">
+      <Filter>MAIN_FILE</Filter>
+    </ClInclude>
+    <ClInclude Include="BFProductDef.h">
+      <Filter>MAIN_DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPProductImpl.h">
+      <Filter>MAIN_IMPL</Filter>
+    </ClInclude>
+    <ClInclude Include="BFPDBSession.h">
+      <Filter>MAIN_DB</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BFP.cpp">
+      <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPDoc.cpp">
+      <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPView.cpp">
+      <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPMainCategoryBase.cpp">
+      <Filter>MAIN_FRAIM\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPMainCategoryManager.cpp">
+      <Filter>MAIN_FRAIM\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPMainCategorySample.cpp">
+      <Filter>MAIN_FRAIM\Category\Child</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPMainCategorySample2.cpp">
+      <Filter>MAIN_FRAIM\Category\Child</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassView.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="FileView.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputWnd.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertiesWnd.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewTree.cpp">
+      <Filter>MAIN_FRAIM</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveNLoad.cpp">
+      <Filter>MAIN_FILE</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPProductImpl.cpp">
+      <Filter>MAIN_IMPL</Filter>
+    </ClCompile>
+    <ClCompile Include="BFPDBSession.cpp">
+      <Filter>MAIN_DB</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BFP.reg">
+      <Filter>..Common</Filter>
+    </None>
+    <None Include="res\BFP.rc2">
+      <Filter>..Resource</Filter>
+    </None>
+    <None Include="res\ribbon.mfcribbon-ms">
+      <Filter>..Common</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\file_view.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\file_view_hc.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\class_view.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\class_view_hc.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\fileview.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\fileview_hc.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\classview.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\classview_hc.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\explorer.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\explorer_hc.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\sort.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\sort_hc.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\menuimages.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\menuimages_hc.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\output_wnd.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\output_wnd_hc.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\properties_wnd.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\properties_wnd_hc.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\properties.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\properties_hc.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\buttons.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\filelarge.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\filesmall.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\main.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\writelarge.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\writesmall.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\BFPDoc.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\BFP.ico">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\Toolbar256.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\bit24_buttons.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\bit24_rib_tab_mesh_small.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+    <Image Include="res\bit24_rib_tab_model_anal_large.bmp">
+      <Filter>..Resource File</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>..Common</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BFP.rc">
+      <Filter>..Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

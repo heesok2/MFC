@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="..Common">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="..Common\Linker">
+      <UniqueIdentifier>{31202087-57fd-419f-842b-db05d124e7c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BASE_UTIL">
+      <UniqueIdentifier>{26890a4a-ff19-46cf-88f0-2c06ae7f5335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BASE_UTIL\Message">
+      <UniqueIdentifier>{783b8409-21b7-4ab8-b28c-04c725fedc4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BASE_OPT">
+      <UniqueIdentifier>{e4b2ec2f-0c77-41c7-bb55-b903e838b325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BASE_COMMON">
+      <UniqueIdentifier>{9942f397-f1f2-44fb-bac5-24eb29a5475d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BF_BASE.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>..Common</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseDlg.cpp">
+      <Filter>BASE_UTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseMessage.cpp">
+      <Filter>BASE_UTIL\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseMsgParser.cpp">
+      <Filter>BASE_UTIL\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="BFBaseOptionManager.cpp">
+      <Filter>BASE_OPT</Filter>
+    </ClCompile>
+    <ClCompile Include="BFDocBase.cpp">
+      <Filter>BASE_COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="BFViewBase.cpp">
+      <Filter>BASE_COMMON</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BF_BASE.def">
+      <Filter>..Common</Filter>
+    </None>
+    <None Include="res\BF_BASE.rc2">
+      <Filter>..Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BF_BASERes.h">
+      <Filter>..Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>..Common</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPre.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPost.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseDlg.h">
+      <Filter>BASE_UTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseMessage.h">
+      <Filter>BASE_UTIL\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseMessageDef.h">
+      <Filter>BASE_UTIL\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseMsgParser.h">
+      <Filter>BASE_UTIL\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseOptionManager.h">
+      <Filter>BASE_OPT</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseVer.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="BFBaseInfo.h">
+      <Filter>..Common\Linker</Filter>
+    </ClInclude>
+    <ClInclude Include="BFDocBase.h">
+      <Filter>BASE_COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="BFViewBase.h">
+      <Filter>BASE_COMMON</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BF_BASE.rc">
+      <Filter>..Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>..Common</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
