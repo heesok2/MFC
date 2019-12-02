@@ -6,11 +6,18 @@
 #include "gtest_sample.h"
 #include "gtest_sampleDlg.h"
 #include "afxdialogex.h"
+#include <gtest\gtest.h>
+#include "doubleNum.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+FILE* pStream = nullptr;
+
+//#ifdef _DEBUG
+//#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console")
+//#endif
 
 // 응용 프로그램 정보에 사용되는 CAboutDlg 대화 상자입니다.
 
@@ -100,6 +107,7 @@ BOOL CgtestsampleDlg::OnInitDialog()
 
 	// TODO: 여기에 추가 초기화 작업을 추가합니다.
 
+
 	return TRUE;  // 포커스를 컨트롤에 설정하지 않으면 TRUE를 반환합니다.
 }
 
@@ -152,3 +160,58 @@ HCURSOR CgtestsampleDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CgtestsampleDlg::OnOK()
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+
+	static int nFlag = 0;
+#ifdef _DEBUG
+
+	if (nFlag == 0)
+	{
+		if (!AllocConsole())
+		{
+			AfxMessageBox(_T("Failed to create the console!"), MB_ICONEXCLAMATION);
+		}
+		const char* pIn = "CONIN$";
+		const char* pOut = "CONOUT$";
+		const char* pRt = "rt";
+		const char* pWt = "wt";
+
+		//freopen(pIn, pRt, stdin);
+		freopen_s(&pStream, pOut, pWt, stdout);
+
+		::testing::InitGoogleTest();
+		RUN_ALL_TESTS();
+	}
+	else
+	{
+
+		fclose(pStream);
+
+		if (!FreeConsole())
+		{
+			int i = 0;
+		}
+	}
+
+	nFlag = !nFlag;
+
+#endif
+
+	//CDialogEx::OnOK();
+}
+
+
+TEST(G_TEST_SAMPLE1, ALL_PASS1)
+{
+	ASSERT_EQ(12, doubleNum(6));
+}
+
+void CgtestsampleDlg::OnCancel()
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+
+	CDialogEx::OnCancel();
+}
