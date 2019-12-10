@@ -9,40 +9,38 @@
 // Copyright (C) Microsoft Corporation
 // All rights reserved.
 
-// ChildFrm.h: CChildFrame 클래스의 인터페이스
-//
-
 #pragma once
 
-class CChildFrame : public CMDIChildWndEx
+/////////////////////////////////////////////////////////////////////////////
+// CCalendarBar 창
+
+class CCalendarBar : public CWnd
 {
-	DECLARE_DYNCREATE(CChildFrame)
+// 생성입니다.
 public:
-	CChildFrame() noexcept;
+	CCalendarBar();
 
 // 특성입니다.
 protected:
-	CSplitterWndEx m_wndSplitter;
-public:
-
-// 작업입니다.
-public:
+	CMonthCalCtrl m_wndCalendar;
+	int m_nMyCalendarsY;
+	CImageList m_Images;
 
 // 재정의입니다.
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+public:
+	virtual BOOL Create(const RECT& rect, CWnd* pParentWnd, UINT nID = (UINT)-1);
+	virtual BOOL PreTranslateMessage(MSG *pMsg);
 
 // 구현입니다.
 public:
-	virtual ~CChildFrame();
-#ifdef _DEBUG
-	virtual void AssertValid() const;
-	virtual void Dump(CDumpContext& dc) const;
-#endif
+	virtual ~CCalendarBar();
 
-// 생성된 메시지 맵 함수
 protected:
-	afx_msg void OnFilePrint();
-	afx_msg void OnFilePrintPreview();
-	afx_msg void OnUpdateFilePrintPreview(CCmdUI* pCmdUI);
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
+	afx_msg void OnPaint();
+	afx_msg void OnSetFocus(CWnd *pOldWnd);
+
 	DECLARE_MESSAGE_MAP()
 };

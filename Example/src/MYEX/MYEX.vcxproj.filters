@@ -39,19 +39,7 @@
     <ClInclude Include="Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="FileView.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="ClassView.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewTree.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="OutputWnd.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="PropertiesWnd.h">
+    <ClInclude Include="calendarbar.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,24 +62,15 @@
     <ClCompile Include="MYEXView.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="FileView.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ClassView.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewTree.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="OutputWnd.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="PropertiesWnd.cpp">
+    <ClCompile Include="calendarbar.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="MYEX.reg" />
+    <None Include="res\ribbon.mfcribbon-ms">
+      <Filter>리소스 파일</Filter>
+    </None>
     <None Include="res\MYEX.rc2">
       <Filter>리소스 파일</Filter>
     </None>
@@ -102,67 +81,43 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\file_view.ico">
+    <Image Include="res\nav_large.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\file_view_hc.ico">
+    <Image Include="res\nav_large_hc.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\class_view.ico">
+    <Image Include="res\pages.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\class_view_hc.ico">
+    <Image Include="res\pages_hc.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\fileview.bmp">
+    <Image Include="res\pages_small.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\fileview_hc.bmp">
+    <Image Include="res\pages_small_hc.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\classview.bmp">
+    <Image Include="res\info.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\classview_hc.bmp">
+    <Image Include="res\buttons.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\explorer.bmp">
+    <Image Include="res\filelarge.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\explorer_hc.bmp">
+    <Image Include="res\filesmall.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\sort.bmp">
+    <Image Include="res\main.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\sort_hc.bmp">
+    <Image Include="res\writelarge.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="res\menuimages.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\menuimages_hc.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\output_wnd.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\output_wnd_hc.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\properties_wnd.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\properties_wnd_hc.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\properties.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\properties_hc.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\userimages.bmp">
+    <Image Include="res\writesmall.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="res\MYEXDoc.ico">
