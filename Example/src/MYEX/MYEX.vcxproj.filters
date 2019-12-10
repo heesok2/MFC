@@ -1,136 +1,138 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{c2870892-5f0e-4cce-8794-e27251ae6588}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{48c38b62-35ca-4314-bc01-f3c42e87789c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="MAIN">
+      <UniqueIdentifier>{8eb4eec5-1f5e-4c3f-8913-2f4e76572fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{d4676e5b-0ce3-4d06-904b-1e50f2c180bd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MYEX.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="MainFrm.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>MAIN</Filter>
     </ClInclude>
     <ClInclude Include="ChildFrm.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>MAIN</Filter>
     </ClInclude>
-    <ClInclude Include="MYEXDoc.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="MYEX.h">
+      <Filter>MAIN</Filter>
     </ClInclude>
     <ClInclude Include="MYEXView.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>MAIN</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="MYEXDoc.h">
+      <Filter>MAIN</Filter>
     </ClInclude>
     <ClInclude Include="calendarbar.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>MAIN</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MYEX.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>__GLOBAL__</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>MAIN</Filter>
     </ClCompile>
     <ClCompile Include="ChildFrm.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>MAIN</Filter>
     </ClCompile>
-    <ClCompile Include="MYEXDoc.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="MYEX.cpp">
+      <Filter>MAIN</Filter>
     </ClCompile>
     <ClCompile Include="MYEXView.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="MYEXDoc.cpp">
+      <Filter>MAIN</Filter>
     </ClCompile>
     <ClCompile Include="calendarbar.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>MAIN</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MYEX.reg" />
     <None Include="res\ribbon.mfcribbon-ms">
-      <Filter>리소스 파일</Filter>
+      <Filter>__GLOBAL__\FILE</Filter>
+    </None>
+    <None Include="MYEX.reg">
+      <Filter>__GLOBAL__</Filter>
     </None>
     <None Include="res\MYEX.rc2">
-      <Filter>리소스 파일</Filter>
+      <Filter>__GLOBAL__\RC</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\writesmall.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\buttons.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\filelarge.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\filesmall.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\info.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\main.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\MYEX.ico">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\MYEXDoc.ico">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\nav_large.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\nav_large_hc.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\pages.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\pages_hc.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\pages_small.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\pages_small_hc.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\Toolbar256.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\writelarge.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX.rc">
-      <Filter>리소스 파일</Filter>
+      <Filter>__GLOBAL__\RC</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\nav_large.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\nav_large_hc.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\pages.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\pages_hc.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\pages_small.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\pages_small_hc.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\info.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\buttons.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\filelarge.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\filesmall.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\main.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\writelarge.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\writesmall.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\MYEXDoc.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\MYEX.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Toolbar.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Toolbar256.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
   </ItemGroup>
 </Project>
