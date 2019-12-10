@@ -157,12 +157,12 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	case ID_PANEL_BUTTON_L:
 	case ID_PANEL_BUTTON_S:
 		{
-
+			ASSERT(g_warning);
 		}
 		break;	
 	default:
 		{
-			ASSERT(0);
+			ASSERT(g_warning);
 		}
 		break;
 	}

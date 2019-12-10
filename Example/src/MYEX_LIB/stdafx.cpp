@@ -4,4 +4,5 @@
 
 #include "stdafx.h"
 
+#include "..\MYEX_LIB\LinkLib.h"
 

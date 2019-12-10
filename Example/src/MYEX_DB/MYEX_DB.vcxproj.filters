@@ -40,6 +40,9 @@
     <ClInclude Include="targetver.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_DB.rc">
