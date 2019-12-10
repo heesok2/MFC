@@ -55,6 +55,9 @@
     <ClInclude Include="AllProjectInclude.h">
       <Filter>DEFINE</Filter>
     </ClInclude>
+    <ClInclude Include="GlobalDefine.h">
+      <Filter>DEFINE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_LIB.rc">

@@ -223,6 +223,7 @@
   <ItemGroup>
     <ClInclude Include="AllProjectInclude.h" />
     <ClInclude Include="ExMathLib.h" />
+    <ClInclude Include="GlobalDefine.h" />
     <ClInclude Include="MYEX_LIB.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />

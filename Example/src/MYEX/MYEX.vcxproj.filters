@@ -159,6 +159,12 @@
     <Image Include="res\writelarge.bmp">
       <Filter>__GLOBAL__\FILE</Filter>
     </Image>
+    <Image Include="res\MENU_EXAMPLE_19.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+    <Image Include="res\MENU_EXAMPLE_32.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX.rc">

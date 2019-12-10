@@ -22,13 +22,13 @@ protected: // serialization에서만 만들어집니다.
 	CMYEXDoc() noexcept;
 	DECLARE_DYNCREATE(CMYEXDoc)
 
-// 특성입니다.
+	// 특성입니다.
 public:
 
-// 작업입니다.
+	// 작업입니다.
 public:
 
-// 재정의입니다.
+	// 재정의입니다.
 public:
 	virtual BOOL OnNewDocument();
 	virtual void Serialize(CArchive& ar);
@@ -37,7 +37,7 @@ public:
 	virtual void OnDrawThumbnail(CDC& dc, LPRECT lprcBounds);
 #endif // SHARED_HANDLERS
 
-// 구현입니다.
+	// 구현입니다.
 public:
 	virtual ~CMYEXDoc();
 #ifdef _DEBUG
@@ -46,13 +46,15 @@ public:
 #endif
 
 protected:
-
-// 생성된 메시지 맵 함수
-protected:
-	DECLARE_MESSAGE_MAP()
-
 #ifdef SHARED_HANDLERS
 	// 검색 처리기에 대한 검색 콘텐츠를 설정하는 도우미 함수
 	void SetSearchContent(const CString& value);
 #endif // SHARED_HANDLERS
+
+protected:
+	afx_msg void OnRibbonCategory(UINT uiMenu);
+	afx_msg void OnRibbonCategoryUI(CCmdUI* pCmdUI);
+
+	DECLARE_MESSAGE_MAP()
+
 };

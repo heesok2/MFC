@@ -32,6 +32,11 @@
 IMPLEMENT_DYNCREATE(CMYEXDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMYEXDoc, CDocument)
+	ON_COMMAND_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategory)
+	ON_COMMAND_RANGE(ID_PANEL_BUTTON_S, ID_PANEL_BUTTON_S, OnRibbonCategory)
+	
+	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategoryUI)
+	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_S, ID_PANEL_BUTTON_S, OnRibbonCategoryUI)
 END_MESSAGE_MAP()
 
 
@@ -86,7 +91,7 @@ void CMYEXDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 	CString strText = _T("TODO: implement thumbnail drawing here");
 	LOGFONT lf;
 
-	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT) GetStockObject(DEFAULT_GUI_FONT));
+	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT)GetStockObject(DEFAULT_GUI_FONT));
 	pDefaultGUIFont->GetLogFont(&lf);
 	lf.lfHeight = 36;
 
@@ -143,5 +148,40 @@ void CMYEXDoc::Dump(CDumpContext& dc) const
 }
 #endif //_DEBUG
 
-
 // CMYEXDoc 명령
+
+void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
+{
+	switch (uiMenu)
+	{
+	case ID_PANEL_BUTTON_L:
+	case ID_PANEL_BUTTON_S:
+		{
+
+		}
+		break;	
+	default:
+		{
+			ASSERT(0);
+		}
+		break;
+	}
+}
+
+void CMYEXDoc::OnRibbonCategoryUI(CCmdUI * pCmdUI)
+{
+	switch (pCmdUI->m_nID)
+	{
+	case ID_PANEL_BUTTON_L:
+	case ID_PANEL_BUTTON_S:
+		{
+
+		}
+		break;
+	default:
+		{
+			ASSERT(0);
+		}
+		break;
+	}
+}

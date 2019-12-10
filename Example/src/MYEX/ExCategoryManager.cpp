@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "ExCategoryManager.h"
-#include "ExCategoryBase.h"
+#include "ExCategoryExample.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -10,7 +10,7 @@ static char THIS_FILE[] = __FILE__;
 
 CExCategoryManager::CExCategoryManager()
 {
-	m_mCategory[E_CAT_EXAMPLE] = std::make_shared<CExCategoryBase>();
+	m_mCategory[E_CAT_EXAMPLE] = std::make_shared<CExCategoryExample>();
 }
 
 CExCategoryManager::~CExCategoryManager()
@@ -21,7 +21,5 @@ CExCategoryManager::~CExCategoryManager()
 void CExCategoryManager::SetMenu(CMFCRibbonBar * pRibbonBar)
 {
 	for (auto pair : m_mCategory)
-	{
-		pair.second->
-	}
+		pair.second->SetMenu(pRibbonBar);
 }

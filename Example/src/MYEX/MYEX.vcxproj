@@ -252,6 +252,8 @@
     <Image Include="res\filesmall.bmp" />
     <Image Include="res\info.bmp" />
     <Image Include="res\main.bmp" />
+    <Image Include="res\MENU_EXAMPLE_19.bmp" />
+    <Image Include="res\MENU_EXAMPLE_32.bmp" />
     <Image Include="res\MYEX.ico" />
     <Image Include="res\MYEXDoc.ico" />
     <Image Include="res\nav_large.bmp" />
