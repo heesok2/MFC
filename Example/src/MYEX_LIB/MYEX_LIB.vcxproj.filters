@@ -13,6 +13,9 @@
     <Filter Include="LIBRARY">
       <UniqueIdentifier>{82b3202b-ec6b-449e-abaf-0a9760e85c69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DEFINE">
+      <UniqueIdentifier>{5c1b0ee6-20b1-427c-8d0c-00d00e5a937f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -20,6 +23,9 @@
     </ClCompile>
     <ClCompile Include="MYEX_LIB.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="ExMathLib.cpp">
+      <Filter>LIBRARY</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +48,12 @@
     </ClInclude>
     <ClInclude Include="MYEX_LIB.h">
       <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="ExMathLib.h">
+      <Filter>LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="AllProjectInclude.h">
+      <Filter>DEFINE</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

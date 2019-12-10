@@ -13,6 +13,15 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{d4676e5b-0ce3-4d06-904b-1e50f2c180bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MAIN\Category">
+      <UniqueIdentifier>{d81a1442-606a-4443-b834-95ac8a3f1693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN\Frame">
+      <UniqueIdentifier>{b26251b0-57a4-49cf-a97e-a670fefe6ca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN\Category\Implement">
+      <UniqueIdentifier>{a6b7ef94-1d02-4e24-b97b-a9791ae6e2e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -20,12 +29,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>__GLOBAL__</Filter>
-    </ClInclude>
-    <ClInclude Include="MainFrm.h">
-      <Filter>MAIN</Filter>
-    </ClInclude>
-    <ClInclude Include="ChildFrm.h">
-      <Filter>MAIN</Filter>
     </ClInclude>
     <ClInclude Include="MYEX.h">
       <Filter>MAIN</Filter>
@@ -42,16 +45,28 @@
     <ClInclude Include="Resource.h">
       <Filter>__GLOBAL__\RC</Filter>
     </ClInclude>
+    <ClInclude Include="ExCategoryManager.h">
+      <Filter>MAIN\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="ExCategoryBase.h">
+      <Filter>MAIN\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="ExCategoryDefine.h">
+      <Filter>MAIN\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MAIN\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>MAIN\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="ExCategoryExample.h">
+      <Filter>MAIN\Category\Implement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
-    </ClCompile>
-    <ClCompile Include="MainFrm.cpp">
-      <Filter>MAIN</Filter>
-    </ClCompile>
-    <ClCompile Include="ChildFrm.cpp">
-      <Filter>MAIN</Filter>
     </ClCompile>
     <ClCompile Include="MYEX.cpp">
       <Filter>MAIN</Filter>
@@ -64,6 +79,21 @@
     </ClCompile>
     <ClCompile Include="calendarbar.cpp">
       <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="ExCategoryManager.cpp">
+      <Filter>MAIN\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="ExCategoryBase.cpp">
+      <Filter>MAIN\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>MAIN\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MAIN\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="ExCategoryExample.cpp">
+      <Filter>MAIN\Category\Implement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -209,6 +209,10 @@
   <ItemGroup>
     <ClInclude Include="calendarbar.h" />
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ExCategoryBase.h" />
+    <ClInclude Include="ExCategoryDefine.h" />
+    <ClInclude Include="ExCategoryExample.h" />
+    <ClInclude Include="ExCategoryManager.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MYEX.h" />
     <ClInclude Include="MYEXDoc.h" />
@@ -220,6 +224,9 @@
   <ItemGroup>
     <ClCompile Include="calendarbar.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ExCategoryBase.cpp" />
+    <ClCompile Include="ExCategoryExample.cpp" />
+    <ClCompile Include="ExCategoryManager.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MYEX.cpp" />
     <ClCompile Include="MYEXDoc.cpp" />

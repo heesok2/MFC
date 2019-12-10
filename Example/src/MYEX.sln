@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MYEX_DB", "MYEX_DB\MYEX_DB.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MYEX_DLG", "MYEX_DLG\MYEX_DLG.vcxproj", "{2A115AE3-4119-4D05-8AA9-45714850F6D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{72C8E39E-EC1C-4C15-8EE9-A63D8E07CE16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -54,6 +56,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A115AE3-4119-4D05-8AA9-45714850F6D9} = {72C8E39E-EC1C-4C15-8EE9-A63D8E07CE16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5558A1B6-0245-49C6-9C70-65E92782B118}
