@@ -1,6 +1,7 @@
 #pragma once
 
 #ifndef __LINK_MYEX_LIB__
+#define __LINK_MYEX_LIB__
 #define LINKNAME "MYEX_LIB.lib"
 
 #if !defined(_AFXDLL)
@@ -22,7 +23,6 @@
 #elif (_MSC_VER == 1900)
 #error vs2015(14.0)
 #elif (_MSC_VER >= 1910 && _MSC_VER <= 1916) // vs2017(15.0)
-	
 	#ifndef _X64
 		#if defined(_DEBUG)
 			#define AUTOLIBNAME "..\\..\\lib\\v141\\Debug\\x86\\" LINKNAME

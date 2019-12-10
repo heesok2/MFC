@@ -27,6 +27,9 @@
     <ClCompile Include="ExMathLib.cpp">
       <Filter>LIBRARY</Filter>
     </ClCompile>
+    <ClCompile Include="MathLib.cpp">
+      <Filter>LIBRARY</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYEX_LIB.rc2">
@@ -59,6 +62,15 @@
       <Filter>DEFINE</Filter>
     </ClInclude>
     <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="MathLib.h">
+      <Filter>LIBRARY</Filter>
+    </ClInclude>
+    <ClInclude Include="EndExtDll.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="BeginExtDll.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
   </ItemGroup>

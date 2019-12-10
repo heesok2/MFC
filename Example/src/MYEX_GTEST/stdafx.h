@@ -37,6 +37,3 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 
-#ifndef __MYEX_LIB__
-#define __MYEX_LIB__
-#endif

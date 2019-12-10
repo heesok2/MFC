@@ -1,8 +1,10 @@
 #pragma once
 
+#include "BeginExtDll.h"
+
 namespace EX_MATH
 {
-	class CExMathLib
+	class __MY_EXT_CLASS__ CExMathLib
 	{
 	public:
 		CExMathLib();
@@ -13,3 +15,4 @@ namespace EX_MATH
 	};
 }
 
+#include "EndExtDll.h"

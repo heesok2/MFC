@@ -208,6 +208,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ExMathLib.cpp" />
+    <ClCompile Include="MathLib.cpp" />
     <ClCompile Include="MYEX_LIB.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -222,9 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AllProjectInclude.h" />
+    <ClInclude Include="BeginExtDll.h" />
+    <ClInclude Include="EndExtDll.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="ExMathLib.h" />
     <ClInclude Include="GlobalDefine.h" />
+    <ClInclude Include="MathLib.h" />
     <ClInclude Include="MYEX_LIB.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />

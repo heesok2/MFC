@@ -1,8 +1,8 @@
 #pragma once
 
-#ifndef __LINK_MYEX_DLG__
-#define __LINK_MYEX_DLG__
-#define LINKNAME "MYEX_DLG.lib"
+#ifndef __LINK_MYEX_GTEST__
+#define __LINK_MYEX_GTEST__
+#define LINKNAME "MYEX_GTEST.lib"
 
 #if !defined(_AFXDLL)
 #error MFC Lib를 Shared Lib로 지정해야 합니다 !
