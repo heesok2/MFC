@@ -6,8 +6,10 @@
 #include "gtest_sample.h"
 #include "gtest_sampleDlg.h"
 #include "afxdialogex.h"
+
+#include "..\gtest_lib\doubleNum.h"
+
 #include <gtest\gtest.h>
-#include "doubleNum.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

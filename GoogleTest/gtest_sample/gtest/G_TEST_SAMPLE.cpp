@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#pragma comment(lib, "gtest_sample.lib")
+#pragma comment(lib, "gtest_lib.lib")
 
 extern "C" __declspec(dllimport) int doubleNum(int x);
 

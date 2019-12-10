@@ -94,6 +94,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -186,7 +187,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="doubleNum.h" />
     <ClInclude Include="gtest_sample.h" />
     <ClInclude Include="gtest_sampleDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -194,7 +194,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="doubleNum.cpp" />
     <ClCompile Include="gtest_sample.cpp" />
     <ClCompile Include="gtest_sampleDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -212,6 +211,11 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\gtest_sample.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gtest_lib\gtest_lib.vcxproj">
+      <Project>{fcb0a546-c0dc-4cc9-ad75-40f4b5709910}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
