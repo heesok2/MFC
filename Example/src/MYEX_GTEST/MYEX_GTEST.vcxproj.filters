@@ -10,6 +10,9 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{5830fd1a-af89-407a-865a-0eb544d71ffb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{7a1d3e14-af7f-4c4d-ae3a-0d4a750aaed3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MYEX_GTEST.cpp">
@@ -17,6 +20,10 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="GoogleTestHelper.cpp" />
+    <ClCompile Include="PluginHandler.cpp">
+      <Filter>Plugin</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +55,10 @@
     </ClInclude>
     <ClInclude Include="ExtStart.h">
       <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="GoogleTestHelper.h" />
+    <ClInclude Include="PluginHandler.h">
+      <Filter>Plugin</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
