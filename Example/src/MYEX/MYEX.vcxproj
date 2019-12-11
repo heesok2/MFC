@@ -213,6 +213,7 @@
     <ClInclude Include="ExCategoryDefine.h" />
     <ClInclude Include="ExCategoryExample.h" />
     <ClInclude Include="ExCategoryManager.h" />
+    <ClInclude Include="ExtDllManager.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MYEX.h" />
     <ClInclude Include="MYEXDoc.h" />
@@ -227,6 +228,7 @@
     <ClCompile Include="ExCategoryBase.cpp" />
     <ClCompile Include="ExCategoryExample.cpp" />
     <ClCompile Include="ExCategoryManager.cpp" />
+    <ClCompile Include="ExtDllManager.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MYEX.cpp" />
     <ClCompile Include="MYEXDoc.cpp" />
@@ -268,6 +270,9 @@
     <Image Include="res\writesmall.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
+      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
       <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>
     </ProjectReference>

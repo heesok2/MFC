@@ -16,4 +16,5 @@
 #include "stdafx.h"
 
 #include "..\MYEX_LIB\LinkLib.h"
+#include "..\MYEX_BASE\LinkLib.h"
 #include "..\MYEX_DB\LinkLib.h"

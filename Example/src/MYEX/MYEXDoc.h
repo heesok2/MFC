@@ -15,8 +15,9 @@
 
 #pragma once
 
+#include "..\MYEX_BASE\DocBase.h"
 
-class CMYEXDoc : public CDocument
+class CMYEXDoc : public CDocBase
 {
 protected: // serialization에서만 만들어집니다.
 	CMYEXDoc() noexcept;

@@ -8,4 +8,3 @@
 
 #undef __MY_EXT_CLASS__		
 #undef __MY_EXT_API__		
-#undef __MY_EXT_DATA__		

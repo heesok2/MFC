@@ -207,7 +207,10 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExampleDlg.cpp" />
+    <ClCompile Include="IDialogProvider.cpp" />
     <ClCompile Include="MYEX_DLG.cpp" />
+    <ClCompile Include="PluginHandler.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -220,10 +223,13 @@
     <None Include="res\MYEX_DLG.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExampleDlg.h" />
     <ClInclude Include="ExtFinish.h" />
     <ClInclude Include="ExtStart.h" />
+    <ClInclude Include="IDialogProvider.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="MYEX_DLG.h" />
+    <ClInclude Include="PluginHandler.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -232,8 +238,8 @@
     <ResourceCompile Include="MYEX_DLG.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
-      <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>
+    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
+      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
       <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>

@@ -162,6 +162,8 @@ BOOL CMYEXApp::InitInstance()
 	pMainFrame->ShowWindow(m_nCmdShow);
 	pMainFrame->UpdateWindow();
 
+	m_ExtDllManager.LoadPlugin();
+
 	return TRUE;
 }
 
@@ -169,6 +171,8 @@ int CMYEXApp::ExitInstance()
 {
 	//TODO: 추가한 추가 리소스를 처리합니다.
 	AfxOleTerm(FALSE);
+
+	m_ExtDllManager.UnloadPlugin();
 
 	return CWinAppEx::ExitInstance();
 }

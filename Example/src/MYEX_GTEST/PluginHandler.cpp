@@ -2,8 +2,13 @@
 #include "PluginHandler.h"
 #include "GoogleTestHelper.h"
 
-BOOL ReqService(LPCTSTR strArguments)
+
+BOOL ReqService(LPCTSTR strArguments, LPVOID lpInitData)
 {
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
 	CGoogleTestHelper helper(0, (CString)strArguments);
-	return helper.Run();
+	helper.Run();
+
+	return TRUE;
 }

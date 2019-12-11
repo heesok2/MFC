@@ -10,6 +10,15 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{54057f70-acc6-4c66-b088-7e21be44d84b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DIALOG">
+      <UniqueIdentifier>{70172079-e7ee-488a-acc3-37bb26842d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{b8a07531-8174-4726-88bb-df0ee86e0ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DIALOG\Interface">
+      <UniqueIdentifier>{d54136e0-df7c-4b0e-b3db-e0dfb10ada91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MYEX_DLG.cpp">
@@ -18,6 +27,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
+    <ClCompile Include="ExampleDlg.cpp">
+      <Filter>DIALOG</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginHandler.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="IDialogProvider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYEX_DLG.rc2">
@@ -49,6 +65,13 @@
     <ClInclude Include="ExtFinish.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
+    <ClInclude Include="ExampleDlg.h">
+      <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginHandler.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="IDialogProvider.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_DLG.rc">

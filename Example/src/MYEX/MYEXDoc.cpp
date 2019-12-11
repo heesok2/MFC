@@ -158,35 +158,6 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	case ID_PANEL_BUTTON_L:
 	case ID_PANEL_BUTTON_S:
 		{
-			CString ProgramPath;
-			::GetModuleFileName(NULL, ProgramPath.GetBuffer(_MAX_PATH), _MAX_PATH);
-			ProgramPath.ReleaseBuffer();
-
-			int nFind = ProgramPath.ReverseFind('\\');
-			if (nFind == -1)
-			{
-				ASSERT(0);
-				return;
-			}
-
-			ProgramPath = ProgramPath.Left(nFind + 1);
-			ProgramPath += _T("Extension\\MYEX_GTEST.dll");
-
-			auto hModule = ::LoadLibrary(ProgramPath);
-			if (NULL == hModule)
-			{
-				ASSERT(0);
-				return;
-			}
-
-			typedef BOOL (*lpFunction)(LPCTSTR);
-			auto pFunction = (lpFunction)::GetProcAddress(hModule, "ReqService");
-			if (pFunction != nullptr)
-			{
-				pFunction(_T(""));
-			}
-
-			::FreeLibrary(hModule);
 			
 		}
 		break;	

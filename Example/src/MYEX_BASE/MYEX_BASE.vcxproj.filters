@@ -10,6 +10,12 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{4e9242c8-4b3a-4be8-b21f-fa599876638d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DIALOG">
+      <UniqueIdentifier>{70bc51f5-f4e1-4613-9350-776e90021958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMMON">
+      <UniqueIdentifier>{bc2def08-550f-41ca-90be-8bba58ba2357}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MYEX_BASE.cpp">
@@ -17,6 +23,12 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="ExDialog.cpp">
+      <Filter>DIALOG</Filter>
+    </ClCompile>
+    <ClCompile Include="DocBase.cpp">
+      <Filter>COMMON</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +63,12 @@
     </ClInclude>
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="ExDialog.h">
+      <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="DocBase.h">
+      <Filter>COMMON</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

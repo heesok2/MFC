@@ -211,6 +211,8 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExDialog.cpp" />
+    <ClCompile Include="DocBase.cpp" />
     <ClCompile Include="MYEX_BASE.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -224,6 +226,8 @@
     <None Include="res\MYEX_BASE.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExDialog.h" />
+    <ClInclude Include="DocBase.h" />
     <ClInclude Include="ExtFinish.h" />
     <ClInclude Include="ExtStart.h" />
     <ClInclude Include="framework.h" />
@@ -235,6 +239,11 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_BASE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
+      <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
