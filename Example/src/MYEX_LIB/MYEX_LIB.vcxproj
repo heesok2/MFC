@@ -223,8 +223,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AllProjectInclude.h" />
-    <ClInclude Include="BeginExtDll.h" />
-    <ClInclude Include="EndExtDll.h" />
+    <ClInclude Include="ExtStart.h" />
+    <ClInclude Include="ExtFinish.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="ExMathLib.h" />
     <ClInclude Include="GlobalDefine.h" />

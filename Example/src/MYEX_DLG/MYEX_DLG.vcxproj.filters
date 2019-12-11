@@ -43,6 +43,12 @@
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
+    <ClInclude Include="ExtStart.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtFinish.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_DLG.rc">

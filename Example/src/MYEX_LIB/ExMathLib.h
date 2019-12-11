@@ -1,6 +1,6 @@
 #pragma once
 
-#include "BeginExtDll.h"
+#include "ExtStart.h"
 
 namespace EX_MATH
 {
@@ -15,4 +15,4 @@ namespace EX_MATH
 	};
 }
 
-#include "EndExtDll.h"
+#include "ExtFinish.h"

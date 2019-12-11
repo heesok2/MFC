@@ -220,6 +220,8 @@
     <None Include="res\MYEX_GTEST.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExtFinish.h" />
+    <ClInclude Include="ExtStart.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="MYEX_GTEST.h" />
     <ClInclude Include="Resource.h" />

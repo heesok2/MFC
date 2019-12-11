@@ -43,8 +43,12 @@
 
 #include <afxcontrolbars.h>     // MFC의 리본 및 컨트롤 막대 지원
 
+#ifndef __MYEX__
+#define __MYEX__
+
 #include "..\MYEX_LIB\AllProjectInclude.h"
 
+#endif
 
 #ifdef _UNICODE
 #if defined _M_IX86

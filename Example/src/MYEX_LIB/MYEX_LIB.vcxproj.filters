@@ -67,10 +67,10 @@
     <ClInclude Include="MathLib.h">
       <Filter>LIBRARY</Filter>
     </ClInclude>
-    <ClInclude Include="EndExtDll.h">
+    <ClInclude Include="ExtStart.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
-    <ClInclude Include="BeginExtDll.h">
+    <ClInclude Include="ExtFinish.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
   </ItemGroup>

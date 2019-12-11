@@ -1,7 +1,7 @@
 #pragma once
 
 #ifndef __EXT_DLL__
-	#error Extension Dll Error
+#error Extension Dll Error
 #endif
 
 #undef __EXT_DLL__
