@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{d3d43430-b1ff-471c-ba8a-7e59607915d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{73c77200-e0fb-4017-a99a-aecac4a7ae35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{4e9242c8-4b3a-4be8-b21f-fa599876638d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MYEX_BASE.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYEX_BASE.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYEX_BASE.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="MYEX_BASE.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtFinish.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtStart.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYEX_BASE.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

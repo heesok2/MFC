@@ -16,6 +16,9 @@
     <Filter Include="DEFINE">
       <UniqueIdentifier>{5c1b0ee6-20b1-427c-8d0c-00d00e5a937f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="INTERFACE">
+      <UniqueIdentifier>{641b91ea-c762-454b-829b-d4a7da9fe783}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
