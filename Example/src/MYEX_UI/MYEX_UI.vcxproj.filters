@@ -2,44 +2,46 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="__GLOBAL__">
-      <UniqueIdentifier>{d83efd66-df13-4e46-9ea0-c1b37fc02bd0}</UniqueIdentifier>
+      <UniqueIdentifier>{46372d7a-4e9c-4298-a063-4d7e02a27c1b}</UniqueIdentifier>
     </Filter>
     <Filter Include="__GLOBAL__\FILE">
-      <UniqueIdentifier>{440f051a-7449-4fcc-adba-354fff8a8a28}</UniqueIdentifier>
+      <UniqueIdentifier>{3751209a-6ffd-4acb-ac70-cf7d589a7d35}</UniqueIdentifier>
     </Filter>
     <Filter Include="__GLOBAL__\RC">
-      <UniqueIdentifier>{54057f70-acc6-4c66-b088-7e21be44d84b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DIALOG">
-      <UniqueIdentifier>{70172079-e7ee-488a-acc3-37bb26842d61}</UniqueIdentifier>
+      <UniqueIdentifier>{5b84c84c-4c63-43ba-8c3f-deda85e14e26}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugin">
-      <UniqueIdentifier>{b8a07531-8174-4726-88bb-df0ee86e0ab4}</UniqueIdentifier>
+      <UniqueIdentifier>{e28a0932-d153-4954-ab2c-1edb83d37586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DIALOG">
+      <UniqueIdentifier>{5133a24d-67ac-420e-b2f3-b52a3120c132}</UniqueIdentifier>
     </Filter>
     <Filter Include="DIALOG\Interface">
-      <UniqueIdentifier>{d54136e0-df7c-4b0e-b3db-e0dfb10ada91}</UniqueIdentifier>
+      <UniqueIdentifier>{2bb4e349-5369-4d8a-a8d8-828ee53d4f3f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MYEX_DLG.cpp">
+    <ClCompile Include="dllmain.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <Filter>__GLOBAL__</Filter>
-    </ClCompile>
-    <ClCompile Include="ExampleDlg.cpp">
-      <Filter>DIALOG</Filter>
     </ClCompile>
     <ClCompile Include="PluginHandler.cpp">
       <Filter>Plugin</Filter>
     </ClCompile>
-    <ClCompile Include="IDialogProvider.cpp" />
+    <ClCompile Include="ExampleDlg.cpp">
+      <Filter>DIALOG</Filter>
+    </ClCompile>
+    <ClCompile Include="IDialogProvider.cpp">
+      <Filter>DIALOG\Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MYEX_DLG.rc2">
+    <None Include="res\MYEX_UI.rc2">
       <Filter>__GLOBAL__\RC</Filter>
     </None>
-    <None Include="MYEX_DLG.def">
+    <None Include="MYEX_UI.def">
       <Filter>__GLOBAL__</Filter>
     </None>
   </ItemGroup>
@@ -47,10 +49,10 @@
     <ClInclude Include="Resource.h">
       <Filter>__GLOBAL__\RC</Filter>
     </ClInclude>
-    <ClInclude Include="MYEX_DLG.h">
+    <ClInclude Include="framework.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="pch.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
@@ -59,16 +61,18 @@
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
-    <ClInclude Include="ExampleDlg.h">
-      <Filter>DIALOG</Filter>
-    </ClInclude>
     <ClInclude Include="PluginHandler.h">
       <Filter>Plugin</Filter>
     </ClInclude>
-    <ClInclude Include="IDialogProvider.h" />
+    <ClInclude Include="ExampleDlg.h">
+      <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="IDialogProvider.h">
+      <Filter>DIALOG\Interface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MYEX_DLG.rc">
+    <ResourceCompile Include="MYEX_UI.rc">
       <Filter>__GLOBAL__\RC</Filter>
     </ResourceCompile>
   </ItemGroup>

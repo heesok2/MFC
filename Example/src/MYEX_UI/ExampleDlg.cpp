@@ -1,6 +1,12 @@
-#include "stdafx.h"
+#include "pch.h"
 #include "Resource.h"
 #include "ExampleDlg.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
 
 CExampleDlg::CExampleDlg(CDocBase * pDoc, CWnd * pParent)
 	: CExDialog(CExampleDlg::IDD, pDoc, pParent)
@@ -32,5 +38,3 @@ BOOL CExampleDlg::Create(CWnd * pParent)
 {
 	return CExDialog::Create(CExampleDlg::IDD, pParent);
 }
-
-

@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef __LINK_MYEX_DLG__
-#define __LINK_MYEX_DLG__ "MYEX_DLG.lib"
+#ifndef __LINK_MYEX_UI__
+#define __LINK_MYEX_UI__ "MYEX_UI.lib"
 
 #if !defined(_AFXDLL)
 #error MFC Lib를 Shared Lib로 지정해야 합니다 !
@@ -24,15 +24,15 @@
 #elif (_MSC_VER >= 1910 && _MSC_VER <= 1916) // vs2017(15.0)
 	#ifndef _X64
 		#if defined(_DEBUG)
-			#define AUTOLIBNAME "..\\..\\lib\\v141\\Debug\\x86\\" __LINK_MYEX_DLG__
+			#define AUTOLIBNAME "..\\..\\lib\\v141\\Debug\\x86\\" __LINK_MYEX_UI__
 		#else
-			#define AUTOLIBNAME "..\\..\\lib\\v141\\Release\\x86\\" __LINK_MYEX_DLG__
+			#define AUTOLIBNAME "..\\..\\lib\\v141\\Release\\x86\\" __LINK_MYEX_UI__
 		#endif
 	#else
 		#if defined(_DEBUG)
-			#define AUTOLIBNAME "..\\..\\lib\\v141\\Debug\\x64\\" __LINK_MYEX_DLG__
+			#define AUTOLIBNAME "..\\..\\lib\\v141\\Debug\\x64\\" __LINK_MYEX_UI__
 		#else
-			#define AUTOLIBNAME "..\\..\\lib\\v141\\Release\\x64\\" __LINK_MYEX_DLG__
+			#define AUTOLIBNAME "..\\..\\lib\\v141\\Release\\x64\\" __LINK_MYEX_UI__
 		#endif
 	#endif
 #endif
@@ -40,4 +40,4 @@
 #pragma message( "automatically link with (" AUTOLIBNAME ")")
 #pragma comment(lib, AUTOLIBNAME)
 #undef AUTOLIBNAME
-#endif // End of __LINK_MYEX_DLG__
+#endif // End of __LINK_MYEX_UI__

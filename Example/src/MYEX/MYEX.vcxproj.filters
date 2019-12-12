@@ -22,7 +22,7 @@
     <Filter Include="MAIN\Category\Implement">
       <UniqueIdentifier>{a6b7ef94-1d02-4e24-b97b-a9791ae6e2e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="EXTERNAL">
+    <Filter Include="EXTENSION">
       <UniqueIdentifier>{efe72beb-2101-4a13-8945-d45965e0d254}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -67,7 +67,7 @@
       <Filter>MAIN\Category\Implement</Filter>
     </ClInclude>
     <ClInclude Include="ExtDllManager.h">
-      <Filter>EXTERNAL</Filter>
+      <Filter>EXTENSION</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +102,7 @@
       <Filter>MAIN\Category\Implement</Filter>
     </ClCompile>
     <ClCompile Include="ExtDllManager.cpp">
-      <Filter>EXTERNAL</Filter>
+      <Filter>EXTENSION</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

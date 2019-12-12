@@ -24,7 +24,7 @@ void CExtDllManager::LoadPlugin()
 	}
 
 	ProgramPath = ProgramPath.Left(nFind + 1);
-	ProgramPath += _T("Extension\\MYEX_DLG.dll");
+	ProgramPath += _T("Extension\\MYEX_UI.dll");
 
 	auto _hModule = ::LoadLibrary(ProgramPath);
 	if (NULL == _hModule)

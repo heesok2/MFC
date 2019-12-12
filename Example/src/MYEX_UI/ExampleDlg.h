@@ -2,7 +2,7 @@
 
 #include "..\MYEX_BASE\ExDialog.h"
 
-class CExampleDlg : public CExDialog
+class AFX_EXT_CLASS CExampleDlg : public CExDialog
 {
 public:
 	CExampleDlg(CDocBase* pDoc, CWnd* pParent = nullptr);

@@ -157,7 +157,6 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	{
 	case ID_PANEL_BUTTON_L:
 		{
-
 		}
 		break;
 	case ID_PANEL_BUTTON_S:

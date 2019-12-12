@@ -1,11 +1,9 @@
-#include "stdafx.h"
+#include "pch.h"
 #include "PluginHandler.h"
 #include "IDialogProvider.h"
 
 BOOL ReqService(LPCTSTR strArguments, LPVOID lpInitData)
 {
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-
 	CDocBase* pDocBase = nullptr;
 	if (lpInitData != nullptr)
 		pDocBase = static_cast<CDocBase*>(lpInitData);
