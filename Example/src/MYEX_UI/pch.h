@@ -15,6 +15,4 @@
 #ifndef __MYEX_UI__
 #define __MYEX_UI__
 
-#include "..\MYEX_LIB\AllProjectInclude.h"
-
 #endif

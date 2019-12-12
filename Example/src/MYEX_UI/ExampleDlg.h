@@ -1,11 +1,9 @@
 #pragma once
 
-#include "..\MYEX_BASE\ExDialog.h"
-
-class AFX_EXT_CLASS CExampleDlg : public CExDialog
+class AFX_EXT_CLASS CExampleDlg : public CDialog
 {
 public:
-	CExampleDlg(CDocBase* pDoc, CWnd* pParent = nullptr);
+	CExampleDlg(CWnd* pParent = nullptr);
 	virtual ~CExampleDlg();
 
 	enum { IDD = IDD_EXAMPLE_DLG };

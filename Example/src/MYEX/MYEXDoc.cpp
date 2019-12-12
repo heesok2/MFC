@@ -161,19 +161,10 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 		{
 			auto pApp = (CMYEXApp*)AfxGetApp();
 
-			typedef BOOL(*lpFunction)(LPVOID);
-			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqDataBase");
+			typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
+			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqService");
 			if (pFunction != nullptr)
-				pFunction(this);
-
-			if (!m_pDBSession->m_aData.empty())
-			{
-				EX_MATH::CExMathLib math;
-				if (fabs(m_pDBSession->m_aData[0]->DoubleSq(6) - math.DoubleSq(6)) < 1e-12)
-				{
-					int i = 0;
-				}
-			}
+				pFunction(_T(""), nullptr);
 		}
 		break;
 	case ID_PANEL_BUTTON_S:

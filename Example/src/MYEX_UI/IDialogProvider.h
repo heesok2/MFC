@@ -11,6 +11,6 @@ public:
 	~IDialogProvider() {}
 
 public:
-	BOOL ReqDialog(CDocBase* pDoc);
+	BOOL ReqDialog();
 };
 

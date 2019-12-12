@@ -10,9 +10,9 @@ IDialogProvider * IDialogProvider::Instance()
 	return &inst;
 }
 
-BOOL IDialogProvider::ReqDialog(CDocBase * pDoc)
+BOOL IDialogProvider::ReqDialog()
 {
-	CExampleDlg* pDlg = new CExampleDlg(pDoc);
+	CExampleDlg* pDlg = new CExampleDlg();
 	if (pDlg->Create())
 	{
 		pDlg->ShowWindow(SW_SHOW);
@@ -20,7 +20,7 @@ BOOL IDialogProvider::ReqDialog(CDocBase * pDoc)
 	}
 	else
 	{
-		ASSERT(g_warning);
+		ASSERT(0);
 		delete pDlg;
 	}
 

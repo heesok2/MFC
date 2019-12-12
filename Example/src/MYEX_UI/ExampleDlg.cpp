@@ -8,8 +8,8 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-CExampleDlg::CExampleDlg(CDocBase * pDoc, CWnd * pParent)
-	: CExDialog(CExampleDlg::IDD, pDoc, pParent)
+CExampleDlg::CExampleDlg(CWnd * pParent)
+	: CDialog(CExampleDlg::IDD, pParent)
 {
 }
 
@@ -19,16 +19,16 @@ CExampleDlg::~CExampleDlg()
 
 void CExampleDlg::DoDataExchange(CDataExchange * pDX)
 {
-	CExDialog::DoDataExchange(pDX);
+	CDialog::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CExampleDlg, CExDialog)
+BEGIN_MESSAGE_MAP(CExampleDlg, CDialog)
 
 END_MESSAGE_MAP();
 
 BOOL CExampleDlg::OnInitDialog()
 {
-	CExDialog::OnInitDialog();
+	CDialog::OnInitDialog();
 
 
 	return TRUE;
@@ -36,5 +36,5 @@ BOOL CExampleDlg::OnInitDialog()
 
 BOOL CExampleDlg::Create(CWnd * pParent)
 {
-	return CExDialog::Create(CExampleDlg::IDD, pParent);
+	return CDialog::Create(CExampleDlg::IDD, pParent);
 }
