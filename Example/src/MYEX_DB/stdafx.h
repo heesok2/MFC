@@ -39,6 +39,6 @@
 #ifndef __MYEX_DB__
 #define __MYEX_DB__
 
-#include "..\MYEX_LIB\AllProjectInclude.h"
+#include "plugin\AllProjectInclude.h"
 
 #endif

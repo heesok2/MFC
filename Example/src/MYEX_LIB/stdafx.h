@@ -39,6 +39,6 @@
 #ifndef __MYEX_LIB__
 #define __MYEX_LIB__
 
-#include "AllProjectInclude.h"
+#include "plugin\AllProjectInclude.h"
 
 #endif

@@ -58,12 +58,6 @@
     <ClInclude Include="ExMathLib.h">
       <Filter>LIBRARY</Filter>
     </ClInclude>
-    <ClInclude Include="AllProjectInclude.h">
-      <Filter>DEFINE</Filter>
-    </ClInclude>
-    <ClInclude Include="GlobalDefine.h">
-      <Filter>DEFINE</Filter>
-    </ClInclude>
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>

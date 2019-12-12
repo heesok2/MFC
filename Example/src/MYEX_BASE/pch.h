@@ -13,7 +13,7 @@
 #ifndef __MYEX_BASE__
 #define __MYEX_BASE__
 
-#include "..\MYEX_LIB\AllProjectInclude.h"
+#include "plugin\AllProjectInclude.h"
 
 #endif
 

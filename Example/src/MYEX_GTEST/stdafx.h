@@ -39,7 +39,7 @@
 #ifndef __MYEX_GTEST__
 #define __MYEX_GTEST__
 
-#include "..\MYEX_LIB\AllProjectInclude.h"
+#include "plugin\AllProjectInclude.h"
 
 #endif
 

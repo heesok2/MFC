@@ -15,4 +15,6 @@
 #ifndef __MYEX_UI__
 #define __MYEX_UI__
 
+#include "plugin\AllProjectInclude.h"
+
 #endif
