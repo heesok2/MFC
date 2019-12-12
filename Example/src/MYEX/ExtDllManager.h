@@ -10,7 +10,7 @@ public:
 	void LoadPlugin();
 	void UnloadPlugin();
 
-protected:
+public:
 	HMODULE hModule;
 
 };

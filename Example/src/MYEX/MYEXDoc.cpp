@@ -21,6 +21,7 @@
 
 #include "MYEXDoc.h"
 #include "..\MYEX_LIB\ExMathLib.h"
+#include "..\MYEX_DB\ExDBSession.h"
 
 #include <propkey.h>
 
@@ -46,6 +47,7 @@ END_MESSAGE_MAP()
 CMYEXDoc::CMYEXDoc() noexcept
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
+	m_pDBSession = std::make_shared<CExDBSession>();
 
 }
 
@@ -157,6 +159,21 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	{
 	case ID_PANEL_BUTTON_L:
 		{
+			auto pApp = (CMYEXApp*)AfxGetApp();
+
+			typedef BOOL(*lpFunction)(LPVOID);
+			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqDataBase");
+			if (pFunction != nullptr)
+				pFunction(this);
+
+			if (!m_pDBSession->m_aData.empty())
+			{
+				EX_MATH::CExMathLib math;
+				if (fabs(m_pDBSession->m_aData[0]->DoubleSq(6) - math.DoubleSq(6)) < 1e-12)
+				{
+					int i = 0;
+				}
+			}
 		}
 		break;
 	case ID_PANEL_BUTTON_S:

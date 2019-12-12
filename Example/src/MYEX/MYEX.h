@@ -47,7 +47,7 @@ protected:
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 
-protected:
+public:
 	CExtDllManager m_ExtDllManager;
 };
 

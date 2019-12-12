@@ -1,5 +1,6 @@
 #pragma once
 
+class CExDBSession;
 class AFX_EXT_CLASS CDocBase : public CDocument
 {
 public:
@@ -7,5 +8,6 @@ public:
 	virtual ~CDocBase();
 
 public:
+	virtual std::shared_ptr<CExDBSession> GetDBSession() = 0;
 
 };

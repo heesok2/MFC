@@ -239,6 +239,9 @@
     <ResourceCompile Include="MYEX_BASE.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
+      <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
       <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>
     </ProjectReference>

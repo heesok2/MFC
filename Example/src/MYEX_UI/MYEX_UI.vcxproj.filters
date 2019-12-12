@@ -19,6 +19,9 @@
     <Filter Include="DIALOG\Interface">
       <UniqueIdentifier>{2bb4e349-5369-4d8a-a8d8-828ee53d4f3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DATABASE">
+      <UniqueIdentifier>{26343a8b-49ba-45ef-8b99-cb0d038ecd66}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="IDialogProvider.cpp">
       <Filter>DIALOG\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ExDataDlg.cpp">
+      <Filter>DATABASE</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +75,9 @@
     </ClInclude>
     <ClInclude Include="IDialogProvider.h">
       <Filter>DIALOG\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ExDataDlg.h">
+      <Filter>DATABASE</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

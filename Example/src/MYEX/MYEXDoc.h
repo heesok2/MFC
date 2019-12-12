@@ -52,10 +52,16 @@ protected:
 	void SetSearchContent(const CString& value);
 #endif // SHARED_HANDLERS
 
+public:
+	virtual std::shared_ptr<CExDBSession> GetDBSession() { return m_pDBSession; }
+
 protected:
 	afx_msg void OnRibbonCategory(UINT uiMenu);
 	afx_msg void OnRibbonCategoryUI(CCmdUI* pCmdUI);
 
 	DECLARE_MESSAGE_MAP()
+
+public:
+	std::shared_ptr<CExDBSession> m_pDBSession;
 
 };

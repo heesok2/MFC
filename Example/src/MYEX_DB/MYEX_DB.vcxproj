@@ -207,6 +207,8 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExData.cpp" />
+    <ClCompile Include="ExDBSession.cpp" />
     <ClCompile Include="MYEX_DB.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -220,6 +222,8 @@
     <None Include="res\MYEX_DB.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExData.h" />
+    <ClInclude Include="ExDBSession.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="MYEX_DB.h" />
     <ClInclude Include="Resource.h" />
