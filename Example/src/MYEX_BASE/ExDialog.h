@@ -1,9 +1,7 @@
 #pragma once
 
-#include "ExtStart.h"
-
 class CDocBase;
-class __MY_EXT_CLASS__ CExDialog : public CDialog
+class AFX_EXT_CLASS CExDialog : public CDialog
 {
 public:
 	CExDialog(CDocBase* pDoc);
@@ -23,5 +21,3 @@ protected:
 	CDocBase* m_pMyDoc;
 
 };
-
-#include "ExtFinish.h"

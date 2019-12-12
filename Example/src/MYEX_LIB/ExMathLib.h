@@ -1,10 +1,8 @@
 #pragma once
 
-#include "ExtStart.h"
-
 namespace EX_MATH
 {
-	class __MY_EXT_CLASS__ CExMathLib
+	class AFX_EXT_CLASS CExMathLib
 	{
 	public:
 		CExMathLib();
@@ -14,5 +12,3 @@ namespace EX_MATH
 		double DoubleSq(double dNum);
 	};
 }
-
-#include "ExtFinish.h"

@@ -55,12 +55,6 @@
     <ClInclude Include="targetver.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
-    <ClInclude Include="ExtFinish.h">
-      <Filter>__GLOBAL__</Filter>
-    </ClInclude>
-    <ClInclude Include="ExtStart.h">
-      <Filter>__GLOBAL__</Filter>
-    </ClInclude>
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>

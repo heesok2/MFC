@@ -1,8 +1,6 @@
 #pragma once
 
-#include "ExtStart.h"
-
-class __MY_EXT_CLASS__ CDocBase : public CDocument
+class AFX_EXT_CLASS CDocBase : public CDocument
 {
 public:
 	CDocBase();
@@ -11,5 +9,3 @@ public:
 public:
 
 };
-
-#include "ExtFinish.h"

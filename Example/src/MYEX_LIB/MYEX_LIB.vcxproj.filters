@@ -70,12 +70,6 @@
     <ClInclude Include="MathLib.h">
       <Filter>LIBRARY</Filter>
     </ClInclude>
-    <ClInclude Include="ExtStart.h">
-      <Filter>__GLOBAL__</Filter>
-    </ClInclude>
-    <ClInclude Include="ExtFinish.h">
-      <Filter>__GLOBAL__</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_LIB.rc">
