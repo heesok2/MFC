@@ -20,6 +20,7 @@
 #endif
 
 #include "MYEXDoc.h"
+#include "MYPackage.h"
 #include "..\MYEX_LIB\ExMathLib.h"
 #include "..\MYEX_DB\ExDBSession.h"
 
@@ -48,11 +49,12 @@ CMYEXDoc::CMYEXDoc() noexcept
 {
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
 	m_pDBSession = std::make_shared<CExDBSession>();
-
+	m_pMyPackage = new CMYPackage();
 }
 
 CMYEXDoc::~CMYEXDoc()
 {
+	_SAFE_DEL(m_pMyPackage);
 }
 
 BOOL CMYEXDoc::OnNewDocument()
@@ -152,6 +154,13 @@ void CMYEXDoc::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 // CMYEXDoc 명령
+
+
+CPackage * CMYEXDoc::GetPackage()
+{
+	ASSERT(m_pMyPackage != nullptr);
+	return m_pMyPackage;
+}
 
 void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 {

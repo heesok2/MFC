@@ -25,6 +25,9 @@
     <Filter Include="EXTENSION">
       <UniqueIdentifier>{efe72beb-2101-4a13-8945-d45965e0d254}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DATABASE">
+      <UniqueIdentifier>{a3995229-c821-4cf9-9229-915852ea714e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -69,6 +72,9 @@
     <ClInclude Include="ExtDllManager.h">
       <Filter>EXTENSION</Filter>
     </ClInclude>
+    <ClInclude Include="MYPackage.h">
+      <Filter>DATABASE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -103,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="ExtDllManager.cpp">
       <Filter>EXTENSION</Filter>
+    </ClCompile>
+    <ClCompile Include="MYPackage.cpp">
+      <Filter>DATABASE</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

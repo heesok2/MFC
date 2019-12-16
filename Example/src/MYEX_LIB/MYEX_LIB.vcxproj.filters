@@ -64,6 +64,12 @@
     <ClInclude Include="MathLib.h">
       <Filter>LIBRARY</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\v141\plugin\AllProjectInclude.h">
+      <Filter>DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\v141\plugin\GlobalDefine.h">
+      <Filter>DEFINE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_LIB.rc">

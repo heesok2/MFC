@@ -222,6 +222,8 @@
     <None Include="res\MYEX_LIB.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\v141\plugin\AllProjectInclude.h" />
+    <ClInclude Include="..\..\include\v141\plugin\GlobalDefine.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="ExMathLib.h" />
     <ClInclude Include="MathLib.h" />

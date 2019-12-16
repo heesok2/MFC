@@ -10,6 +10,9 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{b1d2e9ba-6277-4c59-a134-77a9240dd7fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DATABASE">
+      <UniqueIdentifier>{850fe4d5-5853-4644-a7ca-b3fbd3fb5f63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MYEX_DB.cpp">
@@ -20,6 +23,12 @@
     </ClCompile>
     <ClCompile Include="ExDBSession.cpp" />
     <ClCompile Include="ExData.cpp" />
+    <ClCompile Include="Package.cpp">
+      <Filter>DATABASE</Filter>
+    </ClCompile>
+    <ClCompile Include="Module.cpp">
+      <Filter>DATABASE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYEX_DB.rc2">
@@ -47,6 +56,15 @@
     </ClInclude>
     <ClInclude Include="ExDBSession.h" />
     <ClInclude Include="ExData.h" />
+    <ClInclude Include="Package.h">
+      <Filter>DATABASE</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>DATABASE</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleBase.hpp">
+      <Filter>DATABASE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_DB.rc">

@@ -17,6 +17,7 @@
 
 #include "..\MYEX_BASE\DocBase.h"
 
+class CMYPackage;
 class CMYEXDoc : public CDocBase
 {
 protected: // serialization에서만 만들어집니다.
@@ -53,6 +54,7 @@ protected:
 #endif // SHARED_HANDLERS
 
 public:
+	virtual CPackage* GetPackage();
 	virtual std::shared_ptr<CExDBSession> GetDBSession() { return m_pDBSession; }
 
 protected:
@@ -63,5 +65,6 @@ protected:
 
 public:
 	std::shared_ptr<CExDBSession> m_pDBSession;
+	CMYPackage* m_pMyPackage;
 
 };
