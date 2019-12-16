@@ -79,6 +79,9 @@
     <ClInclude Include="ExDataDlg.h">
       <Filter>DATABASE</Filter>
     </ClInclude>
+    <ClInclude Include="PluginResManager.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_UI.rc">

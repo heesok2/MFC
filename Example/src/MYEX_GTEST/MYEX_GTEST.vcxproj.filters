@@ -25,6 +25,9 @@
     <ClCompile Include="PluginHandler.cpp">
       <Filter>Plugin</Filter>
     </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYEX_GTEST.rc2">
@@ -52,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="GoogleTestHelper.h" />
     <ClInclude Include="PluginHandler.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginResManager.h">
       <Filter>Plugin</Filter>
     </ClInclude>
   </ItemGroup>

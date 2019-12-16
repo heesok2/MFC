@@ -1,11 +1,12 @@
 #include "stdafx.h"
 #include "PluginHandler.h"
+#include "PluginResManager.h"
 #include "GoogleTestHelper.h"
 
 BOOL ReqService(LPCTSTR strArguments, LPVOID)
 {
-	CGoogleTestHelper helper(0, (CString)strArguments);
-	helper.Run();
+	SWITCH_RESOURCE;
 
-	return TRUE;
+	CGoogleTestHelper helper(0, (CString)strArguments);
+	return helper.Run();
 }
