@@ -175,6 +175,9 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqService");
 			if (pFunction != nullptr)
 				pFunction(_T(""), nullptr);*/
+
+			mylib::CZipLib lib;
+			lib.Example();
 		}
 		break;
 	case ID_PANEL_BUTTON_S:

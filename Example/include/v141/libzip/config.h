@@ -67,7 +67,7 @@
 #define LONG_LIBZIP 4
 #define LONG_LONG_LIBZIP 8
 #define SIZEOF_OFF_T 4
-#define SIZE_T_LIBZIP 8
+#define SIZE_T_LIBZIP 4
 /* #undef SSIZE_T_LIBZIP */
 /* #undef HAVE_DIRENT_H */
 /* #undef HAVE_FTS_H */
