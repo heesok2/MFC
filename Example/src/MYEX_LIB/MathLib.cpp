@@ -2,13 +2,16 @@
 #include "MathLib.h"
 #include "ExMathLib.h"
 
-CMathLib::CMathLib()
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+mylib::CMathLib::CMathLib()
 {
-	EX_MATH::CExMathLib lib;
-	lib.DoubleSq(12);
 }
 
-
-CMathLib::~CMathLib()
+mylib::CMathLib::~CMathLib()
 {
 }

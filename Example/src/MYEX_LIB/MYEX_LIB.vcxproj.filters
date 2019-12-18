@@ -19,6 +19,15 @@
     <Filter Include="INTERFACE">
       <UniqueIdentifier>{641b91ea-c762-454b-829b-d4a7da9fe783}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LIBRARY\Zip">
+      <UniqueIdentifier>{138b4a10-d958-4dd6-a11e-01b200fbe59e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIBRARY\Math">
+      <UniqueIdentifier>{0ee586a8-9eab-435f-bbdf-a7bade3a1e61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIBRARY\String">
+      <UniqueIdentifier>{c4fbe6a1-43f7-4379-a7ff-dde848ff6f7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -27,11 +36,17 @@
     <ClCompile Include="MYEX_LIB.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
-    <ClCompile Include="ExMathLib.cpp">
-      <Filter>LIBRARY</Filter>
+    <ClCompile Include="StringLib.cpp">
+      <Filter>LIBRARY\String</Filter>
     </ClCompile>
     <ClCompile Include="MathLib.cpp">
-      <Filter>LIBRARY</Filter>
+      <Filter>LIBRARY\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="ExMathLib.cpp">
+      <Filter>LIBRARY\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipLib.cpp">
+      <Filter>LIBRARY\Zip</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,20 +70,26 @@
     <ClInclude Include="MYEX_LIB.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
-    <ClInclude Include="ExMathLib.h">
-      <Filter>LIBRARY</Filter>
-    </ClInclude>
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
-    </ClInclude>
-    <ClInclude Include="MathLib.h">
-      <Filter>LIBRARY</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\v141\plugin\AllProjectInclude.h">
       <Filter>DEFINE</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\v141\plugin\GlobalDefine.h">
       <Filter>DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="StringLib.h">
+      <Filter>LIBRARY\String</Filter>
+    </ClInclude>
+    <ClInclude Include="MathLib.h">
+      <Filter>LIBRARY\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ExMathLib.h">
+      <Filter>LIBRARY\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipLib.h">
+      <Filter>LIBRARY\Zip</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

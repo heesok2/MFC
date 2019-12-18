@@ -22,6 +22,7 @@
 #include "MYEXDoc.h"
 #include "MYPackage.h"
 #include "..\MYEX_LIB\ExMathLib.h"
+#include "..\MYEX_LIB\ZipLib.h"
 #include "..\MYEX_DB\ExDBSession.h"
 
 #include <propkey.h>
@@ -168,12 +169,12 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	{
 	case ID_PANEL_BUTTON_L:
 		{
-			auto pApp = (CMYEXApp*)AfxGetApp();
+			/*auto pApp = (CMYEXApp*)AfxGetApp();
 
 			typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
 			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqService");
 			if (pFunction != nullptr)
-				pFunction(_T(""), nullptr);
+				pFunction(_T(""), nullptr);*/
 		}
 		break;
 	case ID_PANEL_BUTTON_S:

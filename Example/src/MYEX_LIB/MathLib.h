@@ -1,9 +1,16 @@
 #pragma once
 
-class CMathLib
-{
-public:
-	CMathLib();
-	virtual ~CMathLib();
-};
+#ifndef DEF_MATHLIB
+#define DEF_MATHLIB
 
+namespace mylib
+{
+	class CMathLib
+	{
+	public:
+		CMathLib();
+		~CMathLib();
+	};
+}
+
+#endif // !DEF_MATHLIB
