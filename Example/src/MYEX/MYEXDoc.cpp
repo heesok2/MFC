@@ -172,7 +172,7 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	{
 	case ID_MYEX_DIALOG:
 		{
-			CAppDialogProvider::DoModal(this, _T("CExampleDlg"));
+			CAppDialogProvider::DoModal(this, _T("CAppListCtrlDlg"));
 		}
 		break;
 	case ID_PANEL_BUTTON_L:
@@ -228,6 +228,7 @@ void CMYEXDoc::OnRibbonCategoryUI(CCmdUI * pCmdUI)
 {
 	switch (pCmdUI->m_nID)
 	{
+	case ID_MYEX_DIALOG:
 	case ID_PANEL_BUTTON_L:
 	case ID_PANEL_BUTTON_S:
 		{

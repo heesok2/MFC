@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MYEX_DB.cpp">
-      <Filter>__GLOBAL__</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
@@ -28,6 +25,9 @@
     </ClCompile>
     <ClCompile Include="Module.cpp">
       <Filter>DATABASE</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,9 +41,6 @@
   <ItemGroup>
     <ClInclude Include="Resource.h">
       <Filter>__GLOBAL__\RC</Filter>
-    </ClInclude>
-    <ClInclude Include="MYEX_DB.h">
-      <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>__GLOBAL__</Filter>

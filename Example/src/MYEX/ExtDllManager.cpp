@@ -29,7 +29,7 @@ void CExtDllManager::LoadPlugin()
 	auto _hModule = ::LoadLibrary(ProgramPath);
 	if (NULL == _hModule)
 	{
-		ASSERT(0);
+		//ASSERT(0);
 		return;
 	}
 

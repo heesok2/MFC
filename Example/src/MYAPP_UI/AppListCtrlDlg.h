@@ -2,13 +2,13 @@
 
 #include "..\MYEX_BASE\ExDialog.h"
 
-class CExListCtrlDlg : public CExDialog
+class CAppListCtrlDlg : public CExDialog
 {
 public:
-	CExListCtrlDlg(CDocBase* pDoc, CWnd* pParent = nullptr);
-	virtual ~CExListCtrlDlg();
+	CAppListCtrlDlg(CDocBase* pDoc, CWnd* pParent = nullptr);
+	virtual ~CAppListCtrlDlg();
 
-	enum { IDD = IDD_APPUI_EXAMPLE_DLG };
+	enum { IDD = IDD_APPUI_LISTCTRL_DLG };
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX) override;

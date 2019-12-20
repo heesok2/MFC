@@ -33,9 +33,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
-    <ClCompile Include="MYEX_LIB.cpp">
-      <Filter>__GLOBAL__</Filter>
-    </ClCompile>
     <ClCompile Include="StringLib.cpp">
       <Filter>LIBRARY\String</Filter>
     </ClCompile>
@@ -47,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="ZipLib.cpp">
       <Filter>LIBRARY\Zip</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -65,9 +65,6 @@
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>__GLOBAL__</Filter>
-    </ClInclude>
-    <ClInclude Include="MYEX_LIB.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="LinkLib.h">

@@ -12,10 +12,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MYEX_GL.cpp">
+    <ClCompile Include="pch.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="dllmain.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,9 +32,6 @@
       <Filter>__GLOBAL__\RC</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
-      <Filter>__GLOBAL__</Filter>
-    </ClInclude>
-    <ClInclude Include="MYEX_GL.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
