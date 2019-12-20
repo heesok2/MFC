@@ -247,6 +247,9 @@
       <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CHECKBOX_BIT24.bmp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

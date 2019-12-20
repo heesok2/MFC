@@ -73,4 +73,9 @@
       <Filter>__GLOBAL__\RC</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CHECKBOX_BIT24.bmp">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
