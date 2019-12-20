@@ -208,9 +208,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityNode.cpp" />
     <ClCompile Include="ExData.cpp" />
     <ClCompile Include="ExDBSession.cpp" />
     <ClCompile Include="Module.cpp" />
+    <ClCompile Include="ModuleElem.cpp" />
+    <ClCompile Include="ModuleMesh.cpp" />
+    <ClCompile Include="ModuleNode.cpp" />
     <ClCompile Include="Package.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -224,11 +229,16 @@
     <None Include="res\MYEX_DB.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityNode.h" />
     <ClInclude Include="ExData.h" />
     <ClInclude Include="ExDBSession.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleBase.hpp" />
+    <ClInclude Include="ModuleElem.h" />
+    <ClInclude Include="ModuleMesh.h" />
+    <ClInclude Include="ModuleNode.h" />
     <ClInclude Include="Package.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />

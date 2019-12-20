@@ -1,16 +1,19 @@
 #pragma once
 
-class CModule;
-class AFX_EXT_CLASS CPackage
+namespace mydb
 {
-public:
-	CPackage();
-	virtual ~CPackage();
-	
-public:
-	virtual void CreateModule() = 0;
+	class CModule;
+	class AFX_EXT_CLASS CPackage
+	{
+	public:
+		CPackage();
+		virtual ~CPackage();
 
-protected:
-	std::map<ETYPE, CModule*> m_mModule;
+	public:
+		virtual void CreateModule() = 0;
 
-};
+	protected:
+		std::map<MYTYPE, std::shared_ptr<CModule>> m_mModule;
+
+	};
+}

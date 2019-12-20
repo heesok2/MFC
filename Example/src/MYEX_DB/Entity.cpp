@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Package.h"
+#include "Entity.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -7,10 +7,10 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-mydb::CPackage::CPackage()
+mydb::CEntity::CEntity()
 {
 }
 
-mydb::CPackage::~CPackage()
+mydb::CEntity::~CEntity()
 {
 }

@@ -5,97 +5,100 @@
 
 #include "Module.h"
 
-template <class TD>
-class CModuleData : public CModule
+namespace mydb
 {
-public:
-	CModuleData(CPackage * pPackage) 
-		: CModule(pPackage) 
-	{}
-	virtual ~CModuleData() {}
-
-public: // Data 
-	virtual void Clear() 
-	{ 
-		m_Dictionary.Clear(); 
-	}
-
-	virtual BOOL Empty()
+	template <class TD>
+	class CModuleData : public mydb::CModule
 	{
-		return m_Dictionary.IsEmpty();
-	}
+	public:
+		CModuleData(CPackage * pPackage)
+			: CModule(pPackage)
+		{}
+		virtual ~CModuleData() {}
 
-	virtual BOOL Exist(DKEY key)
-	{
-		auto itr = m_Dictionary.Find(key);
-		return ITR_IS_VALID(itr);
-	}
+	public: // Data 
+		virtual void Clear()
+		{
+			m_Dictionary.Clear();
+		}
 
-	virtual DITER Find(DKEY key)
-	{
-		return m_Dictionary.Find(key);
-	}
+		virtual BOOL Empty()
+		{
+			return m_Dictionary.IsEmpty();
+		}
 
-	virtual BOOL Find(DKEY key, TD& data)
-	{
-		auto itr = m_Dictionary.Find(key);
-		if (!ITR_IS_VALID(itr)) return FALSE;
+		virtual BOOL Exist(MYKEY key)
+		{
+			auto itr = m_Dictionary.Find(key);
+			return ITR_IS_VALID(itr);
+		}
 
-		data = m_Dictionary.GetAtNU(itr);
-		return TRUE;
-	}
+		virtual MYITR Find(MYKEY key)
+		{
+			return m_Dictionary.Find(key);
+		}
 
-	virtual DITER InsertNU(const TD& data)
-	{
-		return m_Dictionary.InsertNU(data);
-	}
+		virtual BOOL Find(MYKEY key, TD& data)
+		{
+			auto itr = m_Dictionary.Find(key);
+			if (!ITR_IS_VALID(itr)) return FALSE;
 
-	virtual BOOL SetAtNU(DITER itr, const TD& data)
-	{
-		return m_Dictionary.SetAtNU(itr, data);
-	}
+			data = m_Dictionary.GetAtNU(itr);
+			return TRUE;
+		}
 
-	virtual BOOL Remove(DITER itr)
-	{
-		return m_Dictionary.Remove(itr);
-	}
+		virtual MYITR InsertNU(const TD& data)
+		{
+			return m_Dictionary.InsertNU(data);
+		}
 
-	virtual const TD& GetAtNU(DITER itr) const
-	{
-		return m_Dictionary.GetAtNU(itr);
-	}
+		virtual BOOL SetAtNU(MYITR itr, const TD& data)
+		{
+			return m_Dictionary.SetAtNU(itr, data);
+		}
 
-	virtual long GetIterList(std::vector<DITER>& lstIter)
-	{
-		return m_Dictionary.GetList(lstIter);
-	}
+		virtual BOOL Remove(MYITR itr)
+		{
+			return m_Dictionary.Remove(itr);
+		}
 
-	virtual long GetDataList(std::vector<TD>& lstData)
-	{
-		return m_Dictionary.GetListData(lstData);
-	}
+		virtual const TD& GetAtNU(MYITR itr) const
+		{
+			return m_Dictionary.GetAtNU(itr);
+		}
 
-	virtual DKEY GetNewKey()
-	{
-		return m_Dictionary.GetNewKey();
-	}
+		virtual long GetIterList(std::vector<MYITR>& lstIter)
+		{
+			return m_Dictionary.GetList(lstIter);
+		}
 
-public:
-	virtual DITER GetDefaultData()
-	{
-		ASSERT(g_warning);
-		return (DITER)nullptr;
-	}
+		virtual long GetDataList(std::vector<TD>& lstData)
+		{
+			return m_Dictionary.GetListData(lstData);
+		}
 
-	virtual void SetDefaultData() 
-	{
-		ASSERT(g_warning);
-	}
+		virtual MYKEY GetNewKey()
+		{
+			return m_Dictionary.GetNewKey();
+		}
 
-protected:
-	CEntityDictionary<TD> m_Dictionary;
+	public:
+		virtual MYITR GetDefaultData()
+		{
+			ASSERT(g_warning);
+			return (MYITR)nullptr;
+		}
 
-};
+		virtual void SetDefaultData()
+		{
+			ASSERT(g_warning);
+		}
+
+	protected:
+		CEntityDictionary<TD> m_Dictionary;
+
+	};
+}
 
 #endif // !MODULEDATA_DEF
 

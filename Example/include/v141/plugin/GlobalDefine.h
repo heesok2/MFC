@@ -5,8 +5,10 @@
 
 static int g_warning = 0;
 
-#define ETYPE UINT // Entity Type
-#define EKEY UINT // Entity Key
+#define MYTYPE UINT
+#define MYKEY UINT 
+#define MYITR DWORD_PTR 
+#define VPTR_SIZE sizeof(DWORD_PTR) // Virtual method table
 
 #define _SAFE_DEL(x) { if(x) { delete (x); } (x) = nullptr; }
 

@@ -17,7 +17,7 @@
 
 #include "..\MYEX_BASE\DocBase.h"
 
-class CMYPackage;
+class CMYEXPackage;
 class CMYEXDoc : public CDocBase
 {
 protected: // serialization에서만 만들어집니다.
@@ -54,8 +54,7 @@ protected:
 #endif // SHARED_HANDLERS
 
 public:
-	virtual CPackage* GetPackage();
-	virtual std::shared_ptr<CExDBSession> GetDBSession() { return m_pDBSession; }
+	virtual std::shared_ptr<mydb::CPackage> GetPackage();
 
 protected:
 	afx_msg void OnRibbonCategory(UINT uiMenu);
@@ -64,7 +63,6 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 public:
-	std::shared_ptr<CExDBSession> m_pDBSession;
-	CMYPackage* m_pMyPackage;
+	MYPACKAGE m_pMyPackage;
 
 };

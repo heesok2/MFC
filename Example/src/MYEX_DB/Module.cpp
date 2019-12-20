@@ -7,11 +7,11 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-CModule::CModule(CPackage * pPackage)
+mydb::CModule::CModule(CPackage * pPackage)
 	: m_pPackage(pPackage)
 {
 }
 
-CModule::~CModule()
+mydb::CModule::~CModule()
 {
 }

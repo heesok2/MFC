@@ -10,8 +10,20 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{b1d2e9ba-6277-4c59-a134-77a9240dd7fc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DATABASE">
+    <Filter Include="DBMS">
       <UniqueIdentifier>{850fe4d5-5853-4644-a7ca-b3fbd3fb5f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE">
+      <UniqueIdentifier>{a8a10c88-ffc7-4b37-9a14-cb4f95412e83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE\Node">
+      <UniqueIdentifier>{afad1696-3002-42f2-8366-bd6793cd016b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE\Element">
+      <UniqueIdentifier>{48438c69-2eaa-460f-8a63-7df888c6d7e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE\Mesh">
+      <UniqueIdentifier>{e9abfd56-ab2a-47e0-8f3d-dc8c1c67ed88}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -21,13 +33,28 @@
     <ClCompile Include="ExDBSession.cpp" />
     <ClCompile Include="ExData.cpp" />
     <ClCompile Include="Package.cpp">
-      <Filter>DATABASE</Filter>
+      <Filter>DBMS</Filter>
     </ClCompile>
     <ClCompile Include="Module.cpp">
-      <Filter>DATABASE</Filter>
+      <Filter>DBMS</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>DBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleNode.cpp">
+      <Filter>MODULE\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleElem.cpp">
+      <Filter>MODULE\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleMesh.cpp">
+      <Filter>MODULE\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityNode.cpp">
+      <Filter>MODULE\Node</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,13 +81,28 @@
     <ClInclude Include="ExDBSession.h" />
     <ClInclude Include="ExData.h" />
     <ClInclude Include="Package.h">
-      <Filter>DATABASE</Filter>
+      <Filter>DBMS</Filter>
     </ClInclude>
     <ClInclude Include="Module.h">
-      <Filter>DATABASE</Filter>
+      <Filter>DBMS</Filter>
     </ClInclude>
     <ClInclude Include="ModuleBase.hpp">
-      <Filter>DATABASE</Filter>
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleNode.h">
+      <Filter>MODULE\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleElem.h">
+      <Filter>MODULE\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleMesh.h">
+      <Filter>MODULE\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityNode.h">
+      <Filter>MODULE\Node</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

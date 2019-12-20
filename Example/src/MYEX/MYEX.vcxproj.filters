@@ -72,7 +72,7 @@
     <ClInclude Include="ExtDllManager.h">
       <Filter>EXTENSION</Filter>
     </ClInclude>
-    <ClInclude Include="MYPackage.h">
+    <ClInclude Include="MYEXPackage.h">
       <Filter>DATABASE</Filter>
     </ClInclude>
   </ItemGroup>
@@ -110,7 +110,7 @@
     <ClCompile Include="ExtDllManager.cpp">
       <Filter>EXTENSION</Filter>
     </ClCompile>
-    <ClCompile Include="MYPackage.cpp">
+    <ClCompile Include="MYEXPackage.cpp">
       <Filter>DATABASE</Filter>
     </ClCompile>
   </ItemGroup>
