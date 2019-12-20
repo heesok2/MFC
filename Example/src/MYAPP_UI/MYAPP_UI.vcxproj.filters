@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{ad716767-7234-4a61-b35c-df81f556dd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{3bae3ebd-d92c-49cd-90c0-aef4dd1245e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{86d50dd9-4aa7-41b4-8a74-c38588e64a9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DIALOG">
+      <UniqueIdentifier>{538a55ef-22ec-4878-b806-410325246317}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DIALOG\Example">
+      <UniqueIdentifier>{20d19ff2-830e-412b-ae29-9ad327c1898c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MYAPP_UI.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDialogProvider.cpp">
+      <Filter>DIALOG</Filter>
+    </ClCompile>
+    <ClCompile Include="ExampleDlg.cpp">
+      <Filter>DIALOG\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="ExListCtrlDlg.cpp">
+      <Filter>DIALOG\Example</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYAPP_UI.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYAPP_UI.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="MYAPP_UI.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="AppDialogProvider.h">
+      <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="ExampleDlg.h">
+      <Filter>DIALOG\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="ExListCtrlDlg.h">
+      <Filter>DIALOG\Example</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYAPP_UI.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

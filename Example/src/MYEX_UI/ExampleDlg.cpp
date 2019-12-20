@@ -1,3 +1,4 @@
+#include "..\MYAPP_UI\ExampleDlg.h"
 #include "pch.h"
 #include "Resource.h"
 #include "ExampleDlg.h"

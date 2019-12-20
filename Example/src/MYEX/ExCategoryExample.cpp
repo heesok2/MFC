@@ -24,16 +24,21 @@ void CExCategoryExample::SetMenu(CMFCRibbonBar * pRibbonBar)
 	m_pRibbonBar = pRibbonBar;
 	m_pCategory = pRibbonBar->AddCategory(_T("Category"), IDB_MENU_EXAMPLE_SMALL, IDB_MENU_EXAMPLE_LARGE);
 
-	m_pPanel = m_pCategory->AddPanel(_T("ExPanel"));
+	m_pPanel = m_pCategory->AddPanel(_T("Panel"));
 	m_pPanel->SetCenterColumnVert(TRUE);
+	
+	m_pbtnDialog = new CMFCRibbonButton(ID_MYEX_DIALOG, _T("Dialog Example"), -1, 0);
+	m_pbtnDialog->SetToolTipText(_T("Dialog Example ToolTip"));
+	m_pbtnDialog->SetDescription(_T("Dialog Example Description"));
+	m_pPanel->Add(m_pbtnDialog);
 
-	m_pButtonL = new CMFCRibbonButton(ID_PANEL_BUTTON_L, _T("ExButton Large"), -1, 0);
-	m_pButtonL->SetToolTipText(_T("ExButton Large ToolTip"));
-	m_pButtonL->SetDescription(_T("ExButton Large Description"));
+	m_pButtonL = new CMFCRibbonButton(ID_PANEL_BUTTON_L, _T("Large Button"), -1, 0);
+	m_pButtonL->SetToolTipText(_T("Large Button ToolTip"));
+	m_pButtonL->SetDescription(_T("Large Button Description"));
 	m_pPanel->Add(m_pButtonL);
 
-	m_pButtonS = new CMFCRibbonButton(ID_PANEL_BUTTON_S, _T("ExButton Small"), 0, -1);
-	m_pButtonS->SetToolTipText(_T("ExButton Small ToolTip"));
-	m_pButtonS->SetDescription(_T("ExButton Small Description"));
+	m_pButtonS = new CMFCRibbonButton(ID_PANEL_BUTTON_S, _T("Small Button "), 0, -1);
+	m_pButtonS->SetToolTipText(_T("Small Button ToolTip"));
+	m_pButtonS->SetDescription(_T("Small Button Description"));
 	m_pPanel->Add(m_pButtonS);	
 }

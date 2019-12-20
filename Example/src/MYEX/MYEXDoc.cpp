@@ -24,6 +24,7 @@
 #include "..\MYEX_LIB\ExMathLib.h"
 #include "..\MYEX_LIB\ZipLib.h"
 #include "..\MYEX_DB\ExDBSession.h"
+#include "..\MYAPP_UI\AppDialogProvider.h"
 
 #include <propkey.h>
 
@@ -38,9 +39,11 @@ IMPLEMENT_DYNCREATE(CMYEXDoc, CDocument)
 BEGIN_MESSAGE_MAP(CMYEXDoc, CDocument)
 	ON_COMMAND_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategory)
 	ON_COMMAND_RANGE(ID_PANEL_BUTTON_S, ID_PANEL_BUTTON_S, OnRibbonCategory)
-	
+	ON_COMMAND_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategory)
+
 	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategoryUI)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_S, ID_PANEL_BUTTON_S, OnRibbonCategoryUI)
+	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategoryUI)
 END_MESSAGE_MAP()
 
 
@@ -167,17 +170,19 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 {
 	switch (uiMenu)
 	{
+	case ID_MYEX_DIALOG:
+		{
+			CAppDialogProvider::DoModal(this, _T("CExampleDlg"));
+		}
+		break;
 	case ID_PANEL_BUTTON_L:
 		{
-			/*auto pApp = (CMYEXApp*)AfxGetApp();
+			auto pApp = (CMYEXApp*)AfxGetApp();
 
 			typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
 			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqService");
 			if (pFunction != nullptr)
-				pFunction(_T(""), nullptr);*/
-
-			mylib::CZipLib lib;
-			lib.Example();
+				pFunction(_T(""), nullptr);
 		}
 		break;
 	case ID_PANEL_BUTTON_S:
@@ -210,7 +215,7 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 
 			::FreeLibrary(hModule);
 		}
-		break;	
+		break;
 	default:
 		{
 			ASSERT(g_warning);

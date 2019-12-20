@@ -18,6 +18,7 @@ protected:
 	CMFCRibbonPanel* m_pPanel;
 	CMFCRibbonButton* m_pButtonL;
 	CMFCRibbonButton* m_pButtonS;
+	CMFCRibbonButton* m_pbtnDialog;
 	CMFCRibbonCheckBox* m_pCheckBox;
 	CMFCRibbonComboBox*	m_pComboBox;
 	CMFCRibbonButton* m_pButtonMenu;
