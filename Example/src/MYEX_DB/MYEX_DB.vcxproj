@@ -210,8 +210,6 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityNode.cpp" />
-    <ClCompile Include="ExData.cpp" />
-    <ClCompile Include="ExDBSession.cpp" />
     <ClCompile Include="Module.cpp" />
     <ClCompile Include="ModuleElem.cpp" />
     <ClCompile Include="ModuleMesh.cpp" />
@@ -229,10 +227,11 @@
     <None Include="res\MYEX_DB.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DataBaseDefine.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityDefine.h" />
+    <ClInclude Include="EntityDictionary.hpp" />
     <ClInclude Include="EntityNode.h" />
-    <ClInclude Include="ExData.h" />
-    <ClInclude Include="ExDBSession.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleBase.hpp" />

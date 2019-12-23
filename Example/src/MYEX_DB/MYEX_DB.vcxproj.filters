@@ -30,8 +30,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
-    <ClCompile Include="ExDBSession.cpp" />
-    <ClCompile Include="ExData.cpp" />
     <ClCompile Include="Package.cpp">
       <Filter>DBMS</Filter>
     </ClCompile>
@@ -78,8 +76,6 @@
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
     </ClInclude>
-    <ClInclude Include="ExDBSession.h" />
-    <ClInclude Include="ExData.h" />
     <ClInclude Include="Package.h">
       <Filter>DBMS</Filter>
     </ClInclude>
@@ -103,6 +99,15 @@
     </ClInclude>
     <ClInclude Include="EntityNode.h">
       <Filter>MODULE\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityDictionary.hpp">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBaseDefine.h">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityDefine.h">
+      <Filter>MODULE</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -9,17 +9,17 @@ BOOL ReqService(LPCTSTR, LPVOID)
 {
 	SWITCH_RESOURCE;
 
-	auto pApp = AfxGetApp();
-	if (pApp == nullptr)
-		return FALSE;
+	//auto pApp = AfxGetApp();
+	//if (pApp == nullptr)
+	//	return FALSE;
 
-	auto pos = pApp->GetFirstDocTemplatePosition();
-	auto pDocTemp = pApp->GetNextDocTemplate(pos);
-	if (pDocTemp == nullptr)
-		return FALSE;
+	//auto pos = pApp->GetFirstDocTemplatePosition();
+	//auto pDocTemp = pApp->GetNextDocTemplate(pos);
+	//if (pDocTemp == nullptr)
+	//	return FALSE;
 
-	auto pDocPos = pDocTemp->GetFirstDocPosition();
-	auto pDoc = pDocTemp->GetNextDoc(pDocPos);
+	//auto pDocPos = pDocTemp->GetFirstDocPosition();
+	//auto pDoc = pDocTemp->GetNextDoc(pDocPos);
 
 	return IDialogProvider::Instance()->ReqDialog();
 }

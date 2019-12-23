@@ -4,6 +4,7 @@
 #define MODULEDATA_DEF
 
 #include "Module.h"
+#include "EntityDictionary.hpp"
 
 namespace mydb
 {

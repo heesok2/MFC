@@ -24,7 +24,6 @@
 
 #include "..\MYEX_LIB\ExMathLib.h"
 #include "..\MYEX_LIB\ZipLib.h"
-#include "..\MYEX_DB\ExDBSession.h"
 #include "..\MYAPP_UI\AppDialogProvider.h"
 
 #include <propkey.h>

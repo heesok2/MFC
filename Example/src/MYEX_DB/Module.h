@@ -9,6 +9,9 @@ namespace mydb
 		CModule(CPackage* pPackage);
 		virtual ~CModule();
 
+	public:
+		virtual MYTYPE GetType() = 0;
+
 	protected:
 		CPackage* m_pPackage;
 
