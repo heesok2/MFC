@@ -9,7 +9,10 @@ namespace mydb
 		virtual ~CEntity();
 
 	public:
-		virtual const MYKEY GetKey() const = 0;
+		virtual const MYKEY GetKey() const
+		{
+			return *((MYKEY*)(((BYTE*)this) + VPTR_SIZE));
+		}
 
 	};
 }

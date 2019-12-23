@@ -12,6 +12,6 @@ public:
 	virtual const MYKEY GetKey() const override;
 
 public:
-	MYKEY myKey;
+	MYKEY myKey; // Must be defined first.
 
 };
