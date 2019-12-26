@@ -7,6 +7,7 @@ enum E_MYTYP_DATA
 {
 	MYTYP_UNKNOWN = 0
 	, MYTYP_NODE
+
 	, MYTYP_NUM
 };
 

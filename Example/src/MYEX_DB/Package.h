@@ -11,9 +11,11 @@ namespace mydb
 
 	public:
 		virtual void CreateModule() = 0;
+		virtual std::shared_ptr<CModule> GetModule(MYTYPE _type);
 
 	protected:
-		std::map<MYTYPE, std::shared_ptr<CModule>> m_mModule;
+		std::map<MYTYPE, UINT> m_mSeqIndex;
+		std::vector<std::shared_ptr<CModule>> m_aModule;
 
 	};
 }

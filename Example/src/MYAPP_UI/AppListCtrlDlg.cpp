@@ -2,6 +2,8 @@
 #include "Resource.h"
 #include "AppListCtrlDlg.h"
 
+#include "..\MYEX_BASE\DocBase.h"
+
 CAppListCtrlDlg::CAppListCtrlDlg(CDocBase * pDoc, CWnd * pParent)
 	: CExDialog(CAppListCtrlDlg::IDD, pDoc, pParent)
 {
@@ -44,6 +46,8 @@ void CAppListCtrlDlg::SetControl()
 	SetListHeader();
 
 	SetListItem();
+
+
 }
 
 void CAppListCtrlDlg::SetListHeader()
