@@ -10,20 +10,6 @@ using namespace mydb;
 
 void TCExample::SetUp()
 {
-	auto pApp = AfxGetApp();
-
-	auto posDocTmp = pApp->GetFirstDocTemplatePosition();
-	while (posDocTmp)
-	{
-		auto pDocTmp = pApp->GetNextDocTemplate(posDocTmp);
-		auto posDoc = pDocTmp->GetFirstDocPosition();
-		while (posDoc)
-		{
-			auto pDoc = pDocTmp->GetNextDoc(posDoc);
-
-		}
-	}
-
 	auto pWnd = AfxGetMainWnd();
 	if (pWnd != nullptr && IsWindow(pWnd->GetSafeHwnd()))
 	{
@@ -55,16 +41,18 @@ TEST_F(TCExample, ExistPackage)
 
 TEST_F(TCExample, ExistModule)
 {
-	EXPECT_TRUE(m_pMyDoc != nullptr);
-
-	auto pPackage = m_pMyDoc->GetPackage();
-	auto pos = pPackage->GetHeader();
-	while (pos != pPackage->GetEnd())
+	if (m_pMyDoc != nullptr)
 	{
-		auto pModule = pPackage->Get(pos);
+		auto pPackage = m_pMyDoc->GetPackage();
+		auto pos = pPackage->GetHeader();
+		while (pos != pPackage->GetEnd())
+		{
+			auto pModule = pPackage->Get(pos);
 
-		ASSERT_TRUE(pModule->GetType() == pos->first);
+			EXPECT_TRUE(pModule != nullptr);
+			ASSERT_TRUE(pModule->GetType() == pos->first);
 
-		pPackage->Next(pos);
-	}
+			pPackage->Next(pos);
+		}
+	}	
 }
