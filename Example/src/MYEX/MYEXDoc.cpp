@@ -38,11 +38,11 @@
 IMPLEMENT_DYNCREATE(CMYEXDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMYEXDoc, CDocument)
-	ON_COMMAND_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategory)
+	ON_COMMAND_RANGE(ID_MYEX_PLUGIN_UI, ID_MYEX_PLUGIN_UI, OnRibbonCategory)
 	ON_COMMAND_RANGE(ID_MYEX_GTEST, ID_MYEX_GTEST, OnRibbonCategory)
 	ON_COMMAND_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategory)
 
-	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategoryUI)
+	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_PLUGIN_UI, ID_MYEX_PLUGIN_UI, OnRibbonCategoryUI)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_GTEST, ID_MYEX_GTEST, OnRibbonCategoryUI)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategoryUI)
 END_MESSAGE_MAP()
@@ -175,7 +175,7 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 			CAppDialogProvider::DoModal(this, _T("CAppListCtrlDlg"));
 		}
 		break;
-	case ID_PANEL_BUTTON_L:
+	case ID_MYEX_PLUGIN_UI:
 		{
 			auto pApp = (CMYEXApp*)AfxGetApp();
 			auto pExtMgr = pApp->GetExtManager();
@@ -217,7 +217,7 @@ void CMYEXDoc::OnRibbonCategoryUI(CCmdUI * pCmdUI)
 	switch (pCmdUI->m_nID)
 	{
 	case ID_MYEX_DIALOG:
-	case ID_PANEL_BUTTON_L:
+	case ID_MYEX_PLUGIN_UI:
 	case ID_MYEX_GTEST:
 		{
 

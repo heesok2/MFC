@@ -3,7 +3,7 @@
 // MYEX_UI.rc에서 사용되고 있습니다.
 //
 
-#define IDD_EXAMPLE_DLG                 3000
+#define IDD_EXAMPLE_DLG                 1000
 
 // Next default values for new objects
 // 

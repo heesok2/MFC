@@ -26,11 +26,17 @@ INT_PTR CAppDialogProvider::DoModal(CDocBase * pDoc, LPCTSTR lpDialogName, LPVOI
 	CRect rcMain;
 	pMainWnd->GetWindowRect(rcMain);
 
-	if (wcscmp(lpDialogName, _T("CExampleDlg")) == 0)
+	if (_tcscmp(lpDialogName, _T("CExampleDlg")) == 0)
 	{
-		
+		CExampleDlg dlg(pDoc);
+		if (lpParam != nullptr)
+		{
+			// Unknown
+		}
+
+		return dlg.DoModal();
 	}
-	else if (wcscmp(lpDialogName, _T("CAppListCtrlDlg")) == 0)
+	else if (_tcscmp(lpDialogName, _T("CAppListCtrlDlg")) == 0)
 	{
 		CAppListCtrlDlg dlg(pDoc);
 		if (lpParam != nullptr)
