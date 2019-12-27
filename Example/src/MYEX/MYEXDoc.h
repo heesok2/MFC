@@ -63,6 +63,6 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 public:
-	MYPACKAGE m_pMyPackage;
+	std::shared_ptr<mydb::CPackage> m_pMyPackage;
 
 };

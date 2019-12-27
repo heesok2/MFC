@@ -188,6 +188,10 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 				if (pFunction != nullptr)
 					pFunction(_T(""), nullptr);
 			}
+			else
+			{
+				AfxMessageBox(_T("Not Found MYEX_UI.dll"));
+			}
 		}
 		break;
 	case ID_MYEX_GTEST:
@@ -201,6 +205,10 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 				auto pFunction = (lpFunction)::GetProcAddress(hModule, "ReqService");
 				if (pFunction != nullptr)
 					pFunction(_T(""), nullptr);
+			}
+			else
+			{
+				AfxMessageBox(_T("Not Found MYEX_GTEST.dll"));
 			}
 		}
 		break;

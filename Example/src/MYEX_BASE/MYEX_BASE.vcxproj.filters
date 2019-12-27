@@ -30,6 +30,9 @@
     <ClCompile Include="MYDialog.cpp">
       <Filter>DIALOG</Filter>
     </ClCompile>
+    <ClCompile Include="ViewBase.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYEX_BASE.rc2">
@@ -60,6 +63,9 @@
     </ClInclude>
     <ClInclude Include="MYDialog.h">
       <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewBase.h">
+      <Filter>COMMON</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

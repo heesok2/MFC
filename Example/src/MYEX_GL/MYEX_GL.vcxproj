@@ -110,6 +110,7 @@
       <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -137,6 +138,7 @@
       <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -168,6 +170,7 @@
       <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -199,6 +202,7 @@
       <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -212,6 +216,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="GLCtrlView.cpp" />
+    <ClCompile Include="GLView.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -225,6 +231,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="GLCtrlView.h" />
+    <ClInclude Include="GLView.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />

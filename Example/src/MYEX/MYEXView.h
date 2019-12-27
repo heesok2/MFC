@@ -14,21 +14,22 @@
 
 #pragma once
 
+#include "..\MYEX_BASE\ViewBase.h"
 
-class CMYEXView : public CView
+class CMYEXView : public CViewBase
 {
 protected: // serialization에서만 만들어집니다.
 	CMYEXView() noexcept;
 	DECLARE_DYNCREATE(CMYEXView)
 
-// 특성입니다.
+	// 특성입니다.
 public:
 	CMYEXDoc* GetDocument() const;
 
-// 작업입니다.
+	// 작업입니다.
 public:
 
-// 재정의입니다.
+	// 재정의입니다.
 public:
 	virtual void OnDraw(CDC* pDC);  // 이 뷰를 그리기 위해 재정의되었습니다.
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -37,7 +38,7 @@ protected:
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);
 
-// 구현입니다.
+	// 구현입니다.
 public:
 	virtual ~CMYEXView();
 #ifdef _DEBUG
@@ -47,7 +48,7 @@ public:
 
 protected:
 
-// 생성된 메시지 맵 함수
+	// 생성된 메시지 맵 함수
 protected:
 	afx_msg void OnFilePrintPreview();
 	afx_msg void OnRButtonUp(UINT nFlags, CPoint point);
@@ -57,6 +58,8 @@ protected:
 
 #ifndef _DEBUG  // MYEXView.cpp의 디버그 버전
 inline CMYEXDoc* CMYEXView::GetDocument() const
-   { return reinterpret_cast<CMYEXDoc*>(m_pDocument); }
+{
+	return reinterpret_cast<CMYEXDoc*>(m_pDocument);
+}
 #endif
 

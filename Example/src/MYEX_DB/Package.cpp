@@ -17,19 +17,6 @@ CPackage::~CPackage()
 {
 }
 
-
-std::shared_ptr<CModule> CPackage::GetModule(MYTYPE _type)
-{
-	auto itr = m_mSeqIndex.find(_type);
-	if (itr == m_mSeqIndex.end())
-	{
-		ASSERT(0);
-		return nullptr;
-	}
-
-	return m_aModule[itr->second];
-}
-
 MYPOS CPackage::GetHeader()
 {
 	return m_mSeqIndex.begin();
@@ -57,3 +44,16 @@ std::shared_ptr<CModule> CPackage::GetNext(MYPOS& pos)
 
 	return m_aModule[seq];
 }
+
+std::shared_ptr<CModule> CPackage::GetModule(MYTYPE type)
+{
+	auto itr = m_mSeqIndex.find(type);
+	if (itr == m_mSeqIndex.end())
+	{
+		ASSERT(0);
+		return nullptr;
+	}
+
+	return m_aModule[itr->second];
+}
+

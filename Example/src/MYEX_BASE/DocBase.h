@@ -5,14 +5,6 @@ namespace mydb
 	class CPackage;
 }
 
-#ifndef DEF_MYPACKAGE
-#define DEF_MYPACKAGE
-
-#define MYPACKAGE std::shared_ptr<mydb::CPackage>
-
-#endif
-
-class CExDBSession;
 class AFX_EXT_CLASS CDocBase : public CDocument
 {
 public:
@@ -20,6 +12,6 @@ public:
 	virtual ~CDocBase();
 
 public:
-	virtual MYPACKAGE GetPackage() = 0;
+	virtual std::shared_ptr<mydb::CPackage> GetPackage() = 0;
 
 };

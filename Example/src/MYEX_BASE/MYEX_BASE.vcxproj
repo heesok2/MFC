@@ -220,6 +220,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ViewBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MYEX_BASE.def" />
@@ -233,6 +234,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ViewBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_BASE.rc" />
@@ -240,6 +242,9 @@
   <ItemGroup>
     <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
       <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MYEX_GL\MYEX_GL.vcxproj">
+      <Project>{e680dd13-bba3-482b-b961-3d7c4ec0e775}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
       <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>

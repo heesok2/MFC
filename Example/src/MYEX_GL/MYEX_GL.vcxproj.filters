@@ -10,6 +10,9 @@
     <Filter Include="__GLOBAL__\RC">
       <UniqueIdentifier>{50e1cb51-a046-438b-989b-d2eb53b6c895}</UniqueIdentifier>
     </Filter>
+    <Filter Include="VIEW">
+      <UniqueIdentifier>{2b89a360-b80d-40ce-9b96-09ad6e697ca5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -17,6 +20,12 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="GLView.cpp">
+      <Filter>VIEW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLCtrlView.cpp">
+      <Filter>VIEW</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +51,12 @@
     </ClInclude>
     <ClInclude Include="LinkLib.h">
       <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="GLView.h">
+      <Filter>VIEW</Filter>
+    </ClInclude>
+    <ClInclude Include="GLCtrlView.h">
+      <Filter>VIEW</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

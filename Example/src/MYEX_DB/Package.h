@@ -2,12 +2,12 @@
 
 namespace mydb
 {
-#ifndef DEF_MY_SEQ
-#define DEF_MY_SEQ
+#ifndef DEF_MYPOS
+#define DEF_MYPOS
 
 	typedef std::map<MYTYPE, UINT>::iterator MYPOS;
 
-#endif // !DEF_MY_SEQ
+#endif // !DEF_MYPOS
 
 
 	class CModule;
@@ -19,14 +19,15 @@ namespace mydb
 
 	public:
 		virtual void CreateModule() = 0;
-		virtual std::shared_ptr<CModule> GetModule(MYTYPE _type);
 		
+		
+	public:
 		MYPOS GetHeader();
 		MYPOS GetEnd();
 		void Next(MYPOS& pos);
 		std::shared_ptr<CModule> Get(MYPOS pos);
-		std::shared_ptr<CModule> GetNext(MYPOS& pos);
-		
+		std::shared_ptr<CModule> GetNext(MYPOS& pos);		
+		std::shared_ptr<CModule> GetModule(MYTYPE type);
 
 	protected:
 		std::map<MYTYPE, UINT> m_mSeqIndex;
