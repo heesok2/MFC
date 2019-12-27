@@ -29,3 +29,31 @@ std::shared_ptr<CModule> CPackage::GetModule(MYTYPE _type)
 
 	return m_aModule[itr->second];
 }
+
+MYPOS CPackage::GetHeader()
+{
+	return m_mSeqIndex.begin();
+}
+
+MYPOS CPackage::GetEnd()
+{
+	return m_mSeqIndex.end();
+}
+
+void mydb::CPackage::Next(MYPOS & pos)
+{
+	pos++;
+}
+
+std::shared_ptr<CModule> CPackage::Get(MYPOS pos)
+{
+	return m_aModule[pos->second];
+}
+
+std::shared_ptr<CModule> CPackage::GetNext(MYPOS& pos)
+{
+	auto seq = pos->second;
+	pos++;
+
+	return m_aModule[seq];
+}

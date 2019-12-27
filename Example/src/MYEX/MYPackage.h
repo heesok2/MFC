@@ -2,11 +2,11 @@
 
 #include "..\MYEX_DB\Package.h"
 
-class CMYEXPackage : public mydb::CPackage
+class CMYPackage : public mydb::CPackage
 {
 public:
-	CMYEXPackage();
-	virtual ~CMYEXPackage();
+	CMYPackage();
+	virtual ~CMYPackage();
 
 public:
 	virtual void CreateModule() override;

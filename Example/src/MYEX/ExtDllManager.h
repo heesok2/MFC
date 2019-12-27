@@ -9,9 +9,10 @@ public:
 public:
 	void LoadPlugin();
 	void UnloadPlugin();
+	HMODULE GetPlugin(CString strFileName);
 
 public:
-	HMODULE hModule;
+	std::map<CString, HMODULE> m_mExtDll;
 
 };
 

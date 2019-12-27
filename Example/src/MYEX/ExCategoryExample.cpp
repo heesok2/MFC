@@ -37,8 +37,8 @@ void CExCategoryExample::SetMenu(CMFCRibbonBar * pRibbonBar)
 	m_pButtonL->SetDescription(_T("Large Button Description"));
 	m_pPanel->Add(m_pButtonL);
 
-	m_pButtonS = new CMFCRibbonButton(ID_PANEL_BUTTON_S, _T("Small Button "), 0, -1);
-	m_pButtonS->SetToolTipText(_T("Small Button ToolTip"));
-	m_pButtonS->SetDescription(_T("Small Button Description"));
+	m_pButtonS = new CMFCRibbonButton(ID_MYEX_GTEST, _T("Google Test "), 0, -1);
+	m_pButtonS->SetToolTipText(_T("Google Test ToolTip"));
+	m_pButtonS->SetDescription(_T("Google Test Description"));
 	m_pPanel->Add(m_pButtonS);	
 }

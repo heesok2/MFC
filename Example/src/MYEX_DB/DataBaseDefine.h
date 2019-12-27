@@ -25,7 +25,7 @@ enum E_DB_NOTIFY
 #define FLAG_DB_REMOVE	0x0002
 #define FLAG_DB_CHANGE	0x0004
 
-#define ITR_TO_DATA(T, x) ((const T*)((CEntityDictionary<T>::TEntity*)(x))->Data)
+#define ITR_TO_DATA(T, x) ((const T*)(&((CEntityDictionary<T>::TEntity*)(x))->Data))
 #define ITR_TO_KEY(x) (((CEntityData*)(((BYTE*)(x)) + sizeof(TEntityParam)))->GetKey())
 
 #endif // !DEF_DBMS

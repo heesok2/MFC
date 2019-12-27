@@ -43,12 +43,16 @@ public:
 	virtual void LoadCustomState();
 	virtual void SaveCustomState();
 
+public:
+	CExtDllManager* GetExtManager() { return &m_ExtDllManager; }
+
 protected:
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 
-public:
+protected:
 	CExtDllManager m_ExtDllManager;
+
 };
 
 extern CMYEXApp theApp;

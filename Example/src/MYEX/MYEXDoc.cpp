@@ -20,7 +20,8 @@
 #endif
 
 #include "MYEXDoc.h"
-#include "MYEXPackage.h"
+#include "MYPackage.h"
+#include "MYPackageStream.h"
 
 #include "..\MYEX_LIB\ExMathLib.h"
 #include "..\MYEX_LIB\ZipLib.h"
@@ -38,11 +39,11 @@ IMPLEMENT_DYNCREATE(CMYEXDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMYEXDoc, CDocument)
 	ON_COMMAND_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategory)
-	ON_COMMAND_RANGE(ID_PANEL_BUTTON_S, ID_PANEL_BUTTON_S, OnRibbonCategory)
+	ON_COMMAND_RANGE(ID_MYEX_GTEST, ID_MYEX_GTEST, OnRibbonCategory)
 	ON_COMMAND_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategory)
 
 	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_L, ID_PANEL_BUTTON_L, OnRibbonCategoryUI)
-	ON_UPDATE_COMMAND_UI_RANGE(ID_PANEL_BUTTON_S, ID_PANEL_BUTTON_S, OnRibbonCategoryUI)
+	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_GTEST, ID_MYEX_GTEST, OnRibbonCategoryUI)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategoryUI)
 END_MESSAGE_MAP()
 
@@ -51,7 +52,7 @@ END_MESSAGE_MAP()
 
 CMYEXDoc::CMYEXDoc() noexcept
 {
-	m_pMyPackage = std::make_shared<CMYEXPackage>();
+	m_pMyPackage = std::make_shared<CMYPackage>();
 }
 
 CMYEXDoc::~CMYEXDoc()
@@ -65,6 +66,8 @@ BOOL CMYEXDoc::OnNewDocument()
 
 	// TODO: 여기에 재초기화 코드를 추가합니다.
 	// SDI 문서는 이 문서를 다시 사용합니다.
+
+	CMYPackageStream::New(this);
 
 	return TRUE;
 }
@@ -175,42 +178,30 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	case ID_PANEL_BUTTON_L:
 		{
 			auto pApp = (CMYEXApp*)AfxGetApp();
+			auto pExtMgr = pApp->GetExtManager();
+			auto hModule = pExtMgr->GetPlugin(_T("MYEX_UI"));
 
-			typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
-			auto pFunction = (lpFunction)::GetProcAddress(pApp->m_ExtDllManager.hModule, "ReqService");
-			if (pFunction != nullptr)
-				pFunction(_T(""), nullptr);
+			if (hModule != nullptr)
+			{
+				typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
+				auto pFunction = (lpFunction)::GetProcAddress(hModule, "ReqService");
+				if (pFunction != nullptr)
+					pFunction(_T(""), nullptr);
+			}
 		}
 		break;
-	case ID_PANEL_BUTTON_S:
+	case ID_MYEX_GTEST:
 		{
-			CString ProgramPath;
-			::GetModuleFileName(NULL, ProgramPath.GetBuffer(_MAX_PATH), _MAX_PATH);
-			ProgramPath.ReleaseBuffer();
-
-			int nFind = ProgramPath.ReverseFind('\\');
-			if (nFind == -1)
+			auto pApp = (CMYEXApp*)AfxGetApp();
+			auto pExtMgr = pApp->GetExtManager();
+			auto hModule = pExtMgr->GetPlugin(_T("MYEX_GTEST"));
+			if (hModule != nullptr)
 			{
-				ASSERT(g_warning);
-				return;
+				typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
+				auto pFunction = (lpFunction)::GetProcAddress(hModule, "ReqService");
+				if (pFunction != nullptr)
+					pFunction(_T(""), nullptr);
 			}
-
-			ProgramPath = ProgramPath.Left(nFind + 1);
-			ProgramPath += _T("Extension\\MYEX_GTEST.dll");
-
-			auto hModule = ::LoadLibrary(ProgramPath);
-			if (NULL == hModule)
-			{
-				ASSERT(g_warning);
-				return;
-			}
-
-			typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
-			auto pFunction = (lpFunction)::GetProcAddress(hModule, "ReqService");
-			if (pFunction != nullptr)
-				pFunction(_T(""), nullptr);
-
-			::FreeLibrary(hModule);
 		}
 		break;
 	default:
@@ -227,7 +218,7 @@ void CMYEXDoc::OnRibbonCategoryUI(CCmdUI * pCmdUI)
 	{
 	case ID_MYEX_DIALOG:
 	case ID_PANEL_BUTTON_L:
-	case ID_PANEL_BUTTON_S:
+	case ID_MYEX_GTEST:
 		{
 
 		}

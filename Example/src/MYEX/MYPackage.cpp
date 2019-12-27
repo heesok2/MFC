@@ -1,17 +1,17 @@
 #include "stdafx.h"
-#include "MYEXPackage.h"
+#include "MYPackage.h"
 
 #include "..\MYEX_DB\ModuleNode.h"
 
-CMYEXPackage::CMYEXPackage()
+CMYPackage::CMYPackage()
 {
 }
 
-CMYEXPackage::~CMYEXPackage()
+CMYPackage::~CMYPackage()
 {
 }
 
-void CMYEXPackage::CreateModule()
+void CMYPackage::CreateModule()
 {
 	auto lambda_module = [&](auto pModule)
 	{

@@ -68,9 +68,9 @@ namespace mydb
 			return m_Dictionary.GetAtNU(itr);
 		}
 
-		virtual long GetIterList(std::vector<MYITR>& lstIter)
+		virtual long GetItrList(std::vector<MYITR>& lstItr)
 		{
-			return m_Dictionary.GetList(lstIter);
+			return m_Dictionary.GetList(lstItr);
 		}
 
 		virtual long GetDataList(std::vector<TD>& lstData)

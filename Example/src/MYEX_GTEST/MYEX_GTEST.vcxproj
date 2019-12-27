@@ -213,7 +213,6 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="GoogleTestHelper.cpp" />
-    <ClCompile Include="MYEX_GTEST.cpp" />
     <ClCompile Include="PluginHandler.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -221,6 +220,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TCExample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MYEX_GTEST.def" />
@@ -229,17 +229,23 @@
   <ItemGroup>
     <ClInclude Include="GoogleTestHelper.h" />
     <ClInclude Include="LinkLib.h" />
-    <ClInclude Include="MYEX_GTEST.h" />
     <ClInclude Include="PluginHandler.h" />
     <ClInclude Include="PluginResManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TCExample.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MYEX_GTEST.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
+      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
+      <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
       <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>
     </ProjectReference>

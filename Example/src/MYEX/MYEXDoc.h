@@ -17,7 +17,7 @@
 
 #include "..\MYEX_BASE\DocBase.h"
 
-class CMYEXPackage;
+class CMYPackage;
 class CMYEXDoc : public CDocBase
 {
 protected: // serialization에서만 만들어집니다.

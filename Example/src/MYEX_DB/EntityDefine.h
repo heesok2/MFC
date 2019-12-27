@@ -3,12 +3,12 @@
 #ifndef DEF_MYTYPE
 #define DEF_MYTYPE
 
-enum E_MYTYP_DATA
+enum E_MYTYPE_DATA
 {
-	MYTYP_UNKNOWN = 0
-	, MYTYP_NODE
+	MYTYPE_UNKNOWN = 0
+	, MYTYPE_NODE
 
-	, MYTYP_NUM
+	, MYTYPE_NUM
 };
 
 #endif // !DEF_MYTYPE

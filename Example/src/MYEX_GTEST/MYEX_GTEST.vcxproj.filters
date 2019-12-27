@@ -13,11 +13,11 @@
     <Filter Include="Plugin">
       <UniqueIdentifier>{7a1d3e14-af7f-4c4d-ae3a-0d4a750aaed3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TESTCASE">
+      <UniqueIdentifier>{6ec505ec-d4cc-43a0-a13a-33f1cb6c17b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MYEX_GTEST.cpp">
-      <Filter>__GLOBAL__</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>__GLOBAL__</Filter>
     </ClCompile>
@@ -27,6 +27,9 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="TCExample.cpp">
+      <Filter>TESTCASE</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -40,9 +43,6 @@
   <ItemGroup>
     <ClInclude Include="Resource.h">
       <Filter>__GLOBAL__\RC</Filter>
-    </ClInclude>
-    <ClInclude Include="MYEX_GTEST.h">
-      <Filter>__GLOBAL__</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>__GLOBAL__</Filter>
@@ -59,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="PluginResManager.h">
       <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="TCExample.h">
+      <Filter>TESTCASE</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,7 @@ protected:
 protected:
 	void SetText();
 	void SetControl();
+	void ExampleDB();
 
 protected:
 	DECLARE_MESSAGE_MAP();
