@@ -1,6 +1,8 @@
 #pragma once
 
-class AFX_EXT_CLASS CExampleDlg : public CDialog
+#include "..\MYEX_BASE\MYDialog.h"
+
+class AFX_EXT_CLASS CExampleDlg : public CMYDialog
 {
 public:
 	CExampleDlg(CWnd* pParent = nullptr);
@@ -14,7 +16,6 @@ protected:
 
 public:
 	BOOL Create(CWnd* pParent = nullptr);
-
 
 protected:
 	DECLARE_MESSAGE_MAP();

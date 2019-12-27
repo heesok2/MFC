@@ -5,7 +5,7 @@
 #include "..\MYEX_BASE\DocBase.h"
 
 CAppListCtrlDlg::CAppListCtrlDlg(CDocBase * pDoc, CWnd * pParent)
-	: CExDialog(CAppListCtrlDlg::IDD, pDoc, pParent)
+	: CMYDialog(CAppListCtrlDlg::IDD, pDoc, pParent)
 {
 }
 
@@ -15,12 +15,12 @@ CAppListCtrlDlg::~CAppListCtrlDlg()
 
 void CAppListCtrlDlg::DoDataExchange(CDataExchange * pDX)
 {
-	CExDialog::DoDataExchange(pDX);
+	CMYDialog::DoDataExchange(pDX);
 
 	DDX_Control(pDX, IDC_APPUI_LIST, m_listctrl);
 }
 
-BEGIN_MESSAGE_MAP(CAppListCtrlDlg, CExDialog)
+BEGIN_MESSAGE_MAP(CAppListCtrlDlg, CMYDialog)
 	ON_NOTIFY(NM_CLICK, IDC_APPUI_LIST, OnNMClickAppuiList)
 	ON_NOTIFY(NM_DBLCLK, IDC_APPUI_LIST, OnNMDblclkAppuiList)
 	ON_NOTIFY(LVN_COLUMNCLICK, IDC_APPUI_LIST, OnLvnColumnclickAppuiList)
@@ -28,7 +28,7 @@ END_MESSAGE_MAP();
 
 BOOL CAppListCtrlDlg::OnInitDialog()
 {
-	CExDialog::OnInitDialog();
+	CMYDialog::OnInitDialog();
 
 	SetText();
 

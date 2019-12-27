@@ -212,7 +212,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="ExDialog.cpp" />
+    <ClCompile Include="MYDialog.cpp" />
     <ClCompile Include="DocBase.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -226,7 +226,7 @@
     <None Include="res\MYEX_BASE.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ExDialog.h" />
+    <ClInclude Include="MYDialog.h" />
     <ClInclude Include="DocBase.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />

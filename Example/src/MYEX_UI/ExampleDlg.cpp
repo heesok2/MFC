@@ -1,4 +1,3 @@
-#include "..\MYAPP_UI\ExampleDlg.h"
 #include "pch.h"
 #include "Resource.h"
 #include "ExampleDlg.h"
@@ -10,7 +9,7 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 CExampleDlg::CExampleDlg(CWnd * pParent)
-	: CDialog(CExampleDlg::IDD, pParent)
+	: CMYDialog(CExampleDlg::IDD, nullptr, pParent)
 {
 }
 
@@ -20,16 +19,16 @@ CExampleDlg::~CExampleDlg()
 
 void CExampleDlg::DoDataExchange(CDataExchange * pDX)
 {
-	CDialog::DoDataExchange(pDX);
+	CMYDialog::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CExampleDlg, CDialog)
+BEGIN_MESSAGE_MAP(CExampleDlg, CMYDialog)
 
 END_MESSAGE_MAP();
 
 BOOL CExampleDlg::OnInitDialog()
 {
-	CDialog::OnInitDialog();
+	CMYDialog::OnInitDialog();
 
 
 	return TRUE;
@@ -37,5 +36,5 @@ BOOL CExampleDlg::OnInitDialog()
 
 BOOL CExampleDlg::Create(CWnd * pParent)
 {
-	return CDialog::Create(CExampleDlg::IDD, pParent);
+	return CMYDialog::Create(CExampleDlg::IDD, pParent);
 }

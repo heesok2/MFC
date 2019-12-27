@@ -1,8 +1,8 @@
 #pragma once
 
-#include "..\MYEX_BASE\ExDialog.h"
+#include "..\MYEX_BASE\MYDialog.h"
 
-class CAppListCtrlDlg : public CExDialog
+class CAppListCtrlDlg : public CMYDialog
 {
 public:
 	CAppListCtrlDlg(CDocBase* pDoc, CWnd* pParent = nullptr);

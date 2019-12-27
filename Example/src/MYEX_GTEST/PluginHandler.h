@@ -1,8 +1,8 @@
 #pragma once
 
-#ifndef GTEST_DEF
-#define GTEST_DEF
+#ifndef DEF_GTEST
+#define DEF_GTEST
 
 extern "C" AFX_EXT_API BOOL ReqService(LPCTSTR strArguments, LPVOID lpInitData);
 
-#endif // !GTEST_DEF
+#endif // !DEF_GTEST

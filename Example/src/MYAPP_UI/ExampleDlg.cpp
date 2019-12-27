@@ -7,7 +7,7 @@
 #include "..\MYEX_DB\ModuleNode.h"
 
 CExampleDlg::CExampleDlg(CDocBase * pDoc, CWnd * pParent)
-	: CExDialog(CExampleDlg::IDD, pDoc, pParent)
+	: CMYDialog(CExampleDlg::IDD, pDoc, pParent)
 {
 }
 
@@ -17,7 +17,7 @@ CExampleDlg::~CExampleDlg()
 
 void CExampleDlg::DoDataExchange(CDataExchange * pDX)
 {
-	CExDialog::DoDataExchange(pDX);
+	CMYDialog::DoDataExchange(pDX);
 }
 
 BEGIN_MESSAGE_MAP(CExampleDlg, CDialog)

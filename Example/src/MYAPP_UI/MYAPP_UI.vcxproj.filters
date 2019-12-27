@@ -24,14 +24,14 @@
     <ClCompile Include="AppDialogProvider.cpp">
       <Filter>DIALOG</Filter>
     </ClCompile>
-    <ClCompile Include="ExampleDlg.cpp">
-      <Filter>DIALOG\Example</Filter>
-    </ClCompile>
     <ClCompile Include="AppListCtrlDlg.cpp">
       <Filter>DIALOG\Example</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="ExampleDlg.cpp">
+      <Filter>DIALOG\Example</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,10 +61,10 @@
     <ClInclude Include="AppDialogProvider.h">
       <Filter>DIALOG</Filter>
     </ClInclude>
-    <ClInclude Include="ExampleDlg.h">
+    <ClInclude Include="AppListCtrlDlg.h">
       <Filter>DIALOG\Example</Filter>
     </ClInclude>
-    <ClInclude Include="AppListCtrlDlg.h">
+    <ClInclude Include="ExampleDlg.h">
       <Filter>DIALOG\Example</Filter>
     </ClInclude>
   </ItemGroup>

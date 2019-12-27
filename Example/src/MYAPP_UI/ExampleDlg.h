@@ -1,8 +1,8 @@
 #pragma once
 
-#include "..\MYEX_BASE\ExDialog.h"
+#include "..\MYEX_BASE\MYDialog.h"
 
-class CExampleDlg : public CExDialog
+class CExampleDlg : public CMYDialog
 {
 public:
 	CExampleDlg(CDocBase* pDoc, CWnd* pParent = nullptr);

@@ -1,13 +1,13 @@
 #pragma once
 
-extern "C" AFX_EXTENSION_MODULE UI_DLL;
+extern "C" AFX_EXTENSION_MODULE PLUGIN_UI;
 class CPluginResManager
 {
 public:
 	CPluginResManager()
 	{
 		m_hInst = AfxGetResourceHandle();
-		AfxSetResourceHandle(UI_DLL.hResource);
+		AfxSetResourceHandle(PLUGIN_UI.hResource);
 	}
 
 	~CPluginResManager()
