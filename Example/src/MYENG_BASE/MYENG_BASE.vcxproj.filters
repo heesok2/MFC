@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{30bd8120-5065-4c6d-ab88-5d8761eafa4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{b66cd043-e2fb-4717-978c-42cb2296ebce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{ea418978-b876-4a70-8ba9-ee992e1d9cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMMON">
+      <UniqueIdentifier>{1547b0a3-cdda-475f-876a-efce0097d65f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DIALOG">
+      <UniqueIdentifier>{e796e1ff-dc8a-4206-95c3-56117eb19603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NOTIFY">
+      <UniqueIdentifier>{31780de5-3d34-402e-9147-29871acaa1dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYENG_BASE.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYENG_BASE.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="DocBase.h">
+      <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="GLCtrlView.h">
+      <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="GLView.h">
+      <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewBase.h">
+      <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="MYDialog.h">
+      <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="NotifyDefine.h">
+      <Filter>NOTIFY</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYENG_BASE.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="DocBase.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="GLCtrlView.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="GLView.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewBase.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="MYDialog.cpp">
+      <Filter>DIALOG</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
