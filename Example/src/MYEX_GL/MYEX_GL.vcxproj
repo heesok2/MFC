@@ -250,8 +250,8 @@
     <ResourceCompile Include="MYEX_GL.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
-      <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>
+    <ProjectReference Include="..\MYENG_LIB\MYENG_LIB.vcxproj">
+      <Project>{b691a75f-2e26-4aad-a156-9461c7071bbb}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

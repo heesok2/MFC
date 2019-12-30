@@ -23,8 +23,7 @@
 #include "MYPackage.h"
 #include "MYPackageStream.h"
 
-#include "..\MYEX_LIB\ExMathLib.h"
-#include "..\MYEX_LIB\ZipLib.h"
+#include "..\MYENG_LIB\ZipLib.h"
 #include "..\MYEX_BASE\NotifyDefine.h"
 #include "..\MYAPP_UI\AppDialogProvider.h"
 

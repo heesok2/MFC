@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Shader.h"
 
-#include "..\MYEX_LIB\StringLib.h"
+#include "..\MYENG_LIB\StringLib.h"
 
 #include <fstream>
 #include <sstream>
