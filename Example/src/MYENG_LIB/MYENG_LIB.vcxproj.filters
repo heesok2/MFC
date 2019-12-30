@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{282910c7-c8b1-4617-bde1-4662f15786bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{56ed1f75-6164-4231-945a-39642a4c2197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{8db0714f-e05d-41c6-b2ad-e4c45f9030ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DEFINE">
+      <UniqueIdentifier>{9745651e-be75-4adb-bdf2-7d7cc74adc3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIBRARY">
+      <UniqueIdentifier>{95741b83-2ae1-48dc-9729-36469a07afda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIBRARY\Zip">
+      <UniqueIdentifier>{969aeea5-5e1c-4ea8-81f5-3d464bcf4a9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIBRARY\String">
+      <UniqueIdentifier>{4d257b36-47b3-4287-aa43-73f5b86f9b93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIBRARY\Math">
+      <UniqueIdentifier>{6e28b895-9bc9-41ec-bdaa-4ea318534b95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipLib.cpp">
+      <Filter>LIBRARY\Zip</Filter>
+    </ClCompile>
+    <ClCompile Include="StringLib.cpp">
+      <Filter>LIBRARY\String</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib.cpp">
+      <Filter>LIBRARY\Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYENG_LIB.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYENG_LIB.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\v141\plugin\AllProjectInclude.h">
+      <Filter>DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\v141\plugin\GlobalDefine.h">
+      <Filter>DEFINE</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipLib.h">
+      <Filter>LIBRARY\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="StringLib.h">
+      <Filter>LIBRARY\String</Filter>
+    </ClInclude>
+    <ClInclude Include="MathLib.h">
+      <Filter>LIBRARY\Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYENG_LIB.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
