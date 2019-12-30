@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MYPackage.h"
 
-#include "..\MYEX_DB\ModuleNode.h"
+#include "..\MYENG_DB\ModuleNode.h"
 
 CMYPackage::CMYPackage()
 {

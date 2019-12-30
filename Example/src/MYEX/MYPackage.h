@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\MYEX_DB\Package.h"
+#include "..\MYENG_DB\Package.h"
 
 class CMYPackage : public mydb::CPackage
 {

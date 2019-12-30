@@ -2,7 +2,7 @@
 #include "MYPackageStream.h"
 
 #include "..\MYEX_BASE\DocBase.h"
-#include "..\MYEX_DB\Package.h"
+#include "..\MYENG_DB\Package.h"
 
 CMYPackageStream::CMYPackageStream()
 {

@@ -3,8 +3,8 @@
 #include "ExampleDlg.h"
 
 #include "..\MYEX_BASE\DocBase.h"
-#include "..\MYEX_DB\Package.h"
-#include "..\MYEX_DB\ModuleNode.h"
+#include "..\MYENG_DB\Package.h"
+#include "..\MYENG_DB\ModuleNode.h"
 
 CExampleDlg::CExampleDlg(CDocBase * pDoc, CWnd * pParent)
 	: CMYDialog(CExampleDlg::IDD, pDoc, pParent)

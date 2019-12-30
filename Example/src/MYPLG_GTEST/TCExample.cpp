@@ -2,8 +2,8 @@
 #include "TCExample.h"
 
 #include "..\MYEX_BASE\DocBase.h"
-#include "..\MYEX_DB\Package.h"
-#include "..\MYEX_DB\Module.h"
+#include "..\MYENG_DB\Package.h"
+#include "..\MYENG_DB\Module.h"
 
 using namespace mytest;
 using namespace mydb;
