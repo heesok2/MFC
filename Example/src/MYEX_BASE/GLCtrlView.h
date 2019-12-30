@@ -2,8 +2,8 @@
 
 #include "GLView.h"
 
-#include "..\MYEX_GL\FrameBufferManager.h"
-#include "..\MYEX_GL\ShaderManager.h"
+#include "..\MYENG_GL\FrameBufferManager.h"
+#include "..\MYENG_GL\ShaderManager.h"
 
 namespace mygl
 {

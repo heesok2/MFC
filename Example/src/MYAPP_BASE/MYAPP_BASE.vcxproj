@@ -240,14 +240,14 @@
     <ResourceCompile Include="MYAPP_BASE.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYENG_GL\MYENG_GL.vcxproj">
+      <Project>{53b57819-5e82-4d5f-bd67-40673dcedb74}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYENG_LIB\MYENG_LIB.vcxproj">
       <Project>{b691a75f-2e26-4aad-a156-9461c7071bbb}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
       <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYEX_GL\MYEX_GL.vcxproj">
-      <Project>{e680dd13-bba3-482b-b961-3d7c4ec0e775}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

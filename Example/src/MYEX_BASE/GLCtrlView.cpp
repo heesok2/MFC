@@ -2,7 +2,7 @@
 #include "GLCtrlView.h"
 #include "NotifyDefine.h"
 
-#include "..\MYEX_GL\ShaderDefine.h"
+#include "..\MYENG_GL\ShaderDefine.h"
 
 using namespace mygl;
 
