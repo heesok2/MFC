@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{e3ddb064-adea-4767-9dbc-5cc5bf28e975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{758281b8-8fd8-4849-abfa-0ffe1de96a3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{553b864b-89b9-487e-894b-6d06c2b39781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FRAME">
+      <UniqueIdentifier>{023431ee-d772-4b18-89e8-df21f6057702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SHADER">
+      <UniqueIdentifier>{91625f89-e05d-4da5-b53d-0b044182e883}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBuffer.cpp">
+      <Filter>FRAME</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBufferManager.cpp">
+      <Filter>FRAME</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>SHADER</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>SHADER</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYENG_GL.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYENG_GL.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+    <None Include="res\GLSL\scene.frag">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </None>
+    <None Include="res\GLSL\scene.vert">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuffer.h">
+      <Filter>FRAME</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBufferDefine.h">
+      <Filter>FRAME</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBufferManager.h">
+      <Filter>FRAME</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>SHADER</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderDefine.h">
+      <Filter>SHADER</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>SHADER</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYENG_GL.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

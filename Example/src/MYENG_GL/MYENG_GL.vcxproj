@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{326ECF5D-B6EB-4DA3-99AE-4E757796841F}</ProjectGuid>
+    <ProjectGuid>{53B57819-5E82-4D5F-BD67-40673DCEDB74}</ProjectGuid>
     <Keyword>MFCDLLProj</Keyword>
-    <RootNamespace>MYAPPBASE</RootNamespace>
+    <RootNamespace>MYENGGL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -107,10 +107,10 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYENG_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -135,10 +135,10 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYENG_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -167,10 +167,10 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYENG_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -199,10 +199,10 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYENG_GL.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -216,38 +216,42 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="MYAPPView.cpp" />
+    <ClCompile Include="FrameBuffer.cpp" />
+    <ClCompile Include="FrameBufferManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MYAPP_BASE.def" />
-    <None Include="res\MYAPP_BASE.rc2" />
+    <None Include="MYENG_GL.def" />
+    <None Include="res\GLSL\scene.frag" />
+    <None Include="res\GLSL\scene.vert" />
+    <None Include="res\MYENG_GL.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="FrameBufferDefine.h" />
+    <ClInclude Include="FrameBufferManager.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
-    <ClInclude Include="MYAPPView.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderDefine.h" />
+    <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MYAPP_BASE.rc" />
+    <ResourceCompile Include="MYENG_GL.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MYENG_LIB\MYENG_LIB.vcxproj">
       <Project>{b691a75f-2e26-4aad-a156-9461c7071bbb}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
-      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYEX_GL\MYEX_GL.vcxproj">
-      <Project>{e680dd13-bba3-482b-b961-3d7c4ec0e775}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
