@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\MYEX_BASE\MYDialog.h"
+#include "..\MYENG_BASE\MYDialog.h"
 
 class CAppListCtrlDlg : public CMYDialog
 {

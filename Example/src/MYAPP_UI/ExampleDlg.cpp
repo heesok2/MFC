@@ -2,7 +2,7 @@
 #include "Resource.h"
 #include "ExampleDlg.h"
 
-#include "..\MYEX_BASE\DocBase.h"
+#include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_DB\Package.h"
 #include "..\MYENG_DB\ModuleNode.h"
 

@@ -6,4 +6,4 @@
 
 #include "..\MYENG_LIB\LinkLib.h"
 #include "..\MYENG_GL\LinkLib.h"
-#include "..\MYEX_BASE\LinkLib.h"
+#include "..\MYENG_BASE\LinkLib.h"

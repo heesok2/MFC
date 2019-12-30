@@ -2,7 +2,7 @@
 #include "Resource.h"
 #include "AppListCtrlDlg.h"
 
-#include "..\MYEX_BASE\DocBase.h"
+#include "..\MYENG_BASE\DocBase.h"
 
 CAppListCtrlDlg::CAppListCtrlDlg(CDocBase * pDoc, CWnd * pParent)
 	: CMYDialog(CAppListCtrlDlg::IDD, pDoc, pParent)

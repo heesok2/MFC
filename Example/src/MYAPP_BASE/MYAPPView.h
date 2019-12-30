@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\MYEX_BASE\ViewBase.h"
+#include "..\MYENG_BASE\ViewBase.h"
 
 class AFX_EXT_CLASS CMYAPPView : public CViewBase
 {

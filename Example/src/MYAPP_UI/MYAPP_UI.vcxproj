@@ -240,14 +240,14 @@
     <ResourceCompile Include="MYAPP_UI.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYENG_BASE\MYENG_BASE.vcxproj">
+      <Project>{e8a98686-860e-4b57-bd79-bac7796314dd}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYENG_DB\MYENG_DB.vcxproj">
       <Project>{22335f3d-9426-4ea8-b90f-c2f65428e4f9}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MYENG_LIB\MYENG_LIB.vcxproj">
       <Project>{b691a75f-2e26-4aad-a156-9461c7071bbb}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
-      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@
 #include "MYPackageStream.h"
 
 #include "..\MYENG_LIB\ZipLib.h"
-#include "..\MYEX_BASE\NotifyDefine.h"
+#include "..\MYENG_BASE\NotifyDefine.h"
 #include "..\MYAPP_UI\AppDialogProvider.h"
 
 #include <propkey.h>

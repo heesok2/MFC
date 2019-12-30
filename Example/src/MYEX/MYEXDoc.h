@@ -15,7 +15,7 @@
 
 #pragma once
 
-#include "..\MYEX_BASE\DocBase.h"
+#include "..\MYENG_BASE\DocBase.h"
 
 class CMYPackage;
 class CMYEXDoc : public CDocBase

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "TCExample.h"
 
-#include "..\MYEX_BASE\DocBase.h"
+#include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_DB\Package.h"
 #include "..\MYENG_DB\Module.h"
 

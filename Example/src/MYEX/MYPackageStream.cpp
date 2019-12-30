@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MYPackageStream.h"
 
-#include "..\MYEX_BASE\DocBase.h"
+#include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_DB\Package.h"
 
 CMYPackageStream::CMYPackageStream()
