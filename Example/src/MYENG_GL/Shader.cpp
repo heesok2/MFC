@@ -38,7 +38,7 @@ void CShader::GLAttachShader(UINT nShaderType, UINT uiResID)
 {
 	auto lambda_source = [](UINT uiRes, std::string& strSource)
 	{
-		auto hHandle = GetModuleHandle(_T("MYEX_GL.dll"));
+		auto hHandle = GetModuleHandle(_T("MYENG_GL.dll"));
 		auto hRes = FindResource(hHandle, MAKEINTRESOURCE(uiRes), _T("GLSL"));
 		if (hRes == nullptr)
 			return FALSE;

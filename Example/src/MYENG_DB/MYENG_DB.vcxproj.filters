@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{0147064f-9653-4736-b180-d612e6536957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{23b16f52-3977-4d2e-a3cd-a6fe138de16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{b84cdf55-eea3-4553-b336-030a3f9ce0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBMS">
+      <UniqueIdentifier>{e52d11db-8a62-4287-8e7f-cc5e897c0482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE">
+      <UniqueIdentifier>{ca3a8727-58aa-4d02-b2bd-d858c2f91bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE\Element">
+      <UniqueIdentifier>{2f21ce31-014f-43cf-9031-f9b873a5843b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE\Node">
+      <UniqueIdentifier>{b22571a7-8b93-4d94-ab32-969c2791c568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MODULE\Mesh">
+      <UniqueIdentifier>{a9e55755-f97c-4ed0-9c4a-827d2d311b88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>DBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="Module.cpp">
+      <Filter>DBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="Package.cpp">
+      <Filter>DBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityNode.cpp">
+      <Filter>MODULE\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleNode.cpp">
+      <Filter>MODULE\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleMesh.cpp">
+      <Filter>MODULE\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleElem.cpp">
+      <Filter>MODULE\Element</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYENG_DB.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYENG_DB.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBaseDefine.h">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleBase.hpp">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="Package.h">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityDefine.h">
+      <Filter>MODULE</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityDictionary.hpp">
+      <Filter>DBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityNode.h">
+      <Filter>MODULE\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleNode.h">
+      <Filter>MODULE\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleMesh.h">
+      <Filter>MODULE\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleElem.h">
+      <Filter>MODULE\Element</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYENG_DB.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
