@@ -278,11 +278,11 @@
     <Image Include="res\writesmall.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYAPP_BASE\MYAPP_BASE.vcxproj">
+      <Project>{326ecf5d-b6eb-4da3-99ae-4e757796841f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYAPP_UI\MYAPP_UI.vcxproj">
       <Project>{98d322b2-a2d8-4875-b4c0-69517e7b8551}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
-      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
       <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>

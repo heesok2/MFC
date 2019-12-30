@@ -1,8 +1,8 @@
 #pragma once
 
-#include "..\MYEX_GL\GLCtrlView.h"
+#include "GLCtrlView.h"
 
-class AFX_EXT_CLASS CViewBase : public mygl::GLCtrlView
+class AFX_EXT_CLASS CViewBase : public mygl::CGLCtrlView
 {
 public:
 	CViewBase();

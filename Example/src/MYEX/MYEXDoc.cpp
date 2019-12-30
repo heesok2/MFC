@@ -25,6 +25,7 @@
 
 #include "..\MYEX_LIB\ExMathLib.h"
 #include "..\MYEX_LIB\ZipLib.h"
+#include "..\MYEX_BASE\NotifyDefine.h"
 #include "..\MYAPP_UI\AppDialogProvider.h"
 
 #include <propkey.h>
@@ -72,10 +73,12 @@ BOOL CMYEXDoc::OnNewDocument()
 	return TRUE;
 }
 
+void CMYEXDoc::OnCloseDocument()
+{
+	UpdateAllViews(nullptr, E_DOCUMENT_CLOSE);
 
-
-
-// CMYEXDoc serialization
+	CDocBase::OnCloseDocument();
+}
 
 void CMYEXDoc::Serialize(CArchive& ar)
 {

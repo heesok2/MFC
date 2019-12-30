@@ -19,4 +19,5 @@
 #include "..\MYEX_BASE\LinkLib.h"
 #include "..\MYEX_DB\LinkLib.h"
 
+#include "..\MYAPP_BASE\LinkLib.h"
 #include "..\MYAPP_UI\LinkLib.h"

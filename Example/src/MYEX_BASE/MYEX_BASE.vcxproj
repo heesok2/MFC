@@ -110,6 +110,7 @@
       <ModuleDefinitionFile>.\MYEX_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -137,6 +138,7 @@
       <ModuleDefinitionFile>.\MYEX_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -168,6 +170,7 @@
       <ModuleDefinitionFile>.\MYEX_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -199,6 +202,7 @@
       <ModuleDefinitionFile>.\MYEX_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -212,6 +216,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="GLCtrlView.cpp" />
+    <ClCompile Include="GLView.cpp" />
     <ClCompile Include="MYDialog.cpp" />
     <ClCompile Include="DocBase.cpp" />
     <ClCompile Include="pch.cpp">
@@ -227,10 +233,13 @@
     <None Include="res\MYEX_BASE.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GLCtrlView.h" />
+    <ClInclude Include="GLView.h" />
     <ClInclude Include="MYDialog.h" />
     <ClInclude Include="DocBase.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
+    <ClInclude Include="NotifyDefine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />

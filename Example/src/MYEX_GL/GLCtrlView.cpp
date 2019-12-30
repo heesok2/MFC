@@ -1,10 +1,12 @@
 #include "pch.h"
 #include "GLCtrlView.h"
 
-mygl::CGLCtrlView::CGLCtrlView()
+using namespace mygl;
+
+CGLCtrlView::CGLCtrlView()
 {
 }
 
-mygl::CGLCtrlView::~CGLCtrlView()
+CGLCtrlView::~CGLCtrlView()
 {
 }

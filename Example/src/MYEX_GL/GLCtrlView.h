@@ -4,7 +4,7 @@
 
 namespace mygl
 {
-	class AFX_EXT_CLASS CGLCtrlView : public CGLView
+	class AFX_EXT_CLASS CGLCtrlView
 	{
 	public:
 		CGLCtrlView();

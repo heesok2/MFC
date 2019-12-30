@@ -29,12 +29,12 @@
 
 // CMYEXView
 
-IMPLEMENT_DYNCREATE(CMYEXView, CViewBase)
+IMPLEMENT_DYNCREATE(CMYEXView, CMYAPPView)
 
-BEGIN_MESSAGE_MAP(CMYEXView, CViewBase)
+BEGIN_MESSAGE_MAP(CMYEXView, CMYAPPView)
 	// 표준 인쇄 명령입니다.
-	ON_COMMAND(ID_FILE_PRINT, &CViewBase::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CViewBase::OnFilePrint)
+	ON_COMMAND(ID_FILE_PRINT, &CMYAPPView::OnFilePrint)
+	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CMYAPPView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CMYEXView::OnFilePrintPreview)
 	ON_WM_CONTEXTMENU()
 	ON_WM_RBUTTONUP()
@@ -57,19 +57,19 @@ BOOL CMYEXView::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: CREATESTRUCT cs를 수정하여 여기에서
 	//  Window 클래스 또는 스타일을 수정합니다.
 
-	return CViewBase::PreCreateWindow(cs);
+	return CMYAPPView::PreCreateWindow(cs);
 }
 
 // CMYEXView 그리기
 
-void CMYEXView::OnDraw(CDC* /*pDC*/)
+void CMYEXView::OnDraw(CDC* pDC)
 {
 	CMYEXDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
 
-	// TODO: 여기에 원시 데이터에 대한 그리기 코드를 추가합니다.
+	CMYAPPView::OnDraw(pDC);
 }
 
 
@@ -118,12 +118,12 @@ void CMYEXView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 #ifdef _DEBUG
 void CMYEXView::AssertValid() const
 {
-	CViewBase::AssertValid();
+	CMYAPPView::AssertValid();
 }
 
 void CMYEXView::Dump(CDumpContext& dc) const
 {
-	CViewBase::Dump(dc);
+	CMYAPPView::Dump(dc);
 }
 
 CMYEXDoc* CMYEXView::GetDocument() const // 디버그되지 않은 버전은 인라인으로 지정됩니다.

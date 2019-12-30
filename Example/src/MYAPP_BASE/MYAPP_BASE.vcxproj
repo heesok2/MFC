@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E680DD13-BBA3-482B-B961-3D7C4EC0E775}</ProjectGuid>
+    <ProjectGuid>{326ECF5D-B6EB-4DA3-99AE-4E757796841F}</ProjectGuid>
     <Keyword>MFCDLLProj</Keyword>
-    <RootNamespace>MYEXGL</RootNamespace>
+    <RootNamespace>MYAPPBASE</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -100,14 +100,14 @@
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_AFXEXT;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_AFXEXT;_X64;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>..\..\include\$(PlatformToolset)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -135,7 +135,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -167,7 +167,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -190,7 +190,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_AFXEXT;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_AFXEXT;_X64;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>..\..\include\$(PlatformToolset)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -199,7 +199,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ModuleDefinitionFile>.\MYEX_GL.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\MYAPP_BASE.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -216,40 +216,39 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="FrameBuffer.cpp" />
-    <ClCompile Include="FrameBufferManager.cpp" />
+    <ClCompile Include="MYAPPView.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="ShaderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MYEX_GL.def" />
-    <None Include="res\GLSL\scene.frag" />
-    <None Include="res\GLSL\scene.vert" />
-    <None Include="res\MYEX_GL.rc2" />
+    <None Include="MYAPP_BASE.def" />
+    <None Include="res\MYAPP_BASE.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FrameBuffer.h" />
-    <ClInclude Include="FrameBufferDefine.h" />
-    <ClInclude Include="FrameBufferManager.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
+    <ClInclude Include="MYAPPView.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="ShaderDefine.h" />
-    <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MYEX_GL.rc" />
+    <ResourceCompile Include="MYAPP_BASE.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYEX_BASE\MYEX_BASE.vcxproj">
+      <Project>{83860c17-e491-4a7b-988a-8bc40e296e82}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MYEX_DB\MYEX_DB.vcxproj">
+      <Project>{7c979127-0dbe-4486-a704-b0166dd6238c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MYEX_GL\MYEX_GL.vcxproj">
+      <Project>{e680dd13-bba3-482b-b961-3d7c4ec0e775}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYEX_LIB\MYEX_LIB.vcxproj">
       <Project>{64bab088-ed18-49ca-95e6-95df8ff464bf}</Project>
     </ProjectReference>

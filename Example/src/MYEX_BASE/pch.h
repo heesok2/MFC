@@ -9,12 +9,9 @@
 
 // 여기에 미리 컴파일하려는 헤더 추가
 #include "framework.h"
-
-#ifndef __MYEX_BASE__
-#define __MYEX_BASE__
-
 #include "plugin\AllProjectInclude.h"
 
-#endif
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 #endif //PCH_H

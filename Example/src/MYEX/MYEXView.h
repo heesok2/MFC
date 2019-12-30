@@ -14,9 +14,9 @@
 
 #pragma once
 
-#include "..\MYEX_BASE\ViewBase.h"
+#include "..\MYAPP_BASE\MYAPPView.h"
 
-class CMYEXView : public CViewBase
+class CMYEXView : public CMYAPPView
 {
 protected: // serialization에서만 만들어집니다.
 	CMYEXView() noexcept;
@@ -33,6 +33,7 @@ public:
 public:
 	virtual void OnDraw(CDC* pDC);  // 이 뷰를 그리기 위해 재정의되었습니다.
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+
 protected:
 	virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);

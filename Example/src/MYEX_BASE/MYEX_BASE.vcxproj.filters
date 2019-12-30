@@ -16,6 +16,9 @@
     <Filter Include="COMMON">
       <UniqueIdentifier>{bc2def08-550f-41ca-90be-8bba58ba2357}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NOTIFY">
+      <UniqueIdentifier>{ce70215a-cca2-463d-9771-053ca4effe54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -31,6 +34,12 @@
       <Filter>DIALOG</Filter>
     </ClCompile>
     <ClCompile Include="ViewBase.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="GLCtrlView.cpp">
+      <Filter>COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="GLView.cpp">
       <Filter>COMMON</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,6 +75,15 @@
     </ClInclude>
     <ClInclude Include="ViewBase.h">
       <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="GLCtrlView.h">
+      <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="GLView.h">
+      <Filter>COMMON</Filter>
+    </ClInclude>
+    <ClInclude Include="NotifyDefine.h">
+      <Filter>NOTIFY</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
