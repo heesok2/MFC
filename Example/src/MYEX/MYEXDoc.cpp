@@ -201,7 +201,7 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 		{
 			auto pApp = (CMYEXApp*)AfxGetApp();
 			auto pExtMgr = pApp->GetExtManager();
-			auto hModule = pExtMgr->GetPlugin(_T("MYEX_GTEST"));
+			auto hModule = pExtMgr->GetPlugin(_T("MYPLG_GTEST"));
 			if (hModule != nullptr)
 			{
 				typedef BOOL(*lpFunction)(LPCTSTR, LPVOID);
@@ -211,7 +211,7 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 			}
 			else
 			{
-				AfxMessageBox(_T("Not Found MYEX_GTEST.dll"));
+				AfxMessageBox(_T("Not Found MYPLG_GTEST.dll"));
 			}
 		}
 		break;

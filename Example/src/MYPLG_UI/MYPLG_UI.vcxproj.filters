@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{78cb3577-6acc-4cdb-b614-e9cd5c52cbcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{25937ac0-2080-4bb7-9900-2b476b8ce5cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{fbf2b8ca-a76b-4ef3-a1cf-b37c22592980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PLUGIN">
+      <UniqueIdentifier>{09739f36-eac7-41fd-9712-0ad9f5c5db4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginHandler.cpp">
+      <Filter>PLUGIN</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYPLG_UI.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYPLG_UI.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginHandler.h">
+      <Filter>PLUGIN</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginResManager.h">
+      <Filter>PLUGIN</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYPLG_UI.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

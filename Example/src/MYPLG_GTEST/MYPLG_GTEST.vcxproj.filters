@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__GLOBAL__">
+      <UniqueIdentifier>{126259e7-5cc5-4203-8e9a-24d5a0112cf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\RC">
+      <UniqueIdentifier>{09aebd99-51a1-40c0-b658-9e30d2a7eddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__GLOBAL__\FILE">
+      <UniqueIdentifier>{7b146290-369d-4199-8e00-c81609287c27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PLUGIN">
+      <UniqueIdentifier>{a77a9ad7-73a4-4575-9b00-ea0a58df9b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HELPER">
+      <UniqueIdentifier>{41c07c2d-a63b-4cb7-88c7-ce8a4fee74ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESTCASE">
+      <UniqueIdentifier>{c21ff79f-fcbf-4fa5-949a-08410f84f73b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>__GLOBAL__</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginHandler.cpp">
+      <Filter>PLUGIN</Filter>
+    </ClCompile>
+    <ClCompile Include="GoogleTestHelper.cpp">
+      <Filter>HELPER</Filter>
+    </ClCompile>
+    <ClCompile Include="TCExample.cpp">
+      <Filter>TESTCASE</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MYPLG_GTEST.rc2">
+      <Filter>__GLOBAL__\RC</Filter>
+    </None>
+    <None Include="MYPLG_GTEST.def">
+      <Filter>__GLOBAL__</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkLib.h">
+      <Filter>__GLOBAL__</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginHandler.h">
+      <Filter>PLUGIN</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginResManager.h">
+      <Filter>PLUGIN</Filter>
+    </ClInclude>
+    <ClInclude Include="GoogleTestHelper.h">
+      <Filter>HELPER</Filter>
+    </ClInclude>
+    <ClInclude Include="TCExample.h">
+      <Filter>TESTCASE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MYPLG_GTEST.rc">
+      <Filter>__GLOBAL__\RC</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
