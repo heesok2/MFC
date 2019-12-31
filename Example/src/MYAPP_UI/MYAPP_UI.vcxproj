@@ -240,6 +240,9 @@
     <ResourceCompile Include="MYAPP_UI.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYAPP_BASE\MYAPP_BASE.vcxproj">
+      <Project>{326ecf5d-b6eb-4da3-99ae-4e757796841f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MYENG_BASE\MYENG_BASE.vcxproj">
       <Project>{e8a98686-860e-4b57-bd79-bac7796314dd}</Project>
     </ProjectReference>

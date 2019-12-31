@@ -16,9 +16,11 @@ protected:
 	CMFCRibbonCategory*	m_pCategory;
 
 	CMFCRibbonPanel* m_pPanel;
-	CMFCRibbonButton* m_pButtonL;
-	CMFCRibbonButton* m_pButtonS;
-	CMFCRibbonButton* m_pbtnDialog;
+	CMFCRibbonButton* m_pBtnPlugin;
+	CMFCRibbonButton* m_pBtnGoogleTest;
+	CMFCRibbonButton* m_pBtnDialog;
+	CMFCRibbonButton* m_pBtnAssimp;
+
 	CMFCRibbonCheckBox* m_pCheckBox;
 	CMFCRibbonComboBox*	m_pComboBox;
 	CMFCRibbonButton* m_pButtonMenu;

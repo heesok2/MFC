@@ -239,7 +239,6 @@
     <ClInclude Include="GLView.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="MYDialog.h" />
-    <ClInclude Include="NotifyDefine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />

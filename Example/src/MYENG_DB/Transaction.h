@@ -14,5 +14,8 @@ namespace mydb
 		BOOL Commit();
 		void Rollback();
 
+	protected:
+		std::shared_ptr<CPackage> m_pMyPackage;
+
 	};
 }

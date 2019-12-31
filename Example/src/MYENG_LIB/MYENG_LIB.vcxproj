@@ -238,6 +238,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="MathLib.h" />
+    <ClInclude Include="NotifyDefine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StringLib.h" />

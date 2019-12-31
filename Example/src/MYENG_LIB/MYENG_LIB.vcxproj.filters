@@ -28,6 +28,9 @@
     <Filter Include="LIBRARY\FileCtrl">
       <UniqueIdentifier>{c3940d4e-fda5-434c-94d2-7f8a2781e034}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NOTIFY">
+      <UniqueIdentifier>{580ba2c5-9269-4b3e-bdcc-00e2d278f29b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -90,6 +93,9 @@
     </ClInclude>
     <ClInclude Include="FileCtrlLib.h">
       <Filter>LIBRARY\FileCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="NotifyDefine.h">
+      <Filter>NOTIFY</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

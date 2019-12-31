@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "GLCtrlView.h"
-#include "NotifyDefine.h"
 
+#include "..\MYENG_LIB\NotifyDefine.h"
 #include "..\MYENG_GL\ShaderDefine.h"
 
 using namespace mygl;

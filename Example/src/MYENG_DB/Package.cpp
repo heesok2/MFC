@@ -9,7 +9,8 @@ static char THIS_FILE[] = __FILE__;
 
 using namespace mydb;
 
-CPackage::CPackage()
+CPackage::CPackage(CDocument* pDoc)
+	: m_pMyDoc(pDoc)
 {
 }
 

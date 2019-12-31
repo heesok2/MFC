@@ -16,13 +16,15 @@ namespace mydb
 	class AFX_EXT_CLASS CPackage
 	{
 	public:
-		CPackage();
+		CPackage(CDocument* pDoc);
 		virtual ~CPackage();
 
 	public:
 		virtual void CreateModule() = 0;
-		
-		
+				
+	public:
+		CDocument* GetDocument() { return m_pMyDoc; }
+
 	public:
 		MYPOS GetHeader();
 		MYPOS GetEnd();
@@ -32,6 +34,8 @@ namespace mydb
 		std::shared_ptr<CModule> GetModule(MYTYPE type);
 
 	protected:
+		CDocument* m_pMyDoc;
+
 		std::map<MYTYPE, UINT> m_mSeqIndex;
 		std::vector<std::shared_ptr<CModule>> m_aModule;
 

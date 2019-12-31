@@ -24,8 +24,10 @@
 #include "MyPackageStream.h"
 
 #include "..\MYENG_LIB\ZipLib.h"
-#include "..\MYENG_BASE\NotifyDefine.h"
+#include "..\MYENG_LIB\NotifyDefine.h"
+#include "..\MYAPP_BASE\AssimpFile.h"
 #include "..\MYAPP_UI\AppDialogProvider.h"
+
 
 #include <propkey.h>
 
@@ -41,10 +43,12 @@ BEGIN_MESSAGE_MAP(CMYEXDoc, CDocument)
 	ON_COMMAND_RANGE(ID_MYEX_PLUGIN_UI, ID_MYEX_PLUGIN_UI, OnRibbonCategory)
 	ON_COMMAND_RANGE(ID_MYEX_GTEST, ID_MYEX_GTEST, OnRibbonCategory)
 	ON_COMMAND_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategory)
+	ON_COMMAND_RANGE(ID_MYEX_ASSIMPIMPORT, ID_MYEX_ASSIMPIMPORT, OnRibbonCategory)
 
 	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_PLUGIN_UI, ID_MYEX_PLUGIN_UI, OnRibbonCategoryUI)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_GTEST, ID_MYEX_GTEST, OnRibbonCategoryUI)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_DIALOG, ID_MYEX_DIALOG, OnRibbonCategoryUI)
+	ON_UPDATE_COMMAND_UI_RANGE(ID_MYEX_ASSIMPIMPORT, ID_MYEX_ASSIMPIMPORT, OnRibbonCategoryUI)
 END_MESSAGE_MAP()
 
 
@@ -52,7 +56,7 @@ END_MESSAGE_MAP()
 
 CMYEXDoc::CMYEXDoc() noexcept
 {
-	m_pMyPackage = std::make_shared<CMyPackage>();
+	m_pMyPackage = std::make_shared<CMyPackage>(this);
 }
 
 CMYEXDoc::~CMYEXDoc()
@@ -214,6 +218,19 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 			}
 		}
 		break;
+	case ID_MYEX_ASSIMPIMPORT:
+		{
+			CString strFilter = _T("All Files(*.*)|*.*||");
+			CFileDialog dlg(TRUE, NULL, NULL, OFN_HIDEREADONLY, strFilter);
+			if (dlg.DoModal() != IDOK)
+				return;
+
+			CAssimpFile file(this);
+			auto strFilePath = dlg.GetPathName();
+			if (file.Open(strFilePath))
+				file.Load();
+		}
+		break;
 	default:
 		{
 			ASSERT(g_warning);
@@ -222,21 +239,6 @@ void CMYEXDoc::OnRibbonCategory(UINT uiMenu)
 	}
 }
 
-void CMYEXDoc::OnRibbonCategoryUI(CCmdUI * pCmdUI)
+void CMYEXDoc::OnRibbonCategoryUI(CCmdUI *)
 {
-	switch (pCmdUI->m_nID)
-	{
-	case ID_MYEX_DIALOG:
-	case ID_MYEX_PLUGIN_UI:
-	case ID_MYEX_GTEST:
-		{
-
-		}
-		break;
-	default:
-		{
-			ASSERT(g_warning);
-		}
-		break;
-	}
 }

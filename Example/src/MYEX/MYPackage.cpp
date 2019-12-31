@@ -1,11 +1,13 @@
 #include "stdafx.h"
 #include "MyPackage.h"
 
+#include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_DB\ModuleNode.h"
 #include "..\MYENG_DB\ModuleElem.h"
 #include "..\MYENG_DB\ModuleMesh.h"
 
-CMyPackage::CMyPackage()
+CMyPackage::CMyPackage(CDocBase* pDoc)
+	: CPackage(pDoc)
 {
 }
 

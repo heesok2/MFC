@@ -16,9 +16,6 @@
     <Filter Include="DIALOG">
       <UniqueIdentifier>{e796e1ff-dc8a-4206-95c3-56117eb19603}</UniqueIdentifier>
     </Filter>
-    <Filter Include="NOTIFY">
-      <UniqueIdentifier>{31780de5-3d34-402e-9147-29871acaa1dc}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYENG_BASE.rc2">
@@ -58,9 +55,6 @@
     </ClInclude>
     <ClInclude Include="MYDialog.h">
       <Filter>DIALOG</Filter>
-    </ClInclude>
-    <ClInclude Include="NotifyDefine.h">
-      <Filter>NOTIFY</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

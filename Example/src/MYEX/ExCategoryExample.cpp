@@ -27,18 +27,23 @@ void CExCategoryExample::SetMenu(CMFCRibbonBar * pRibbonBar)
 	m_pPanel = m_pCategory->AddPanel(_T("Panel"));
 	m_pPanel->SetCenterColumnVert(TRUE);
 	
-	m_pbtnDialog = new CMFCRibbonButton(ID_MYEX_DIALOG, _T("Dialog Example"), -1, 0);
-	m_pbtnDialog->SetToolTipText(_T("Dialog Example ToolTip"));
-	m_pbtnDialog->SetDescription(_T("Dialog Example Description"));
-	m_pPanel->Add(m_pbtnDialog);
+	m_pBtnDialog = new CMFCRibbonButton(ID_MYEX_DIALOG, _T("Dialog Example"), -1, 0);
+	m_pBtnDialog->SetToolTipText(_T("Dialog Example ToolTip"));
+	m_pBtnDialog->SetDescription(_T("Dialog Example Description"));
+	m_pPanel->Add(m_pBtnDialog);
 
-	m_pButtonL = new CMFCRibbonButton(ID_MYEX_PLUGIN_UI, _T("Plugin UI"), -1, 0);
-	m_pButtonL->SetToolTipText(_T("Plugin UI ToolTip"));
-	m_pButtonL->SetDescription(_T("Plugin UI Description"));
-	m_pPanel->Add(m_pButtonL);
+	m_pBtnPlugin = new CMFCRibbonButton(ID_MYEX_PLUGIN_UI, _T("Plugin UI"), 0, -1);
+	m_pBtnPlugin->SetToolTipText(_T("Plugin UI ToolTip"));
+	m_pBtnPlugin->SetDescription(_T("Plugin UI Description"));
+	m_pPanel->Add(m_pBtnPlugin);
 
-	m_pButtonS = new CMFCRibbonButton(ID_MYEX_GTEST, _T("Google Test "), 0, -1);
-	m_pButtonS->SetToolTipText(_T("Google Test ToolTip"));
-	m_pButtonS->SetDescription(_T("Google Test Description"));
-	m_pPanel->Add(m_pButtonS);	
+	m_pBtnGoogleTest = new CMFCRibbonButton(ID_MYEX_GTEST, _T("Google Test "), 0, -1);
+	m_pBtnGoogleTest->SetToolTipText(_T("Google Test ToolTip"));
+	m_pBtnGoogleTest->SetDescription(_T("Google Test Description"));
+	m_pPanel->Add(m_pBtnGoogleTest);	
+
+	m_pBtnAssimp = new CMFCRibbonButton(ID_MYEX_ASSIMPIMPORT, _T("Assimp Import"), 0, -1);
+	m_pBtnAssimp->SetToolTipText(_T("Assimp Import ToolTip"));
+	m_pBtnAssimp->SetDescription(_T("Assimp Import Description"));
+	m_pPanel->Add(m_pBtnAssimp);	
 }

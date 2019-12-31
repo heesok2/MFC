@@ -6,7 +6,7 @@ namespace Assimp
 }
 
 class CDocBase;
-class CAssimpFile
+class AFX_EXT_CLASS CAssimpFile
 {
 public:
 	CAssimpFile(CDocBase* pDoc);
@@ -21,6 +21,5 @@ protected:
 
 	CString m_strFilePath;
 	std::shared_ptr<Assimp::Importer> m_pFile;
-	
-};
 
+};

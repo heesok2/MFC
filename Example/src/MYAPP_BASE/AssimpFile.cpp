@@ -108,7 +108,7 @@ BOOL CAssimpFile::Load()
 				break;
 			}
 
-			aItrNode[lnode] = itrNode;
+			aItrNode.push_back(itrNode);
 		}
 
 		for (unsigned int lface = 0; lface < pMesh->mNumFaces; ++lface)
