@@ -1,15 +1,16 @@
 #include "pch.h"
-#include "MYAPPView.h"
+#include "AppViewBase.h"
 
-CMYAPPView::CMYAPPView()
+CAppViewBase::CAppViewBase()
+{
+
+}
+
+CAppViewBase::~CAppViewBase()
 {
 }
 
-CMYAPPView::~CMYAPPView()
-{
-}
-
-void CMYAPPView::OnDraw(CDC * pDC)
+void CAppViewBase::OnDraw(CDC * pDC)
 {
 	BeginwglCurrent();
 	{

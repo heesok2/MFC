@@ -15,10 +15,10 @@
 
 #pragma once
 
-#include "..\MYENG_BASE\DocBase.h"
+#include "..\MYAPP_BASE\AppDocBase.h"
 
-class CMYPackage;
-class CMYEXDoc : public CDocBase
+class CMyPackage;
+class CMYEXDoc : public CAppDocBase
 {
 protected: // serialization에서만 만들어집니다.
 	CMYEXDoc() noexcept;

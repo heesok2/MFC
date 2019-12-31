@@ -1,5 +1,6 @@
 #include "pch.h"
-#include "EntityNode.h"
+#include "EntityElem.h"
+#include "EntityDefine.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -7,10 +8,11 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-CEntityNode::CEntityNode()
+CEntityElem::CEntityElem()
 {
 }
 
-CEntityNode::~CEntityNode()
+
+CEntityElem::~CEntityElem()
 {
 }

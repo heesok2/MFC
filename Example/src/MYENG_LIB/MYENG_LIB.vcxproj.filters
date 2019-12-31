@@ -25,6 +25,9 @@
     <Filter Include="LIBRARY\Math">
       <UniqueIdentifier>{6e28b895-9bc9-41ec-bdaa-4ea318534b95}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LIBRARY\FileCtrl">
+      <UniqueIdentifier>{c3940d4e-fda5-434c-94d2-7f8a2781e034}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="MathLib.cpp">
       <Filter>LIBRARY\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="FileCtrlLib.cpp">
+      <Filter>LIBRARY\FileCtrl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +87,9 @@
     </ClInclude>
     <ClInclude Include="MathLib.h">
       <Filter>LIBRARY\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="FileCtrlLib.h">
+      <Filter>LIBRARY\FileCtrl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

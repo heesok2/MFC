@@ -76,7 +76,7 @@ void CGLCtrlView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 			{
 				m_FrameBufferManager.GLDelete();
 				m_ShaderManager.GLDelete();
-				
+
 				GLDeleteScene();
 			}
 			EndwglCurrent();
@@ -91,14 +91,14 @@ void CGLCtrlView::GLCreateScene()
 {
 	float quadVertices[] =
 	{
-		// positions   // texCoords
-		-1.0f,  1.0f,  0.0f, 1.0f,
-		-1.0f, -1.0f,  0.0f, 0.0f,
-		1.0f, -1.0f,  1.0f, 0.0f,
+		// positions			// normal			// texCoords
+		-1.0f, 1.0f, 0.f,		0.f, 0.f, 1.f,		0.0f, 1.0f,
+		-1.0f, -1.0f, 0.f,		0.f, 0.f, 1.f,		0.0f, 0.0f,
+		1.0f, -1.0f, 0.f,		0.f, 0.f, 1.f,		1.0f, 0.0f,
 
-		-1.0f,  1.0f,  0.0f, 1.0f,
-		1.0f, -1.0f,  1.0f, 0.0f,
-		1.0f,  1.0f,  1.0f, 1.0f
+		-1.0f, 1.0f, 0.f,		0.f, 0.f, 1.f,		0.0f, 1.0f,
+		1.0f, -1.0f, 0.f,		0.f, 0.f, 1.f,		1.0f, 0.0f,
+		1.0f, 1.0f, 0.f,		0.f, 0.f, 1.f,		1.0f, 1.0f
 	};
 
 	glGenVertexArrays(1, &m_uiSceneVAO);
@@ -109,9 +109,11 @@ void CGLCtrlView::GLCreateScene()
 	{
 		glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), quadVertices, GL_STATIC_DRAW);
 		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 4, nullptr);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 8, nullptr);
 		glEnableVertexAttribArray(1);
-		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 4, (void*)(sizeof(float) * 2));
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 3));
+		glEnableVertexAttribArray(2);
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 5));
 
 		auto ShaderScene = m_ShaderManager.GetAt(E_SHADER_SCENE);
 		ShaderScene.GLSetInt("SceneTex2D", 0);

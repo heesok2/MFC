@@ -11,6 +11,7 @@ namespace mydb
 
 	public:
 		virtual MYTYPE GetType() = 0;
+		virtual MYKEY GetNewKey() = 0;
 
 	protected:
 		CPackage* m_pPackage;

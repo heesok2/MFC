@@ -50,6 +50,15 @@
     <None Include="res\GLSL\scene.vert">
       <Filter>__GLOBAL__\FILE</Filter>
     </None>
+    <None Include="res\GLSL\phong.frag">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </None>
+    <None Include="res\GLSL\phong.vert">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </None>
+    <None Include="res\GLSL\directional.frag">
+      <Filter>__GLOBAL__\FILE</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">

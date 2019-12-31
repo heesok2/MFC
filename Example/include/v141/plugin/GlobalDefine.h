@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef GLOBAL_DEF
-#define GLOBAL_DEF
+#ifndef DEF_GLOBAL
+#define DEF_GLOBAL
 
 static int g_warning = 0;
 
@@ -15,4 +15,4 @@ static int g_warning = 0;
 #define _SAFE_DELETE(x) { if(x){delete (x);(x)=NULL; }}
 #define _SAFE_DELETE_ARRAY(x) { if(x){delete[] (x); (x)=NULL;} }
 
-#endif // !GLOBAL_DEF
+#endif // !DEF_GLOBAL

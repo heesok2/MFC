@@ -1,17 +1,19 @@
 #include "stdafx.h"
-#include "MYPackage.h"
+#include "MyPackage.h"
 
 #include "..\MYENG_DB\ModuleNode.h"
+#include "..\MYENG_DB\ModuleElem.h"
+#include "..\MYENG_DB\ModuleMesh.h"
 
-CMYPackage::CMYPackage()
+CMyPackage::CMyPackage()
 {
 }
 
-CMYPackage::~CMYPackage()
+CMyPackage::~CMyPackage()
 {
 }
 
-void CMYPackage::CreateModule()
+void CMyPackage::CreateModule()
 {
 	auto lambda_module = [&](auto pModule)
 	{
@@ -32,5 +34,7 @@ void CMYPackage::CreateModule()
 
 	// DB Relation 에 맞게 저장해야 한다.
 	lambda_module(std::make_shared<CModuleNode>(this));
+	lambda_module(std::make_shared<CModuleElem>(this));
+	lambda_module(std::make_shared<CModuleMesh>(this));
 
 }

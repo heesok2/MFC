@@ -20,8 +20,8 @@
 #endif
 
 #include "MYEXDoc.h"
-#include "MYPackage.h"
-#include "MYPackageStream.h"
+#include "MyPackage.h"
+#include "MyPackageStream.h"
 
 #include "..\MYENG_LIB\ZipLib.h"
 #include "..\MYENG_BASE\NotifyDefine.h"
@@ -52,7 +52,7 @@ END_MESSAGE_MAP()
 
 CMYEXDoc::CMYEXDoc() noexcept
 {
-	m_pMyPackage = std::make_shared<CMYPackage>();
+	m_pMyPackage = std::make_shared<CMyPackage>();
 }
 
 CMYEXDoc::~CMYEXDoc()
@@ -67,7 +67,7 @@ BOOL CMYEXDoc::OnNewDocument()
 	// TODO: 여기에 재초기화 코드를 추가합니다.
 	// SDI 문서는 이 문서를 다시 사용합니다.
 
-	CMYPackageStream::New(this);
+	CMyPackageStream::New(this);
 
 	return TRUE;
 }
@@ -76,7 +76,7 @@ void CMYEXDoc::OnCloseDocument()
 {
 	UpdateAllViews(nullptr, E_DOCUMENT_CLOSE);
 
-	CDocBase::OnCloseDocument();
+	CAppDocBase::OnCloseDocument();
 }
 
 void CMYEXDoc::Serialize(CArchive& ar)

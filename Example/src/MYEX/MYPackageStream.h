@@ -1,11 +1,11 @@
 #pragma once
 
 class CDocBase;
-class CMYPackageStream
+class CMyPackageStream
 {
 public:
-	CMYPackageStream();
-	~CMYPackageStream();
+	CMyPackageStream();
+	~CMyPackageStream();
 
 public:
 	static BOOL New(CDocBase* pDoc);

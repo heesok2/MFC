@@ -2,11 +2,11 @@
 
 #include "..\MYENG_DB\Package.h"
 
-class CMYPackage : public mydb::CPackage
+class CMyPackage : public mydb::CPackage
 {
 public:
-	CMYPackage();
-	virtual ~CMYPackage();
+	CMyPackage();
+	virtual ~CMyPackage();
 
 public:
 	virtual void CreateModule() override;

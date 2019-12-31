@@ -2,11 +2,11 @@
 
 #include "..\MYENG_BASE\ViewBase.h"
 
-class AFX_EXT_CLASS CMYAPPView : public CViewBase
+class AFX_EXT_CLASS CAppViewBase : public CViewBase
 {
 public:
-	CMYAPPView();
-	virtual ~CMYAPPView();
+	CAppViewBase();
+	virtual ~CAppViewBase();
 
 protected:
 

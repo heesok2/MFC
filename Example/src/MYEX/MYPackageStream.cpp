@@ -1,18 +1,18 @@
 #include "stdafx.h"
-#include "MYPackageStream.h"
+#include "MyPackageStream.h"
 
 #include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_DB\Package.h"
 
-CMYPackageStream::CMYPackageStream()
+CMyPackageStream::CMyPackageStream()
 {
 }
 
-CMYPackageStream::~CMYPackageStream()
+CMyPackageStream::~CMyPackageStream()
 {
 }
 
-BOOL CMYPackageStream::New(CDocBase * pDoc)
+BOOL CMyPackageStream::New(CDocBase * pDoc)
 {
 	auto pPackage = pDoc->GetPackage();
 	pPackage->CreateModule();
@@ -20,19 +20,19 @@ BOOL CMYPackageStream::New(CDocBase * pDoc)
 	return TRUE;
 }
 
-BOOL CMYPackageStream::Open(CDocBase * )
+BOOL CMyPackageStream::Open(CDocBase * )
 {
 
 	return TRUE;
 }
 
-BOOL CMYPackageStream::Save(CDocBase * )
+BOOL CMyPackageStream::Save(CDocBase * )
 {
 
 	return TRUE;
 }
 
-BOOL CMYPackageStream::Close(CDocBase *)
+BOOL CMyPackageStream::Close(CDocBase *)
 {
 
 	return TRUE;

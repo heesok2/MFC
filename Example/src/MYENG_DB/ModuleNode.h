@@ -16,6 +16,4 @@ public:
 		return MYTYPE_NODE;
 	}
 
-public:
-
 };

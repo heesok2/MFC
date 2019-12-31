@@ -6,6 +6,8 @@
 #include "..\MYENG_DB\Package.h"
 #include "..\MYENG_DB\ModuleNode.h"
 
+using namespace mydb;
+
 CExampleDlg::CExampleDlg(CDocBase * pDoc, CWnd * pParent)
 	: CMYDialog(CExampleDlg::IDD, pDoc, pParent)
 {
@@ -49,8 +51,8 @@ void CExampleDlg::SetControl()
 
 void CExampleDlg::ExampleDB()
 {
-	auto pPackage = m_pMyDoc->GetPackage();
-	auto pModuleNode = std::static_pointer_cast<CModuleNode>(pPackage->GetModule(MYTYPE_NODE));
+	auto pMyPackage = m_pMyDoc->GetPackage();
+	auto pModuleNode = std::static_pointer_cast<CModuleNode>(pMyPackage->GetModule(MYTYPE_NODE));
 
 	// 조회
 	std::vector<MYITR> aItr;
@@ -66,6 +68,10 @@ void CExampleDlg::ExampleDB()
 		}
 	}
 
+	CTransaction tr(pMyPackage);
+	if (!tr.Begin())
+		return;
+
 	// 추가
 	CEntityNode tInsert;
 	tInsert.Key = pModuleNode->GetNewKey();
@@ -78,6 +84,9 @@ void CExampleDlg::ExampleDB()
 	if (!ITR_IS_VALID(itrNode))
 	{
 		ASSERT(g_warning);
+
+		tr.Rollback();
+		return;
 	}
 
 	// 수정 
@@ -86,11 +95,19 @@ void CExampleDlg::ExampleDB()
 	if (!pModuleNode->SetAtNU(itrNode, tModify))
 	{
 		ASSERT(g_warning);
+
+		tr.Rollback();
+		return;
 	}
 
 	// 삭제
 	if (!pModuleNode->Remove(itrNode))
 	{
 		ASSERT(g_warning);
+
+		tr.Rollback();
+		return;
 	}
+
+	tr.Commit();
 }

@@ -77,6 +77,13 @@ void CShaderManager::GLCreate(UINT uiType)
 			shader.GLAttachShader(GL_FRAGMENT_SHADER, IDR_SCENE_FRAG);
 		}
 		break;
+	case E_SHADER_PHONG:
+		{
+			shader.GLAttachShader(GL_VERTEX_SHADER, IDR_PHONG_VERT);
+			shader.GLAttachShader(GL_FRAGMENT_SHADER, IDR_DIRECTIONAL_FRAG);
+			shader.GLAttachShader(GL_FRAGMENT_SHADER, IDR_PHONG_FRAG);
+		}
+		break;
 	default:
 		{
 			ASSERT(g_warning);

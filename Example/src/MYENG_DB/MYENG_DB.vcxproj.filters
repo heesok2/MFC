@@ -54,6 +54,15 @@
     <ClCompile Include="ModuleElem.cpp">
       <Filter>MODULE\Element</Filter>
     </ClCompile>
+    <ClCompile Include="EntityElem.cpp">
+      <Filter>MODULE\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityMesh.cpp">
+      <Filter>MODULE\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Transaction.cpp">
+      <Filter>DBMS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYENG_DB.rc2">
@@ -111,6 +120,18 @@
     </ClInclude>
     <ClInclude Include="ModuleElem.h">
       <Filter>MODULE\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityElem.h">
+      <Filter>MODULE\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityMesh.h">
+      <Filter>MODULE\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementType.h">
+      <Filter>MODULE\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Transaction.h">
+      <Filter>DBMS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -72,10 +72,10 @@
     <ClInclude Include="ExtDllManager.h">
       <Filter>EXTENSION</Filter>
     </ClInclude>
-    <ClInclude Include="MYPackage.h">
+    <ClInclude Include="MyPackage.h">
       <Filter>DATABASE</Filter>
     </ClInclude>
-    <ClInclude Include="MYPackageStream.h">
+    <ClInclude Include="MyPackageStream.h">
       <Filter>DATABASE</Filter>
     </ClInclude>
   </ItemGroup>
@@ -113,10 +113,10 @@
     <ClCompile Include="ExtDllManager.cpp">
       <Filter>EXTENSION</Filter>
     </ClCompile>
-    <ClCompile Include="MYPackage.cpp">
+    <ClCompile Include="MyPackage.cpp">
       <Filter>DATABASE</Filter>
     </ClCompile>
-    <ClCompile Include="MYPackageStream.cpp">
+    <ClCompile Include="MyPackageStream.cpp">
       <Filter>DATABASE</Filter>
     </ClCompile>
   </ItemGroup>

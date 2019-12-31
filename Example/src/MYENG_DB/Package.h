@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Transaction.h"
+
 namespace mydb
 {
 #ifndef DEF_MYPOS

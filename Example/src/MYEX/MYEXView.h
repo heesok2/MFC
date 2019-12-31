@@ -14,9 +14,9 @@
 
 #pragma once
 
-#include "..\MYAPP_BASE\MYAPPView.h"
+#include "..\MYAPP_BASE\AppViewBase.h"
 
-class CMYEXView : public CMYAPPView
+class CMYEXView : public CAppViewBase
 {
 protected: // serialization에서만 만들어집니다.
 	CMYEXView() noexcept;

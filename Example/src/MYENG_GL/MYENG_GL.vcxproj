@@ -229,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="MYENG_GL.def" />
+    <None Include="res\GLSL\directional.frag" />
+    <None Include="res\GLSL\phong.frag" />
+    <None Include="res\GLSL\phong.vert" />
     <None Include="res\GLSL\scene.frag" />
     <None Include="res\GLSL\scene.vert" />
     <None Include="res\MYENG_GL.rc2" />
