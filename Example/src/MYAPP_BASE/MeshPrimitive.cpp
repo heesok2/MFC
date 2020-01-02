@@ -8,6 +8,12 @@
 #include "..\MYENG_DB\ModuleElem.h"
 #include "..\MYENG_DB\ModuleMesh.h"
 
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
 CMeshPrimitive::CMeshPrimitive()
 	: m_uiVAO(0)
 	, m_uiVBO(0)

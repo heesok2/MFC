@@ -4,6 +4,12 @@
 #include "..\MYENG_LIB\NotifyDefine.h"
 #include "..\MYENG_GL\ShaderDefine.h"
 
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
 using namespace mygl;
 
 CGLCtrlView::CGLCtrlView()

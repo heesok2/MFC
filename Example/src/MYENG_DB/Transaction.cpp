@@ -4,6 +4,12 @@
 
 #include "..\MYENG_LIB\NotifyDefine.h"
 
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
 using namespace mydb;
 
 CTransaction::CTransaction(std::shared_ptr<mydb::CPackage> pPackage)
