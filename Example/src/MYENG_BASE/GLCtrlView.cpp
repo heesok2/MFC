@@ -65,7 +65,7 @@ void CGLCtrlView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 		{
 			BeginwglCurrent();
 			{
-
+				m_RenderManager.GLPrepare(this, pHint);
 			}
 			EndwglCurrent();
 		}

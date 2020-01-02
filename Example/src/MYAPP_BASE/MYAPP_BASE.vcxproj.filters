@@ -19,6 +19,12 @@
     <Filter Include="FILE\Assimp">
       <UniqueIdentifier>{9cd8c02f-761c-4e0c-b90a-ae56205a38b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RENDER">
+      <UniqueIdentifier>{05218a8b-52a0-44e8-9418-d46cdb89341b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RENDER\Phone">
+      <UniqueIdentifier>{fd3c3720-9c45-46fc-8ae1-d647887dc1db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -35,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="AssimpFile.cpp">
       <Filter>FILE\Assimp</Filter>
+    </ClCompile>
+    <ClCompile Include="PhongRender.cpp">
+      <Filter>RENDER\Phone</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshPrimitive.cpp">
+      <Filter>RENDER</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +81,15 @@
     </ClInclude>
     <ClInclude Include="AssimpFile.h">
       <Filter>FILE\Assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="PhongRender.h">
+      <Filter>RENDER\Phone</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDefine.h">
+      <Filter>RENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshPrimitive.h">
+      <Filter>RENDER</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

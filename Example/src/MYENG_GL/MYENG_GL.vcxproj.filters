@@ -16,6 +16,9 @@
     <Filter Include="SHADER">
       <UniqueIdentifier>{91625f89-e05d-4da5-b53d-0b044182e883}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RENDER">
+      <UniqueIdentifier>{8dde0d52-f0e1-470b-bf25-79f8a430ae4d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -35,6 +38,15 @@
     </ClCompile>
     <ClCompile Include="ShaderManager.cpp">
       <Filter>SHADER</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>RENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderBase.cpp">
+      <Filter>RENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimitiveBase.cpp">
+      <Filter>RENDER</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +105,15 @@
     </ClInclude>
     <ClInclude Include="ShaderManager.h">
       <Filter>SHADER</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>RENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderBase.h">
+      <Filter>RENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimitiveBase.h">
+      <Filter>RENDER</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

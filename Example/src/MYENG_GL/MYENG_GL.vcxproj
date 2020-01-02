@@ -224,6 +224,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PrimitiveBase.cpp" />
+    <ClCompile Include="RenderBase.cpp" />
+    <ClCompile Include="RenderManager.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderManager.cpp" />
   </ItemGroup>
@@ -243,6 +246,9 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PrimitiveBase.h" />
+    <ClInclude Include="RenderBase.h" />
+    <ClInclude Include="RenderManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderDefine.h" />

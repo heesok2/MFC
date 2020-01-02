@@ -142,7 +142,7 @@ BOOL CAssimpFile::Load()
 		CEntityMesh tMesh;
 		tMesh.Key = pModuleMesh->GetNewKey();
 		tMesh.aItrNode = aItrNode;
-		tMesh.aItrElement = aItrElem;
+		tMesh.aItrElem = aItrElem;
 
 		auto itrMesh = pModuleMesh->InsertNU(tMesh);
 		if (!ITR_IS_VALID(itrMesh))

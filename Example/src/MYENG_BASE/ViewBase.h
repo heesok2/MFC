@@ -8,6 +8,5 @@ public:
 	CViewBase();
 	virtual ~CViewBase();
 
-
 };
 

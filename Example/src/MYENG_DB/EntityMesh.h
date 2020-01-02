@@ -13,7 +13,7 @@ public:
 
 	std::vector<MYITR> aItrMesh;
 	std::vector<MYITR> aItrNode;
-	std::vector<MYITR> aItrElement;
+	std::vector<MYITR> aItrElem;
 	std::vector<MYITR> aItrTexture;
 
 };

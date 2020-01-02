@@ -4,6 +4,7 @@
 
 #include "..\MYENG_GL\FrameBufferManager.h"
 #include "..\MYENG_GL\ShaderManager.h"
+#include "..\MYENG_GL\RenderManager.h"
 
 namespace mygl
 {
@@ -32,6 +33,8 @@ namespace mygl
 	protected:
 		CFrameBufferManager m_FrameBufferManager;
 		CShaderManager m_ShaderManager;
+		CRenderManager m_RenderManager;
+		
 		UINT m_uiSceneVAO;
 		UINT m_uiSceneVBO;
 
