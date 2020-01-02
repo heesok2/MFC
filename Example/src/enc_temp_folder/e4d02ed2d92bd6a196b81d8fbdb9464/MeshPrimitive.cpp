@@ -37,6 +37,8 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 		aBufferVertex.push_back(tNode.aVertex);		
 		aBufferNormal.push_back(tNode.aNormal);
 		aBufferTexCord.push_back(tNode.aTexCord);
+
+		break;
 	}
 
 	std::vector<float> aBuffer;

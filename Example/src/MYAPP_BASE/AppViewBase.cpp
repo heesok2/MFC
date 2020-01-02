@@ -65,11 +65,9 @@ int CAppViewBase::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (CViewBase::OnCreate(lpCreateStruct) == -1)
 		return -1;
 
+	AttachedRender();
 
+	AttachedPrimitive();
 
-
-
-
-	
 	return 0;
 }
