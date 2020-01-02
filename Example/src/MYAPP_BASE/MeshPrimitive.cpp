@@ -23,23 +23,25 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 	auto pModuleNode = std::static_pointer_cast<CModuleNode>(pPackage->GetModule(MYTYPE_NODE));
 	auto pModuleElem = std::static_pointer_cast<CModuleElem>(pPackage->GetModule(MYTYPE_ELEM));
 	auto pModuleMesh = std::static_pointer_cast<CModuleMesh>(pPackage->GetModule(MYTYPE_MESH));
-	
+
+	std::vector<float> aBuffer;
+	std::vector<UINT> aBufferIndex;
 	std::vector<glm::vec3> aBufferVertex;
 	std::vector<glm::vec3> aBufferNormal;
 	std::vector<glm::vec3> aBufferTexCord;
 
 	std::vector<MYITR> aItrNode;
+	std::map<MYITR, UINT> mNodeIndex;
 	auto lNodeSize = pModuleNode->GetItrList(aItrNode);
 	for (auto lnode = 0; lnode < lNodeSize; ++lnode)
 	{
 		auto& tNode = pModuleNode->GetAtNU(aItrNode[lnode]);
-
 		aBufferVertex.push_back(tNode.aVertex);		
 		aBufferNormal.push_back(tNode.aNormal);
 		aBufferTexCord.push_back(tNode.aTexCord);
-	}
 
-	std::vector<float> aBuffer;
+		mNodeIndex[aItrNode[lnode]] = lnode;
+	}
 
 	auto lBufferSize = (aBufferVertex.size() + aBufferNormal.size() + aBufferTexCord.size()) * 3;
 	if (lBufferSize > 0)
@@ -49,6 +51,24 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 		auto itrTexCord = std::copy(&(aBufferNormal[0][0]), &(aBufferNormal[0][0]) + (aBufferNormal.size() * 3), itrNormal);
 		std::copy(&(aBufferTexCord[0][0]), &(aBufferTexCord[0][0]) + (aBufferTexCord.size() * 3), itrTexCord);
 	}
-	
+
+	std::vector<MYITR> aItrElem;
+	auto lElemSize = pModuleElem->GetItrList(aItrElem);
+	for (auto lelem = 0; lelem < lElemSize; ++lelem)
+	{
+		auto& tElem = pModuleElem->GetAtNU(aItrElem[lelem]);
+		if (tElem.uiType == E_ELEMTYPE_TRI3)
+		{
+			aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[0]]);
+			aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[1]]);
+			aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[2]]);
+		}
+		else
+		{
+			ASSERT(g_warning);
+		}
+		
+	}
+
 	return TRUE;
 }
