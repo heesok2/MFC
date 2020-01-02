@@ -215,6 +215,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="DocBase.cpp" />
     <ClCompile Include="GLCtrlView.cpp" />
@@ -233,6 +234,8 @@
     <None Include="res\MYENG_BASE.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraDefine.h" />
     <ClInclude Include="DocBase.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="GLCtrlView.h" />

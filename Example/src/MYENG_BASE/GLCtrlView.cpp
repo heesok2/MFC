@@ -133,6 +133,16 @@ std::shared_ptr<CShader> CGLCtrlView::GetShader(UINT uiShaderType)
 	return m_ShaderManager.GetAt(uiShaderType);
 }
 
+glm::mat4 CGLCtrlView::GetViewMatrix()
+{
+	return m_Camera.GetViewMatrix();
+}
+
+glm::mat4 CGLCtrlView::GetProjectionMatrix()
+{
+	return m_Camera.GetProjectionMatrix();
+}
+
 void CGLCtrlView::GLBindFrameBuffer(UINT uiType)
 {
 	m_FrameBufferManager.GLBind(uiType);
@@ -163,6 +173,12 @@ int CGLCtrlView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 void CGLCtrlView::OnSize(UINT nType, int cx, int cy)
 {
 	CGLView::OnSize(nType, cx, cy);
+
+	CRect rect;
+	rect.left = rect.bottom = 0;
+	rect.right = cx;
+	rect.top = cy;
+	m_Camera.SetViewSize(rect);
 
 	BeginwglCurrent();
 	{

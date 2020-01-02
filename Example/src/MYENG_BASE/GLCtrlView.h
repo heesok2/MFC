@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GLView.h"
+#include "Camera.h"
 
 #include "..\MYENG_GL\FrameBufferManager.h"
 #include "..\MYENG_GL\ShaderManager.h"
@@ -20,6 +21,8 @@ namespace mygl
 
 	public:
 		std::shared_ptr<CShader> GetShader(UINT uiShaderType);
+		glm::mat4 GetViewMatrix();
+		glm::mat4 GetProjectionMatrix();
 
 	protected:
 		void GLBindFrameBuffer(UINT uiType);
@@ -37,6 +40,7 @@ namespace mygl
 		CFrameBufferManager m_FrameBufferManager;
 		CShaderManager m_ShaderManager;
 		CRenderManager m_RenderManager;
+		CCamera m_Camera;
 		
 		UINT m_uiSceneVAO;
 		UINT m_uiSceneVBO;

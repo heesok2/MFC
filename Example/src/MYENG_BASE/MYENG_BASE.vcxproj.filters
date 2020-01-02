@@ -16,6 +16,12 @@
     <Filter Include="DIALOG">
       <UniqueIdentifier>{e796e1ff-dc8a-4206-95c3-56117eb19603}</UniqueIdentifier>
     </Filter>
+    <Filter Include="VIEW">
+      <UniqueIdentifier>{d6bbb1b3-b421-4342-b1fe-ce2a6120beef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VIEW\Camera">
+      <UniqueIdentifier>{a39acaf2-fff0-4627-8504-07ef3b564558}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYENG_BASE.rc2">
@@ -44,17 +50,23 @@
     <ClInclude Include="DocBase.h">
       <Filter>COMMON</Filter>
     </ClInclude>
-    <ClInclude Include="GLCtrlView.h">
-      <Filter>COMMON</Filter>
-    </ClInclude>
-    <ClInclude Include="GLView.h">
-      <Filter>COMMON</Filter>
-    </ClInclude>
     <ClInclude Include="ViewBase.h">
       <Filter>COMMON</Filter>
     </ClInclude>
     <ClInclude Include="MYDialog.h">
       <Filter>DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="GLView.h">
+      <Filter>VIEW</Filter>
+    </ClInclude>
+    <ClInclude Include="GLCtrlView.h">
+      <Filter>VIEW</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>VIEW\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraDefine.h">
+      <Filter>VIEW\Camera</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -72,17 +84,20 @@
     <ClCompile Include="DocBase.cpp">
       <Filter>COMMON</Filter>
     </ClCompile>
-    <ClCompile Include="GLCtrlView.cpp">
-      <Filter>COMMON</Filter>
-    </ClCompile>
-    <ClCompile Include="GLView.cpp">
-      <Filter>COMMON</Filter>
-    </ClCompile>
     <ClCompile Include="ViewBase.cpp">
       <Filter>COMMON</Filter>
     </ClCompile>
     <ClCompile Include="MYDialog.cpp">
       <Filter>DIALOG</Filter>
+    </ClCompile>
+    <ClCompile Include="GLView.cpp">
+      <Filter>VIEW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLCtrlView.cpp">
+      <Filter>VIEW</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>VIEW\Camera</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
