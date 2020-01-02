@@ -37,7 +37,7 @@ void CAppViewBase::OnDraw(CDC * pDC)
 
 			glEnable(GL_DEPTH_TEST);
 
-
+			m_RenderManager.GLDraw(this);
 		}
 
 		glPopAttrib();

@@ -9,6 +9,10 @@
 #include "..\MYENG_DB\ModuleMesh.h"
 
 CMeshPrimitive::CMeshPrimitive()
+	: m_uiVAO(0)
+	, m_uiVBO(0)
+	, m_uiEBO(0)
+	, m_uiSize(0)
 {
 }
 
@@ -36,7 +40,7 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 	for (auto lnode = 0; lnode < lNodeSize; ++lnode)
 	{
 		auto& tNode = pModuleNode->GetAtNU(aItrNode[lnode]);
-		aBufferVertex.push_back(tNode.aVertex);		
+		aBufferVertex.push_back(tNode.aVertex);
 		aBufferNormal.push_back(tNode.aNormal);
 		aBufferTexCord.push_back(tNode.aTexCord);
 
@@ -67,8 +71,57 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 		{
 			ASSERT(g_warning);
 		}
-		
 	}
+	   
+	glGenBuffers(1, &m_uiVBO);
+	glBindBuffer(GL_ARRAY_BUFFER, m_uiVBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * aBuffer.size(), &(aBuffer[0]), GL_STATIC_DRAW);
+
+	glGenBuffers(1, &m_uiEBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_uiEBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(UINT)* aBufferIndex.size(), &(aBufferIndex[0]), GL_STATIC_DRAW);
+
+	glGenVertexArrays(1, &m_uiVAO);
+	glBindVertexArray(m_uiVAO);
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, m_uiVBO);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_uiEBO);
+
+		auto itvVtx = sizeof(float) * 3 * 0;
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)itvVtx);
+		glEnableVertexAttribArray(0);
+
+		auto itvNor = sizeof(float) * 3 * aBufferVertex.size();
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)itvNor);
+		glEnableVertexAttribArray(1);
+		
+		auto itvTex = sizeof(float) * 3 * (aBufferVertex.size() + aBufferNormal.size());
+		glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 0, (void*)itvTex);
+		glEnableVertexAttribArray(2);
+	}
+	glBindVertexArray(0);
+
+	m_uiSize = static_cast<UINT>(aBufferIndex.size());
 
 	return TRUE;
+}
+
+BOOL CMeshPrimitive::GLIsValid()
+{
+	return m_uiSize;
+}
+
+void CMeshPrimitive::GLBind()
+{
+	glBindVertexArray(m_uiVAO);
+}
+
+void CMeshPrimitive::GLUnbind()
+{
+	glBindVertexArray(0);
+}
+
+void CMeshPrimitive::GLDraw()
+{
+	glDrawElements(GL_TRIANGLES, m_uiSize, GL_UNSIGNED_INT, 0);
 }

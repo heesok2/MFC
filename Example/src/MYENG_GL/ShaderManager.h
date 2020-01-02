@@ -12,7 +12,7 @@ namespace mygl
 
 	public:
 		BOOL IsValid(UINT uiType);
-		CShader& GetAt(UINT uiType);
+		std::shared_ptr<CShader> GetAt(UINT uiType);
 
 		void GLVersion();
 		void GLCreate();
@@ -22,7 +22,7 @@ namespace mygl
 		void GLCreate(UINT uiType);
 
 	protected:
-		std::map<UINT, CShader> m_mBuild;
+		std::map<UINT, std::shared_ptr<CShader>> m_mBuild;
 
 	};
 }

@@ -26,13 +26,13 @@ BOOL CShaderManager::IsValid(UINT uiType)
 	return itr != m_mBuild.end();
 }
 
-CShader & CShaderManager::GetAt(UINT uiType)
+std::shared_ptr<CShader> CShaderManager::GetAt(UINT uiType)
 {
 	auto itr = m_mBuild.find(uiType);
 	if (itr == m_mBuild.end())
 	{
 		ASSERT(g_warning);
-		m_mBuild[uiType] = CShader();
+		m_mBuild[uiType] = std::make_shared<CShader>();
 	}
 
 	return m_mBuild[uiType];
@@ -66,22 +66,22 @@ void CShaderManager::GLCreate(UINT uiType)
 	if (m_mBuild.end() != itrFind)
 		return;
 
-	CShader shader;
-	shader.GLCreate();
+	auto pShader = std::make_shared<CShader>();
+	pShader->GLCreate();
 
 	switch (uiType)
 	{
 	case E_SHADER_SCENE:
 		{
-			shader.GLAttachShader(GL_VERTEX_SHADER, IDR_SCENE_VERT);
-			shader.GLAttachShader(GL_FRAGMENT_SHADER, IDR_SCENE_FRAG);
+			pShader->GLAttachShader(GL_VERTEX_SHADER, IDR_SCENE_VERT);
+			pShader->GLAttachShader(GL_FRAGMENT_SHADER, IDR_SCENE_FRAG);
 		}
 		break;
 	case E_SHADER_PHONG:
 		{
-			shader.GLAttachShader(GL_VERTEX_SHADER, IDR_PHONG_VERT);
-			shader.GLAttachShader(GL_FRAGMENT_SHADER, IDR_DIRECTIONAL_FRAG);
-			shader.GLAttachShader(GL_FRAGMENT_SHADER, IDR_PHONG_FRAG);
+			pShader->GLAttachShader(GL_VERTEX_SHADER, IDR_PHONG_VERT);
+			pShader->GLAttachShader(GL_FRAGMENT_SHADER, IDR_DIRECTIONAL_FRAG);
+			pShader->GLAttachShader(GL_FRAGMENT_SHADER, IDR_PHONG_FRAG);
 		}
 		break;
 	default:
@@ -91,8 +91,8 @@ void CShaderManager::GLCreate(UINT uiType)
 		break;
 	}
 
-	shader.GLLinkShader();
-	m_mBuild[uiType] = shader;
+	pShader->GLLinkShader();
+	m_mBuild[uiType] = pShader;
 }
 
 void CShaderManager::GLDelete()
@@ -100,7 +100,7 @@ void CShaderManager::GLDelete()
 	auto itr = m_mBuild.begin();
 	while (itr == m_mBuild.end())
 	{
-		itr->second.GLDelete();
+		itr->second->GLDelete();
 		itr++;
 	}
 }

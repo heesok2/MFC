@@ -2,10 +2,7 @@
 
 out vec4 FragColor;
 
-vec3 GetDirectionalLight();
-
 void main()
 {
-	vec3 aColor = GetDirectionalLight();
-	FragColor = vec4(aColor, 1.f);
+	FragColor = vec4(0.3f, 0.3f, 0.3f, 1.f);
 }

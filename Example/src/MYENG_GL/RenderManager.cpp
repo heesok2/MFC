@@ -48,3 +48,9 @@ BOOL CRenderManager::GLPrepare(CView* pView, CObject* pHint)
 
 	return TRUE;
 }
+
+void mygl::CRenderManager::GLDraw(CView * pView)
+{
+	for (auto pRender : m_aRender)
+		pRender->GLDraw(pView);
+}

@@ -14,17 +14,8 @@ struct MyMatrix
 
 uniform MyMatrix myMatrix;
 
-out vec2 aTexCoordinate;
-out vec3 aNormalVector;
-out vec3 aModelViewPosition;
-
 void main()
 {
-	aTexCoordinate = aTexcel;
-	aNormalVector = vec3(myMatrix.matNormal * vec4(aNormal, 1.f));
-	mat4 matModelView = myMatrix.matModel * myMatrix.matView;
-	aModelViewPosition = vec3(matModelView * vec4(aVertex, 1.f));
-	
 	mat4 matModelViewProjection = myMatrix.matModel * myMatrix.matView * myMatrix.matProjection;
 	gl_Position = matModelViewProjection * vec4(aVertex, 1.f);
 }

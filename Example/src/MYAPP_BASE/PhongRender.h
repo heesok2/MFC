@@ -11,11 +11,11 @@ public:
 	virtual ~CPhongRender();
 
 public:
-	virtual UINT GetType() override 
-	{ 
+	virtual UINT GetType() override
+	{
 		return E_RENDER_PHONG;
 	}
 
-	virtual void GLDraw() override;
+	virtual void GLDraw(CView* pView) override;
 
 };

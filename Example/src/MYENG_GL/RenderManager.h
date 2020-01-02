@@ -15,6 +15,7 @@ namespace mygl
 		void AttachedPrimitive(std::shared_ptr<CPrimitiveBase> pPrimitive);
 
 		BOOL GLPrepare(CView* pView, CObject* pHint);
+		void GLDraw(CView* pView);
 
 	protected:
 		std::vector<std::shared_ptr<CRenderBase>> m_aRender;

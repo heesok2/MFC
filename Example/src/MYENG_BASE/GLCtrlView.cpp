@@ -29,14 +29,14 @@ void CGLCtrlView::OnDraw(CDC *)
 
 		glPushAttrib(GL_ALL_ATTRIB_BITS);
 		{
-			auto Shader = m_ShaderManager.GetAt(E_SHADER_SCENE);
+			auto pShader = m_ShaderManager.GetAt(E_SHADER_SCENE);
 
 			glClearColor(0.f, 0.f, 0.f, 1.f);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 			glDisable(GL_DEPTH_TEST);
 
-			Shader.GLBind();
+			pShader->GLBind();
 			m_FrameBufferManager.GLBindColorTex2D(E_FBO_MODEL);
 			{
 				glBindVertexArray(m_uiSceneVAO);
@@ -44,7 +44,7 @@ void CGLCtrlView::OnDraw(CDC *)
 				glBindVertexArray(0);
 			}
 			m_FrameBufferManager.GLUnbindColorTex2D(E_FBO_MODEL);
-			Shader.GLUnbind();
+			pShader->GLUnbind();
 		}
 		glPopAttrib();
 
@@ -116,7 +116,7 @@ void CGLCtrlView::GLCreateScene()
 		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 5));
 
 		auto ShaderScene = m_ShaderManager.GetAt(E_SHADER_SCENE);
-		ShaderScene.GLSetInt("SceneTex2D", 0);
+		ShaderScene->GLSetInt("SceneTex2D", 0);
 	}
 	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -126,6 +126,11 @@ void CGLCtrlView::GLDeleteScene()
 {
 	glDeleteVertexArrays(1, &m_uiSceneVAO);
 	glDeleteBuffers(1, &m_uiSceneVBO);
+}
+
+std::shared_ptr<CShader> CGLCtrlView::GetShader(UINT uiShaderType)
+{
+	return m_ShaderManager.GetAt(uiShaderType);
 }
 
 void CGLCtrlView::GLBindFrameBuffer(UINT uiType)

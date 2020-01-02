@@ -11,7 +11,7 @@ namespace mygl
 
 	public:
 		virtual UINT GetType() = 0;
-		virtual void GLDraw() = 0;
+		virtual void GLDraw(CView* pView) = 0;
 
 	public:
 		void Attached(std::shared_ptr<CPrimitiveBase> pPrimitive);

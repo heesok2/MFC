@@ -18,6 +18,9 @@ namespace mygl
 		virtual void OnDraw(CDC* /*pDC*/);
 		virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 
+	public:
+		std::shared_ptr<CShader> GetShader(UINT uiShaderType);
+
 	protected:
 		void GLBindFrameBuffer(UINT uiType);
 		void GLUnbindFrameBuffer(UINT uiType);
