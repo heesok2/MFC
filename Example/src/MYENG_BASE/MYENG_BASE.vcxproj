@@ -220,7 +220,7 @@
     <ClCompile Include="DocBase.cpp" />
     <ClCompile Include="GLCtrlView.cpp" />
     <ClCompile Include="GLView.cpp" />
-    <ClCompile Include="MYDialog.cpp" />
+    <ClCompile Include="MyDialog.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -241,7 +241,7 @@
     <ClInclude Include="GLCtrlView.h" />
     <ClInclude Include="GLView.h" />
     <ClInclude Include="LinkLib.h" />
-    <ClInclude Include="MYDialog.h" />
+    <ClInclude Include="MyDialog.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />

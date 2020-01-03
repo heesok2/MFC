@@ -53,9 +53,6 @@
     <ClInclude Include="ViewBase.h">
       <Filter>COMMON</Filter>
     </ClInclude>
-    <ClInclude Include="MYDialog.h">
-      <Filter>DIALOG</Filter>
-    </ClInclude>
     <ClInclude Include="GLView.h">
       <Filter>VIEW</Filter>
     </ClInclude>
@@ -67,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="CameraDefine.h">
       <Filter>VIEW\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="MyDialog.h">
+      <Filter>DIALOG</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +87,6 @@
     <ClCompile Include="ViewBase.cpp">
       <Filter>COMMON</Filter>
     </ClCompile>
-    <ClCompile Include="MYDialog.cpp">
-      <Filter>DIALOG</Filter>
-    </ClCompile>
     <ClCompile Include="GLView.cpp">
       <Filter>VIEW</Filter>
     </ClCompile>
@@ -98,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>VIEW\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="MyDialog.cpp">
+      <Filter>DIALOG</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

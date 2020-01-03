@@ -1,12 +1,12 @@
 #pragma once
 
-#include "ExCategoryBase.h"
+#include "CategoryBase.h"
 
-class CExCategoryExample : public CExCategoryBase
+class CCategoryExample : public CCategoryBase
 {
 public:
-	CExCategoryExample();
-	virtual ~CExCategoryExample();
+	CCategoryExample();
+	virtual ~CCategoryExample();
 
 public:
 	virtual void SetMenu(CMFCRibbonBar * pRibbonBar) override;
@@ -20,6 +20,7 @@ protected:
 	CMFCRibbonButton* m_pBtnGoogleTest;
 	CMFCRibbonButton* m_pBtnDialog;
 	CMFCRibbonButton* m_pBtnAssimp;
+	CMFCRibbonButton* m_pBtnExampleDB;
 
 	CMFCRibbonCheckBox* m_pCheckBox;
 	CMFCRibbonComboBox*	m_pComboBox;

@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "MYDialog.h"
+#include "MyDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -7,32 +7,32 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-CMYDialog::CMYDialog(CDocBase * pDoc)
+CMyDialog::CMyDialog(CDocBase * pDoc)
 	: CDialog()
 	, m_pMyDoc(pDoc)
 	, m_bModeless(TRUE)
 {
 }
 
-CMYDialog::CMYDialog(UINT uiResID, CDocBase * pDoc, CWnd * pParent)
+CMyDialog::CMyDialog(UINT uiResID, CDocBase * pDoc, CWnd * pParent)
 	: CDialog(uiResID, pParent)
 	, m_pMyDoc(pDoc)
 	, m_bModeless(TRUE)
 {
 }
 
-CMYDialog::~CMYDialog()
+CMyDialog::~CMyDialog()
 {
 }
 
-INT_PTR CMYDialog::DoModal()
+INT_PTR CMyDialog::DoModal()
 {
 	m_bModeless = FALSE;
 
 	return CDialog::DoModal();
 }
 
-void CMYDialog::OnOK()
+void CMyDialog::OnOK()
 {
 	CDialog::OnOK();
 
@@ -40,7 +40,7 @@ void CMYDialog::OnOK()
 		CDialog::DestroyWindow();
 }
 
-void CMYDialog::OnCancel()
+void CMyDialog::OnCancel()
 {
 	CDialog::OnCancel();
 
@@ -48,7 +48,7 @@ void CMYDialog::OnCancel()
 		CDialog::DestroyWindow();
 }
 
-void CMYDialog::PostNcDestroy()
+void CMyDialog::PostNcDestroy()
 {
 	CDialog::PostNcDestroy();
 

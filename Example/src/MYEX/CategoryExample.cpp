@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Resource.h"
-#include "ExCategoryExample.h"
+#include "CategoryExample.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -8,18 +8,18 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-CExCategoryExample::CExCategoryExample()
+CCategoryExample::CCategoryExample()
 	: m_pRibbonBar(nullptr)
 {
 	m_Menu.CreateMenu();
 }
 
-CExCategoryExample::~CExCategoryExample()
+CCategoryExample::~CCategoryExample()
 {
 	m_Menu.DestroyMenu();
 }
 
-void CExCategoryExample::SetMenu(CMFCRibbonBar * pRibbonBar)
+void CCategoryExample::SetMenu(CMFCRibbonBar * pRibbonBar)
 {
 	m_pRibbonBar = pRibbonBar;
 	m_pCategory = pRibbonBar->AddCategory(_T("Category"), IDB_MENU_EXAMPLE_SMALL, IDB_MENU_EXAMPLE_LARGE);
@@ -27,7 +27,12 @@ void CExCategoryExample::SetMenu(CMFCRibbonBar * pRibbonBar)
 	m_pPanel = m_pCategory->AddPanel(_T("Panel"));
 	m_pPanel->SetCenterColumnVert(TRUE);
 	
-	m_pBtnDialog = new CMFCRibbonButton(ID_MYEX_DIALOG, _T("Dialog Example"), -1, 0);
+	m_pBtnExampleDB = new CMFCRibbonButton(ID_MYEX_DB_EXAMPLE, _T("DB Example"), -1, 0);
+	m_pBtnExampleDB->SetToolTipText(_T("DB Example ToolTip"));
+	m_pBtnExampleDB->SetDescription(_T("DB Example Description"));
+	m_pPanel->Add(m_pBtnExampleDB);
+
+	m_pBtnDialog = new CMFCRibbonButton(ID_MYEX_DIALOG, _T("Dialog Example"), 0, -1);
 	m_pBtnDialog->SetToolTipText(_T("Dialog Example ToolTip"));
 	m_pBtnDialog->SetDescription(_T("Dialog Example Description"));
 	m_pPanel->Add(m_pBtnDialog);

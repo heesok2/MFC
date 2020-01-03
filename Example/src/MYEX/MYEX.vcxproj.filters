@@ -51,23 +51,11 @@
     <ClInclude Include="Resource.h">
       <Filter>__GLOBAL__\RC</Filter>
     </ClInclude>
-    <ClInclude Include="ExCategoryManager.h">
-      <Filter>MAIN\Category</Filter>
-    </ClInclude>
-    <ClInclude Include="ExCategoryBase.h">
-      <Filter>MAIN\Category</Filter>
-    </ClInclude>
-    <ClInclude Include="ExCategoryDefine.h">
-      <Filter>MAIN\Category</Filter>
-    </ClInclude>
     <ClInclude Include="MainFrm.h">
       <Filter>MAIN\Frame</Filter>
     </ClInclude>
     <ClInclude Include="ChildFrm.h">
       <Filter>MAIN\Frame</Filter>
-    </ClInclude>
-    <ClInclude Include="ExCategoryExample.h">
-      <Filter>MAIN\Category\Implement</Filter>
     </ClInclude>
     <ClInclude Include="ExtDllManager.h">
       <Filter>EXTENSION</Filter>
@@ -77,6 +65,18 @@
     </ClInclude>
     <ClInclude Include="MyPackageStream.h">
       <Filter>DATABASE</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryDefine.h">
+      <Filter>MAIN\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryBase.h">
+      <Filter>MAIN\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryManager.h">
+      <Filter>MAIN\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryExample.h">
+      <Filter>MAIN\Category\Implement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -95,20 +95,11 @@
     <ClCompile Include="calendarbar.cpp">
       <Filter>MAIN</Filter>
     </ClCompile>
-    <ClCompile Include="ExCategoryManager.cpp">
-      <Filter>MAIN\Category</Filter>
-    </ClCompile>
-    <ClCompile Include="ExCategoryBase.cpp">
-      <Filter>MAIN\Category</Filter>
-    </ClCompile>
     <ClCompile Include="ChildFrm.cpp">
       <Filter>MAIN\Frame</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
       <Filter>MAIN\Frame</Filter>
-    </ClCompile>
-    <ClCompile Include="ExCategoryExample.cpp">
-      <Filter>MAIN\Category\Implement</Filter>
     </ClCompile>
     <ClCompile Include="ExtDllManager.cpp">
       <Filter>EXTENSION</Filter>
@@ -118,6 +109,15 @@
     </ClCompile>
     <ClCompile Include="MyPackageStream.cpp">
       <Filter>DATABASE</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryBase.cpp">
+      <Filter>MAIN\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryManager.cpp">
+      <Filter>MAIN\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryExample.cpp">
+      <Filter>MAIN\Category\Implement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

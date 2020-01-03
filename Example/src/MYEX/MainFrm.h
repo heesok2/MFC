@@ -22,7 +22,7 @@ class COutlookBar : public CMFCOutlookBar
 	virtual void GetPaneName(CString& strName) const { BOOL bNameValid = strName.LoadString(IDS_OUTLOOKBAR); ASSERT(bNameValid); if (!bNameValid) strName.Empty(); }
 };
 
-class CExCategoryManager;
+class CCategoryManager;
 class CMainFrame : public CMDIFrameWndEx
 {
 	DECLARE_DYNAMIC(CMainFrame)
@@ -75,5 +75,5 @@ protected:  // 컨트롤 모음이 포함된 멤버입니다.
 	CCalendarBar      m_wndCalendar;
 	CMFCCaptionBar    m_wndCaptionBar;
 
-	std::shared_ptr<CExCategoryManager> m_pCategoryManager;
+	std::shared_ptr<CCategoryManager> m_pCategoryManager;
 };

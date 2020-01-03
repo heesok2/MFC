@@ -9,6 +9,12 @@ static char THIS_FILE[] = __FILE__;
 
 CEntityNode::CEntityNode()
 {
+	Key = 0;
+	aVertex = glm::vec3(0.f);
+	aNormal = glm::vec3(0.f);
+	aTexCord = glm::vec3(0.f);
+	aTangent = glm::vec3(0.f);
+	aBitangent = glm::vec3(0.f);
 }
 
 CEntityNode::~CEntityNode()

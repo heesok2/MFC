@@ -65,13 +65,15 @@
 #define ID_MYEX_PLUGIN_UI               32776
 #define ID_PANEL_ASSIMPIMPORT           32777
 #define ID_MYEX_ASSIMPIMPORT            32778
+#define ID_PANEL_DBEXAMPLE              32779
+#define ID_MYEX_DB_EXAMPLE              32780
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        313
-#define _APS_NEXT_COMMAND_VALUE         32779
+#define _APS_NEXT_COMMAND_VALUE         32781
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           310
 #endif

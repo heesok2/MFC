@@ -16,7 +16,7 @@
 #include "MYEX.h"
 
 #include "MainFrm.h"
-#include "ExCategoryManager.h"
+#include "CategoryManager.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -43,7 +43,7 @@ CMainFrame::CMainFrame() noexcept
 	// TODO: 여기에 멤버 초기화 코드를 추가합니다.
 	theApp.m_nAppLook = theApp.GetInt(_T("ApplicationLook"), ID_VIEW_APPLOOK_WINDOWS_7);
 
-	m_pCategoryManager = std::make_shared<CExCategoryManager>();
+	m_pCategoryManager = std::make_shared<CCategoryManager>();
 }
 
 CMainFrame::~CMainFrame()
@@ -66,9 +66,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableMDITabbedGroups(TRUE, mdiTabParams);
 
 	m_wndRibbonBar.Create(this);
-	m_wndRibbonBar.LoadFromResource(IDR_RIBBON);
-
-	m_pCategoryManager->SetMenu(&m_wndRibbonBar);
+	m_pCategoryManager->SetMenu(&m_wndRibbonBar); // Custom Category
+	m_wndRibbonBar.LoadFromResource(IDR_RIBBON); // Resourec Category
 
 	if (!m_wndStatusBar.Create(this))
 	{

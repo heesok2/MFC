@@ -1,12 +1,12 @@
 #pragma once
 
 class CDocBase;
-class AFX_EXT_CLASS CMYDialog : public CDialog
+class AFX_EXT_CLASS CMyDialog : public CDialog
 {
 public:
-	CMYDialog(CDocBase* pDoc);
-	CMYDialog(UINT uiResID, CDocBase* pDoc, CWnd* pParent = nullptr);
-	virtual ~CMYDialog();
+	CMyDialog(CDocBase* pDoc);
+	CMyDialog(UINT uiResID, CDocBase* pDoc, CWnd* pParent = nullptr);
+	virtual ~CMyDialog();
 
 public:
 	virtual INT_PTR DoModal();

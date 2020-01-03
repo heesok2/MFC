@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "ExCategoryBase.h"
+#include "CategoryBase.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -7,10 +7,10 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-CExCategoryBase::CExCategoryBase()
+CCategoryBase::CCategoryBase()
 {
 }
 
-CExCategoryBase::~CExCategoryBase()
+CCategoryBase::~CCategoryBase()
 {
 }
