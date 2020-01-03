@@ -17,9 +17,9 @@ const float g_SENSITIVITY = 0.1f;
 const float g_ZOOM = 45.0f;
 
 CCamera::CCamera()
-	: m_eMode(E_MODE_FPS)
+	: m_eMode(E_MODE_MODELER)
 {
-	m_aCameraPos = glm::vec3(0.f, 0.f, 5.f);
+	m_aCameraPos = glm::vec3(0.f, 0.f, 10.f);
 	m_aCameraDir = glm::vec3(0.f, 0.f, -1.f);
 	m_aCameraUp = glm::vec3(0.f, 1.f, 0.f);
 	m_aCameraRight = glm::vec3(1.f, 0.f, 0.f);

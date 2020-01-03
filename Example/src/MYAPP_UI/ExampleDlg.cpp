@@ -237,6 +237,131 @@ void CExampleDlg::ExecuteFace()
 
 void CExampleDlg::ExecuteBox()
 {
+	float g_vertices[] = {
+		// positions          // normals           // texture coords
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  1.0f,  1.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,  0.0f,  0.0f,
+
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  1.0f,  1.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f,
+
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  1.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+
+		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  1.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,
+		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,  1.0f,  0.0f,
+
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  1.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  1.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  1.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,  0.0f,  1.0f,
+
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f
+	};
+
+	int g_tri_index[] = {
+		1, 1, 2, 3,
+		1, 4, 5, 6,
+
+		1, 7, 8, 9,
+		1, 10, 11, 12,
+
+		1, 13, 14, 15,
+		1, 16, 17, 18,
+
+		1, 19, 20, 21,
+		1, 22, 23, 24,
+
+		1, 25, 26, 27,
+		1, 28, 29, 30,
+
+		1, 31, 32, 33,
+		1, 34, 35, 36
+	};
+
+	auto pMyPackage = m_pMyDoc->GetPackage();
+	auto pModuleNode = std::static_pointer_cast<CModuleNode>(pMyPackage->GetModule(MYTYPE_NODE));
+	auto pModuleElem = std::static_pointer_cast<CModuleElem>(pMyPackage->GetModule(MYTYPE_ELEM));
+	auto pModuleMesh = std::static_pointer_cast<CModuleMesh>(pMyPackage->GetModule(MYTYPE_MESH));
+
+	CTransaction tr(pMyPackage);
+	if (!tr.Begin())
+		return;
+
+	std::vector<MYITR> aItrNode;
+	{
+		auto SZ_POS = sizeof(float) * 3;
+		auto SZ_NORMAL = sizeof(float) * 3;
+		auto SZ_TEXCORD = sizeof(float) * 2;
+		auto SZ_DATA = (SZ_POS + SZ_NORMAL + SZ_TEXCORD);
+		auto szNum = sizeof(g_vertices) / SZ_DATA;
+		for (auto indx = 0; indx < static_cast<int>(szNum); ++indx)
+		{
+			CEntityNode tNode;
+			tNode.Key = pModuleNode->GetNewKey();
+			tNode.aVertex = glm::vec3(g_vertices[indx * 8 + 0], g_vertices[indx * 8 + 1], g_vertices[indx * 8 + 2]);
+			tNode.aNormal = glm::vec3(g_vertices[indx * 8 + 3], g_vertices[indx * 8 + 4], g_vertices[indx * 8 + 5]);
+			tNode.aTexCord = glm::vec2(g_vertices[indx * 8 + 6], g_vertices[indx * 8 + 7]);
+
+			auto itrNode = pModuleNode->InsertNU(tNode);
+			aItrNode.push_back(itrNode);
+		}
+	}
+
+	std::vector<MYITR> aItrElem;
+	{
+		auto SZ_DATA = sizeof(int) * 4;
+		auto szNum = sizeof(g_tri_index) / SZ_DATA;
+		for (auto indx = 0; indx < static_cast<int>(szNum); ++indx)
+		{
+			CEntityElem tElem;
+			tElem.Key = pModuleElem->GetNewKey();
+			tElem.uiType = E_ELEMTYPE_TRI3;
+
+			for (auto lvtx = 0; lvtx < 3; ++lvtx)
+			{
+				auto nidx = g_tri_index[indx * 4 + 1 + lvtx] - 1;
+				auto itr = aItrNode[nidx];
+			
+				tElem.aItrNode.push_back(itr);
+			}
+
+			auto itrElem = pModuleElem->InsertNU(tElem);
+			aItrElem.push_back(itrElem);
+		}
+	}
+	
+	CEntityMesh tMesh;
+	tMesh.Key = pModuleMesh->GetNewKey();
+	tMesh.aItrNode = aItrNode;
+	tMesh.aItrElem = aItrElem;
+	pModuleMesh->InsertNU(tMesh);
+
+	if (!tr.Commit())
+		ASSERT(g_warning);
 }
 
 void CExampleDlg::OnClickedApply()

@@ -85,7 +85,6 @@ BOOL CAssimpFile::Load()
 	{
 		trg.x = src.x;
 		trg.y = src.y;
-		trg.z = 0.;
 	};
 	for (unsigned int lmesh = 0; lmesh < pScene->mNumMeshes; ++lmesh)
 	{

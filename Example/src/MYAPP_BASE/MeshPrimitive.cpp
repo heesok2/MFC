@@ -38,7 +38,7 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 	std::vector<UINT> aBufferIndex;
 	std::vector<glm::vec3> aBufferVertex;
 	std::vector<glm::vec3> aBufferNormal;
-	std::vector<glm::vec3> aBufferTexCord;
+	std::vector<glm::vec2> aBufferTexCord;
 
 	std::vector<MYITR> aItrNode;
 	std::map<MYITR, UINT> mNodeIndex;
@@ -53,13 +53,13 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 		mNodeIndex[aItrNode[lnode]] = lnode;
 	}
 
-	auto lBufferSize = (aBufferVertex.size() + aBufferNormal.size() + aBufferTexCord.size()) * 3;
+	auto lBufferSize = (aBufferVertex.size() + aBufferNormal.size()) * 3 + aBufferTexCord.size() * 2;
 	if (lBufferSize > 0)
 	{
 		aBuffer.resize(lBufferSize);
 		auto itrNormal = std::copy(&(aBufferVertex[0][0]), &(aBufferVertex[0][0]) + (aBufferVertex.size() * 3), aBuffer.begin());
 		auto itrTexCord = std::copy(&(aBufferNormal[0][0]), &(aBufferNormal[0][0]) + (aBufferNormal.size() * 3), itrNormal);
-		std::copy(&(aBufferTexCord[0][0]), &(aBufferTexCord[0][0]) + (aBufferTexCord.size() * 3), itrTexCord);
+		std::copy(&(aBufferTexCord[0][0]), &(aBufferTexCord[0][0]) + (aBufferTexCord.size() * 2), itrTexCord);
 	}
 
 	std::vector<MYITR> aItrElem;
@@ -102,7 +102,7 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 		glEnableVertexAttribArray(1);
 		
 		auto itvTex = sizeof(float) * 3 * (aBufferVertex.size() + aBufferNormal.size());
-		glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 0, (void*)itvTex);
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, (void*)itvTex);
 		glEnableVertexAttribArray(2);
 	}
 	glBindVertexArray(0);
