@@ -216,7 +216,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppDocBase.cpp" />
-    <ClCompile Include="AssimpFile.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="AppViewBase.cpp" />
     <ClCompile Include="MeshPrimitive.cpp" />
@@ -234,7 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppDocBase.h" />
-    <ClInclude Include="AssimpFile.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="AppViewBase.h" />

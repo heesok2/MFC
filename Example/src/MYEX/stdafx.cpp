@@ -18,6 +18,6 @@
 #include "..\MYENG_LIB\LinkLib.h"
 #include "..\MYENG_DB\LinkLib.h"
 #include "..\MYENG_BASE\LinkLib.h"
-
 #include "..\MYAPP_BASE\LinkLib.h"
+#include "..\MYAPP_COM\LinkLib.h"
 #include "..\MYAPP_UI\LinkLib.h"

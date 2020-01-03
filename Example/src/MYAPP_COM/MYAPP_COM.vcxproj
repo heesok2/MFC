@@ -20,21 +20,21 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{7E161BB2-305A-46A3-B7B1-9A7DF51618DC}</ProjectGuid>
-    <Keyword>MFCProj</Keyword>
-    <RootNamespace>MYEX</RootNamespace>
+    <ProjectGuid>{DA10EC43-25B9-464E-8EDC-CA156021EBDD}</ProjectGuid>
+    <Keyword>MFCDLLProj</Keyword>
+    <RootNamespace>MYAPPCOM</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -42,14 +42,14 @@
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -74,12 +74,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>..\..\temp\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>..\..\temp\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(ProjectName)\</IntDir>
@@ -94,25 +94,26 @@
     <OutDir>..\..\bin\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>..\..\temp\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_AFXEXT;_X64;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>..\..\include\$(PlatformToolset)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\MYAPP_COM.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>assimp-vc141-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
-      <ValidateAllParameters>true</ValidateAllParameters>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </Midl>
     <ResourceCompile>
@@ -121,25 +122,26 @@
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_X64;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>..\..\include\$(PlatformToolset)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\MYAPP_COM.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>assimp-vc141-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
-      <ValidateAllParameters>true</ValidateAllParameters>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </Midl>
     <ResourceCompile>
@@ -156,21 +158,22 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>..\..\include\$(PlatformToolset)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\MYAPP_COM.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>assimp-vc141-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
-      <ValidateAllParameters>true</ValidateAllParameters>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </Midl>
     <ResourceCompile>
@@ -187,21 +190,22 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_X64;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_AFXEXT;_X64;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>..\..\include\$(PlatformToolset)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\MYAPP_COM.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\lib\$(PlatformToolset)\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>assimp-vc141-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
-      <ValidateAllParameters>true</ValidateAllParameters>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </Midl>
     <ResourceCompile>
@@ -211,81 +215,33 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="calendarbar.h" />
-    <ClInclude Include="ChildFrm.h" />
-    <ClInclude Include="ExCategoryBase.h" />
-    <ClInclude Include="ExCategoryDefine.h" />
-    <ClInclude Include="ExCategoryExample.h" />
-    <ClInclude Include="ExCategoryManager.h" />
-    <ClInclude Include="ExtDllManager.h" />
-    <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="MYEX.h" />
-    <ClInclude Include="MYEXDoc.h" />
-    <ClInclude Include="MYEXView.h" />
-    <ClInclude Include="MyPackage.h" />
-    <ClInclude Include="MyPackageStream.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="calendarbar.cpp" />
-    <ClCompile Include="ChildFrm.cpp" />
-    <ClCompile Include="ExCategoryBase.cpp" />
-    <ClCompile Include="ExCategoryExample.cpp" />
-    <ClCompile Include="ExCategoryManager.cpp" />
-    <ClCompile Include="ExtDllManager.cpp" />
-    <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="MYEX.cpp" />
-    <ClCompile Include="MYEXDoc.cpp" />
-    <ClCompile Include="MYEXView.cpp" />
-    <ClCompile Include="MyPackage.cpp" />
-    <ClCompile Include="MyPackageStream.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    <ClCompile Include="AssimpFile.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MYEX.reg" />
-    <None Include="res\MYEX.rc2" />
-    <None Include="res\ribbon.mfcribbon-ms" />
+    <None Include="MYAPP_COM.def" />
+    <None Include="res\MYAPP_COM.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MYEX.rc" />
+    <ClInclude Include="AssimpFile.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="LinkLib.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\buttons.bmp" />
-    <Image Include="res\filelarge.bmp" />
-    <Image Include="res\filesmall.bmp" />
-    <Image Include="res\info.bmp" />
-    <Image Include="res\main.bmp" />
-    <Image Include="res\MENU_EXAMPLE_19.bmp" />
-    <Image Include="res\MENU_EXAMPLE_32.bmp" />
-    <Image Include="res\MYEX.ico" />
-    <Image Include="res\MYEXDoc.ico" />
-    <Image Include="res\nav_large.bmp" />
-    <Image Include="res\nav_large_hc.bmp" />
-    <Image Include="res\pages.bmp" />
-    <Image Include="res\pages_hc.bmp" />
-    <Image Include="res\pages_small.bmp" />
-    <Image Include="res\pages_small_hc.bmp" />
-    <Image Include="res\Toolbar.bmp" />
-    <Image Include="res\Toolbar256.bmp" />
-    <Image Include="res\writelarge.bmp" />
-    <Image Include="res\writesmall.bmp" />
+    <ResourceCompile Include="MYAPP_COM.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MYAPP_BASE\MYAPP_BASE.vcxproj">
       <Project>{326ecf5d-b6eb-4da3-99ae-4e757796841f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYAPP_COM\MYAPP_COM.vcxproj">
-      <Project>{da10ec43-25b9-464e-8edc-ca156021ebdd}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MYAPP_UI\MYAPP_UI.vcxproj">
-      <Project>{98d322b2-a2d8-4875-b4c0-69517e7b8551}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MYENG_BASE\MYENG_BASE.vcxproj">
       <Project>{e8a98686-860e-4b57-bd79-bac7796314dd}</Project>

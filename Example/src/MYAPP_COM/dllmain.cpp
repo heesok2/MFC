@@ -9,7 +9,7 @@
 #define new DEBUG_NEW
 #endif
 
-extern "C" AFX_EXTENSION_MODULE MYAPP_UI = { NULL, NULL };
+extern "C" AFX_EXTENSION_MODULE MYAPP_COM = { NULL, NULL };
 
 extern "C" int APIENTRY
 DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
@@ -19,10 +19,10 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 	if (dwReason == DLL_PROCESS_ATTACH)
 	{
-		TRACE0("MYAPP_UI.DLL을 초기화하고 있습니다.\n");
+		TRACE0("MYAPP_COM.DLL을 초기화하고 있습니다.\n");
 		
 		// 확장 DLL을 한 번만 초기화합니다.
-		if (!AfxInitExtensionModule(MYAPP_UI, hInstance))
+		if (!AfxInitExtensionModule(MYAPP_COM, hInstance))
 			return 0;
 
 		// 이 DLL을 리소스 체인에 삽입합니다.
@@ -37,15 +37,15 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 		//  기본 DLL의 리소스 체인에 추가되지 않으므로
 		//  심각한 문제가 발생합니다.
 
-		new CDynLinkLibrary(MYAPP_UI);
+		new CDynLinkLibrary(MYAPP_COM);
 
 	}
 	else if (dwReason == DLL_PROCESS_DETACH)
 	{
-		TRACE0("MYAPP_UI.DLL을 종료하고 있습니다.\n");
+		TRACE0("MYAPP_COM.DLL을 종료하고 있습니다.\n");
 
 		// 소멸자가 호출되기 전에 라이브러리를 종료합니다.
-		AfxTermExtensionModule(MYAPP_UI);
+		AfxTermExtensionModule(MYAPP_COM);
 	}
 	return 1;   // 확인
 }

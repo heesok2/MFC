@@ -25,7 +25,7 @@
 
 #include "..\MYENG_LIB\ZipLib.h"
 #include "..\MYENG_LIB\NotifyDefine.h"
-#include "..\MYAPP_BASE\AssimpFile.h"
+#include "..\MYAPP_COM\AssimpFile.h"
 #include "..\MYAPP_UI\AppDialogProvider.h"
 
 

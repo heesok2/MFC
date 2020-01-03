@@ -13,12 +13,6 @@
     <Filter Include="COMMON">
       <UniqueIdentifier>{0a986a02-d529-4c57-831e-8a377ebeab16}</UniqueIdentifier>
     </Filter>
-    <Filter Include="FILE">
-      <UniqueIdentifier>{4e8f5a87-88d8-486a-b667-c09e1432bfe2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="FILE\Assimp">
-      <UniqueIdentifier>{9cd8c02f-761c-4e0c-b90a-ae56205a38b9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RENDER">
       <UniqueIdentifier>{05218a8b-52a0-44e8-9418-d46cdb89341b}</UniqueIdentifier>
     </Filter>
@@ -38,9 +32,6 @@
     </ClCompile>
     <ClCompile Include="AppViewBase.cpp">
       <Filter>COMMON</Filter>
-    </ClCompile>
-    <ClCompile Include="AssimpFile.cpp">
-      <Filter>FILE\Assimp</Filter>
     </ClCompile>
     <ClCompile Include="PhongRender.cpp">
       <Filter>RENDER\Phone</Filter>
@@ -78,9 +69,6 @@
     </ClInclude>
     <ClInclude Include="AppViewBase.h">
       <Filter>COMMON</Filter>
-    </ClInclude>
-    <ClInclude Include="AssimpFile.h">
-      <Filter>FILE\Assimp</Filter>
     </ClInclude>
     <ClInclude Include="PhongRender.h">
       <Filter>RENDER\Phone</Filter>
