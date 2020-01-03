@@ -80,7 +80,6 @@ void CShaderManager::GLCreate(UINT uiType)
 	case E_SHADER_PHONG:
 		{
 			pShader->GLAttachShader(GL_VERTEX_SHADER, IDR_PHONG_VERT);
-			pShader->GLAttachShader(GL_FRAGMENT_SHADER, IDR_DIRECTIONAL_FRAG);
 			pShader->GLAttachShader(GL_FRAGMENT_SHADER, IDR_PHONG_FRAG);
 		}
 		break;

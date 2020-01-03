@@ -205,20 +205,21 @@ void CExampleDlg::ExecuteFace()
 	tNode.aNormal.z = 1.f;
 	auto itrNodeLT = pModuleNode->InsertNU(tNode);
 
-	CEntityElem tElem;
-	tElem.Key = pModuleElem->GetNewKey();
-	tElem.uiType = E_ELEMTYPE_TRI3;
-	tElem.aItrNode.push_back(itrNodeLT);
-	tElem.aItrNode.push_back(itrNodeLB);
-	tElem.aItrNode.push_back(itrNodeRB);
-	auto itrElemL = pModuleElem->InsertNU(tElem);
+	CEntityElem tElemL;
+	tElemL.Key = pModuleElem->GetNewKey();
+	tElemL.uiType = E_ELEMTYPE_TRI3;
+	tElemL.aItrNode.push_back(itrNodeLT);
+	tElemL.aItrNode.push_back(itrNodeLB);
+	tElemL.aItrNode.push_back(itrNodeRB);
+	auto itrElemL = pModuleElem->InsertNU(tElemL);
 
-	tElem.Key = pModuleElem->GetNewKey();
-	tElem.uiType = E_ELEMTYPE_TRI3;
-	tElem.aItrNode.push_back(itrNodeRB);
-	tElem.aItrNode.push_back(itrNodeRT);
-	tElem.aItrNode.push_back(itrNodeLT);
-	auto itrElemR = pModuleElem->InsertNU(tElem);
+	CEntityElem tElemR;
+	tElemR.Key = pModuleElem->GetNewKey();
+	tElemR.uiType = E_ELEMTYPE_TRI3;
+	tElemR.aItrNode.push_back(itrNodeRB);
+	tElemR.aItrNode.push_back(itrNodeRT);
+	tElemR.aItrNode.push_back(itrNodeLT);
+	auto itrElemR = pModuleElem->InsertNU(tElemR);
 
 	CEntityMesh tMesh;
 	tMesh.Key = pModuleMesh->GetNewKey();

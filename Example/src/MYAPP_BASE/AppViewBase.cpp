@@ -37,7 +37,7 @@ void CAppViewBase::OnDraw(CDC * pDC)
 
 			glEnable(GL_DEPTH_TEST);
 
-			//m_RenderManager.GLDraw(this);
+			m_RenderManager.GLDraw(this);
 		}
 
 		glPopAttrib();
@@ -52,12 +52,12 @@ void CAppViewBase::OnDraw(CDC * pDC)
 
 void CAppViewBase::AttachedRender()
 {
-	//m_RenderManager.AttachedRender(std::make_shared<CPhongRender>());
+	m_RenderManager.AttachedRender(std::make_shared<CPhongRender>());
 }
 
 void CAppViewBase::AttachedPrimitive()
 {
-	//m_RenderManager.AttachedPrimitive(std::make_shared<CMeshPrimitive>());
+	m_RenderManager.AttachedPrimitive(std::make_shared<CMeshPrimitive>());
 }
 
 int CAppViewBase::OnCreate(LPCREATESTRUCT lpCreateStruct)
