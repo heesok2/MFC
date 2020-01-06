@@ -25,8 +25,8 @@ void CPhongRender::GLDraw(CView* pView)
 	auto pMyView = reinterpret_cast<CViewBase*>(pView);
 	auto pShader = pMyView->GetShader(E_SHADER_PHONG);
 	auto matModelMatrix = glm::mat4(1.f);
-	auto matViewMatrix = pMyView->GetViewMatrix();
-	auto matProjectionMatrix = pMyView->GetProjectionMatrix();
+	auto matViewMatrix =  pMyView->GetViewMatrix(); // glm::lookAt(glm::vec3(0.f, 0.f, 5.f), glm::vec3(0.f, 0.f, -1.f), glm::vec3(0.f, 1.f, 0.f));
+	auto matProjectionMatrix = pMyView->GetProjectionMatrix(); // glm::perspective(glm::radians(45.f), 1.f, 0.0001f, 1000.f);
 	auto matNormalMatrix = glm::transpose(glm::inverse(matViewMatrix * matModelMatrix));
 
 	pShader->GLBind();
@@ -36,10 +36,10 @@ void CPhongRender::GLDraw(CView* pView)
 		if (!pPrimitive->GLIsValid())
 			continue;
 
-		pShader->GLSetMatrix4("tMatrix.matModel", matModelMatrix);
-		pShader->GLSetMatrix4("tMatrix.matView", matViewMatrix);
-		pShader->GLSetMatrix4("tMatrix.matProjection", matProjectionMatrix);
-		pShader->GLSetMatrix4("tMatrix.matNormal", matNormalMatrix);
+		pShader->GLSetMatrix4("myMatrix.matModel", matModelMatrix);
+		pShader->GLSetMatrix4("myMatrix.matView", matViewMatrix);
+		pShader->GLSetMatrix4("myMatrix.matProjection", matProjectionMatrix);
+		pShader->GLSetMatrix4("myMatrix.matNormal", matNormalMatrix);
 
 		pPrimitive->GLBind();
 		pPrimitive->GLDraw();
