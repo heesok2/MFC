@@ -23,7 +23,7 @@ CCamera::CCamera()
 	m_fMovementSpeed = g_SPEED;
 	m_fMouseSensitivity = g_SENSITIVITY;
 
-	m_eMode = E_MODE_TEST;
+	m_eMode = E_MODE_SIMPLE;
 	m_aCameraPos = glm::vec3(0.f, 0.f, 10.f);
 	m_aCameraDir = glm::vec3(0.f, 0.f, -1.f);
 	m_aCameraUp = glm::vec3(0.f, 1.f, 0.f);
@@ -49,7 +49,7 @@ glm::mat4 CCamera::GetViewMatrix()
 {
 	switch (m_eMode)
 	{
-	case E_MODE_TEST:
+	case E_MODE_SIMPLE:
 		return glm::lookAt(m_aCameraPos - m_aCameraDir, m_aCameraPos, m_aCameraUp);
 	case E_MODE_FPS:
 		return glm::lookAt(m_aCameraPos - m_aCameraDir, m_aCameraPos, m_aCameraUp);
@@ -142,7 +142,7 @@ void CCamera::UpdateCameraVectors(float fOffsetX, float fOffsetY)
 {
 	switch (m_eMode)
 	{
-	case E_MODE_TEST:
+	case E_MODE_SIMPLE:
 		{
 			m_aCameraPos += m_aCameraRight * fOffsetX;
 			m_aCameraPos += m_aCameraUp * fOffsetY;

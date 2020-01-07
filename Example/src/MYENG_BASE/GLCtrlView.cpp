@@ -135,14 +135,14 @@ void CGLCtrlView::GLDeleteScene()
 	glDeleteBuffers(1, &m_uiSceneVBO);
 }
 
-glm::vec3 CGLCtrlView::GLUnproject(CPoint point)
+glm::vec3 CGLCtrlView::GLUnproject(const CPoint& window)
 {
 	auto myViewport = m_Camera.GetViewport();
 	auto myViewMatrix = m_Camera.GetViewMatrix();
 	auto myProjectionMatrix = m_Camera.GetProjectionMatrix();
 	
-	auto winX = point.x;
-	auto winY = myViewport.q - point.y;
+	auto winX = window.x;
+	auto winY = myViewport.q - window.y;
 	float fwinZ = 0.f;
 	glReadPixels(winX, winY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &fwinZ);
 
@@ -152,6 +152,15 @@ glm::vec3 CGLCtrlView::GLUnproject(CPoint point)
 	win.z = fwinZ;
 
 	return glm::unProject(win, myViewMatrix, myProjectionMatrix, myViewport);
+}
+
+glm::vec3 CGLCtrlView::Project(const glm::vec3& world)
+{
+	auto myViewport = m_Camera.GetViewport();
+	auto myViewMatrix = m_Camera.GetViewMatrix();
+	auto myProjectionMatrix = m_Camera.GetProjectionMatrix();
+
+	return glm::project(world, myViewMatrix, myProjectionMatrix, myViewport);
 }
 
 std::shared_ptr<CShader> CGLCtrlView::GetShader(UINT uiShaderType)
@@ -232,7 +241,7 @@ void CGLCtrlView::OnLButtonUp(UINT nFlags, CPoint point)
 	CGLView::OnLButtonUp(nFlags, point);
 }
 
-void mygl::CGLCtrlView::OnMouseMove(UINT nFlags, CPoint point)
+void CGLCtrlView::OnMouseMove(UINT nFlags, CPoint point)
 {
 	if (nFlags & MK_LBUTTON)
 	{

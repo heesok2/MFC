@@ -29,8 +29,9 @@ namespace mygl
 		void GLUnbindFrameBuffer(UINT uiType);
 		void GLCreateScene();
 		void GLDeleteScene();
-		
-		glm::vec3 GLUnproject(CPoint point);
+
+		glm::vec3 Project(const glm::vec3& world);
+		glm::vec3 GLUnproject(const CPoint& window);
 
 	protected:
 		afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
