@@ -11,15 +11,12 @@ namespace mygl
 		virtual ~CCamera();
 
 	public:
-		glm::vec3 GetEyePos() { return m_aCameraPos; }
-		glm::vec3 GetEyeDir() { return m_aCameraDir; }
-		glm::vec3 GetEyeUp() { return m_aCameraUp; }
-		glm::vec3 GetEyeRight() { return m_aCameraRight; }
+		glm::ivec4 GetViewport();
 		glm::mat4 GetViewMatrix();
-		glm::mat4 GetProjectionMatrix();
+		glm::mat4 GetProjectionMatrix();		
 
 	public:
-		void SetViewSize(CRect& rect);
+		void SetViewport(int width, int height);
 		void SetViewCenter(glm::vec3& vPosition);
 		void SetCameraPosition(glm::vec3& vPosition);
 		void SetMousePosition(CPoint& point);
@@ -31,11 +28,13 @@ namespace mygl
 		void UpdateCameraVectors(float fOffsetX, float fOffsetY);
 
 	protected:
-		E_CAMERA_MODE m_eMode;
-
-		CRect m_Viewport;
+		float m_fYaw;
+		float m_fPitch;
+		float m_fMovementSpeed;
+		float m_fMouseSensitivity;
 		CPoint m_MousePoint; // Mouse Move
 
+		E_CAMERA_MODE m_eMode;
 		glm::vec3 m_aCameraPos;
 		glm::vec3 m_aCameraDir;
 		glm::vec3 m_aCameraUp;
@@ -43,10 +42,6 @@ namespace mygl
 		glm::vec3 m_aWorldUp;
 		glm::vec3 m_aWorldCenter;
 
-		float m_fYaw;
-		float m_fPitch;
-		float m_fMovementSpeed;
-		float m_fMouseSensitivity;
-
+		glm::ivec4 m_aViewport;
 	};
 }

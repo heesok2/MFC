@@ -25,6 +25,9 @@ CGLCtrlView::~CGLCtrlView()
 BEGIN_MESSAGE_MAP(CGLCtrlView, CGLView)
 	ON_WM_SIZE()
 	ON_WM_CREATE()
+	ON_WM_LBUTTONDOWN()
+	ON_WM_LBUTTONUP()
+	ON_WM_MOUSEMOVE()
 END_MESSAGE_MAP()
 
 void CGLCtrlView::OnDraw(CDC *)
@@ -132,6 +135,25 @@ void CGLCtrlView::GLDeleteScene()
 	glDeleteBuffers(1, &m_uiSceneVBO);
 }
 
+glm::vec3 CGLCtrlView::GLUnproject(CPoint point)
+{
+	auto myViewport = m_Camera.GetViewport();
+	auto myViewMatrix = m_Camera.GetViewMatrix();
+	auto myProjectionMatrix = m_Camera.GetProjectionMatrix();
+	
+	auto winX = point.x;
+	auto winY = myViewport.q - point.y;
+	float fwinZ = 0.f;
+	glReadPixels(winX, winY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &fwinZ);
+
+	glm::vec3 win;
+	win.x = (float)winX;
+	win.y = (float)winY;
+	win.z = fwinZ;
+
+	return glm::unProject(win, myViewMatrix, myProjectionMatrix, myViewport);
+}
+
 std::shared_ptr<CShader> CGLCtrlView::GetShader(UINT uiShaderType)
 {
 	return m_ShaderManager.GetAt(uiShaderType);
@@ -178,15 +200,49 @@ void CGLCtrlView::OnSize(UINT nType, int cx, int cy)
 {
 	CGLView::OnSize(nType, cx, cy);
 
-	CRect rect;
-	rect.left = rect.bottom = 0;
-	rect.right = cx;
-	rect.top = cy;
-	m_Camera.SetViewSize(rect);
+	m_Camera.SetViewport(cx, cy);
 
 	BeginwglCurrent();
 	{
 		m_FrameBufferManager.GLResize(cx, cy);
 	}
 	EndwglCurrent();
+}
+
+void CGLCtrlView::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	auto pWnd = GetCapture();
+	if (pWnd == nullptr)
+	{
+		SetCapture();
+		m_Camera.SetMousePosition(point);
+	}
+
+	CGLView::OnLButtonDown(nFlags, point);
+}
+
+void CGLCtrlView::OnLButtonUp(UINT nFlags, CPoint point)
+{
+	auto pWnd = GetCapture();
+	if (pWnd == this)
+	{
+		ReleaseCapture();
+	}
+
+	CGLView::OnLButtonUp(nFlags, point);
+}
+
+void mygl::CGLCtrlView::OnMouseMove(UINT nFlags, CPoint point)
+{
+	if (nFlags & MK_LBUTTON)
+	{
+		auto pWnd = GetCapture();
+		if (pWnd == this)
+		{
+			m_Camera.OnMouseMove(point);
+			Invalidate();
+		}
+	}
+
+	CGLView::OnMouseMove(nFlags, point);
 }

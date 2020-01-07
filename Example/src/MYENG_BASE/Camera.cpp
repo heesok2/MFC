@@ -13,12 +13,17 @@ using namespace mygl;
 const float g_YAW = -90.0f;
 const float g_PITCH = 0.0f;
 const float g_SPEED = 1.5f;
-const float g_SENSITIVITY = 0.1f;
+const float g_SENSITIVITY = 0.01f;
 const float g_ZOOM = 45.0f;
 
 CCamera::CCamera()
-	: m_eMode(E_MODE_MODELER)
 {
+	m_fYaw = g_YAW;
+	m_fPitch = g_PITCH;
+	m_fMovementSpeed = g_SPEED;
+	m_fMouseSensitivity = g_SENSITIVITY;
+
+	m_eMode = E_MODE_TEST;
 	m_aCameraPos = glm::vec3(0.f, 0.f, 10.f);
 	m_aCameraDir = glm::vec3(0.f, 0.f, -1.f);
 	m_aCameraUp = glm::vec3(0.f, 1.f, 0.f);
@@ -26,10 +31,7 @@ CCamera::CCamera()
 	m_aWorldUp = glm::vec3(0.f, 1.f, 0.f);
 	m_aWorldCenter = glm::vec3(0.f, 0.f, 0.f);
 
-	m_fYaw = g_YAW;
-	m_fPitch = g_PITCH;
-	m_fMovementSpeed = g_SPEED;
-	m_fMouseSensitivity = g_SENSITIVITY;
+	m_aViewport = glm::ivec4(0.f);
 
 	UpdateCameraVectors(0.f, 0.f);
 }
@@ -38,10 +40,17 @@ CCamera::~CCamera()
 {
 }
 
+glm::ivec4 CCamera::GetViewport()
+{
+	return m_aViewport;
+}
+
 glm::mat4 CCamera::GetViewMatrix()
 {
 	switch (m_eMode)
 	{
+	case E_MODE_TEST:
+		return glm::lookAt(m_aCameraPos - m_aCameraDir, m_aCameraPos, m_aCameraUp);
 	case E_MODE_FPS:
 		return glm::lookAt(m_aCameraPos - m_aCameraDir, m_aCameraPos, m_aCameraUp);
 	case E_MODE_MODELER:
@@ -55,12 +64,15 @@ glm::mat4 CCamera::GetViewMatrix()
 glm::mat4 CCamera::GetProjectionMatrix()
 {
 	glm::mat4 proj(1.f);
-	return glm::perspective(glm::radians(30.f), (float)(m_Viewport.Width()) / (float)(m_Viewport.Height()), 0.0001f, 1000.f);
+	return glm::perspective(glm::radians(30.f), ((float)m_aViewport.p / (float)m_aViewport.q), 0.0001f, 1000.f);
 }
 
-void CCamera::SetViewSize(CRect& rect)
+void CCamera::SetViewport(int width, int height)
 {
-	m_Viewport = rect;
+	m_aViewport.s = 0;
+	m_aViewport.t = 0;
+	m_aViewport.p = width;
+	m_aViewport.q = height;
 }
 
 void CCamera::SetViewCenter(glm::vec3 & vPosition)
@@ -118,10 +130,9 @@ void CCamera::OnKeyboardDown(E_CAMERA_MOVEMENT eMovement, float deltaTime)
 
 void CCamera::OnMouseMove(CPoint point)
 {
-
 	auto MouseOffset = m_MousePoint - point;
 	auto fOffsetX = (float)MouseOffset.cx * m_fMouseSensitivity;
-	auto fOffsetY = (float)MouseOffset.cy * m_fMouseSensitivity;
+	auto fOffsetY = (float)MouseOffset.cy * m_fMouseSensitivity * -1.f;
 	m_MousePoint = point;
 
 	UpdateCameraVectors(fOffsetX, fOffsetY);
@@ -131,10 +142,16 @@ void CCamera::UpdateCameraVectors(float fOffsetX, float fOffsetY)
 {
 	switch (m_eMode)
 	{
+	case E_MODE_TEST:
+		{
+			m_aCameraPos += m_aCameraRight * fOffsetX;
+			m_aCameraPos += m_aCameraUp * fOffsetY;
+		}
+		break;
 	case E_MODE_FPS:
 		{
 			m_fYaw += fOffsetX;
-			m_fPitch += -fOffsetY;
+			m_fPitch += fOffsetY;
 
 			glm::vec3 aDirection;
 			aDirection.x = cos(glm::radians(m_fPitch)) * cos(glm::radians(m_fYaw));
