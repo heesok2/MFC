@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "MeshPrimitive.h"
 
+#include "..\MYENG_LIB\ImageLib.h"
 #include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_BASE\ViewBase.h"
 #include "..\MYENG_DB\Package.h"
@@ -13,6 +14,8 @@
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
+
+using namespace mylib;
 
 CMeshPrimitive::CMeshPrimitive()
 {
@@ -88,16 +91,20 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView)
 			}
 		}
 
+
+		CImageLib imgLib;
+		//imgLib.Open();
+		auto uiTex = CreateTex2D(GL_RGB, imgLib.GetWidth(), imgLib.GetHeight()
+								 , imgLib.GetByte() == MYIMG_RGBA ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, imgLib.GetBuffer());
+
 		auto uiEBO = CreateEBO(aBufferIndex);
 
 		UINT uiNormalOffset = 3 * sizeof(float) * static_cast<UINT>(aBufferVertex.size());
 		UINT uiTexcelOffset = 3 * sizeof(float) * static_cast<UINT>(aBufferVertex.size() + aBufferNormal.size());
-		CreateVAO(uiVBO, uiEBO, static_cast<UINT>(aBufferIndex.size())
+		CreateVAO(uiVBO, uiEBO, 0, &uiTex, static_cast<UINT>(aBufferIndex.size())
 				  , 3, 0
 				  , 3, uiNormalOffset
 				  , 2, uiTexcelOffset);
-
-		//auto uiTex = CreateTex2D(GL_RGB, )
 	}
 
 	return TRUE;

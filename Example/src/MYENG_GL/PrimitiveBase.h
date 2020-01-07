@@ -31,7 +31,8 @@ namespace mygl
 	protected:
 		UINT CreateVBO(std::vector<float>& aBuffer);
 		UINT CreateEBO(std::vector<UINT>& aBufferIndex);
-		UINT CreateVAO(UINT uiVBO, UINT uiEBO, UINT uiCount
+		UINT CreateVAO(UINT uiVBO, UINT uiEBO, UINT uiTexCount, UINT* pTex
+					   , UINT uiCount
 					   , UINT uiVertexCount, UINT uiVertexOffset
 					   , UINT uiNormalCount, UINT uiNormalOffset
 					   , UINT uiTexcelCount, UINT uiTexcelOffset);

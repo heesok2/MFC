@@ -51,10 +51,11 @@ UINT CPrimitiveBase::CreateEBO(std::vector<UINT>& aBufferIndex)
 	return uiEBO;
 }
 
-UINT CPrimitiveBase::CreateVAO(UINT uiVBO, UINT uiEBO, UINT uiCount
-								 , UINT uiVertexCount, UINT uiVertexOffset
-								 , UINT uiNormalCount, UINT uiNormalOffset
-								 , UINT uiTexcelCount, UINT uiTexcelOffset)
+UINT CPrimitiveBase::CreateVAO(UINT uiVBO, UINT uiEBO, UINT uiTexCount, UINT* pTex
+							   , UINT uiCount
+							   , UINT uiVertexCount, UINT uiVertexOffset
+							   , UINT uiNormalCount, UINT uiNormalOffset
+							   , UINT uiTexcelCount, UINT uiTexcelOffset)
 {
 	UINT uiVAO;
 

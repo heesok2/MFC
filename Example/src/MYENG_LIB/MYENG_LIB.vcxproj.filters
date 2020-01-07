@@ -31,6 +31,9 @@
     <Filter Include="NOTIFY">
       <UniqueIdentifier>{580ba2c5-9269-4b3e-bdcc-00e2d278f29b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LIBRARY\Image">
+      <UniqueIdentifier>{a0d3ce3b-b9e0-40a3-b41f-65770d665741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -50,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="FileCtrlLib.cpp">
       <Filter>LIBRARY\FileCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageLib.cpp">
+      <Filter>LIBRARY\Image</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +102,12 @@
     </ClInclude>
     <ClInclude Include="NotifyDefine.h">
       <Filter>NOTIFY</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageLib.h">
+      <Filter>LIBRARY\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>LIBRARY\Image</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

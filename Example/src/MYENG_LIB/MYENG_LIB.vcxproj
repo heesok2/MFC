@@ -217,6 +217,7 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="FileCtrlLib.cpp" />
+    <ClCompile Include="ImageLib.cpp" />
     <ClCompile Include="MathLib.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -236,11 +237,13 @@
     <ClInclude Include="..\..\include\v141\plugin\GlobalDefine.h" />
     <ClInclude Include="FileCtrlLib.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="ImageLib.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="MathLib.h" />
     <ClInclude Include="NotifyDefine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="stb_image.h" />
     <ClInclude Include="StringLib.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="ZipLib.h" />
