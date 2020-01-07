@@ -17,5 +17,6 @@ public:
 	}
 
 	virtual void GLDraw(CView* pView) override;
+	virtual BOOL GLPrepare(CView* pView, CObject* pHint) override;
 
 };

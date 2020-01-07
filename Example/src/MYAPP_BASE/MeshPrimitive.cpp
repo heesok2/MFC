@@ -15,10 +15,6 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 CMeshPrimitive::CMeshPrimitive()
-	: m_uiVAO(0)
-	, m_uiVBO(0)
-	, m_uiEBO(0)
-	, m_uiSize(0)
 {
 }
 
@@ -26,7 +22,7 @@ CMeshPrimitive::~CMeshPrimitive()
 {
 }
 
-BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
+BOOL CMeshPrimitive::GLPrepare(CView * pView)
 {
 	auto pMyDoc = static_cast<CDocBase*>(pView->GetDocument());
 	auto pPackage = pMyDoc->GetPackage();
@@ -34,8 +30,12 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 	auto pModuleElem = std::static_pointer_cast<CModuleElem>(pPackage->GetModule(MYTYPE_ELEM));
 	auto pModuleMesh = std::static_pointer_cast<CModuleMesh>(pPackage->GetModule(MYTYPE_MESH));
 
+	if (pModuleNode->Empty() ||
+		pModuleElem->Empty() ||
+		pModuleMesh->Empty())
+		return TRUE;
+
 	std::vector<float> aBuffer;
-	std::vector<UINT> aBufferIndex;
 	std::vector<glm::vec3> aBufferVertex;
 	std::vector<glm::vec3> aBufferNormal;
 	std::vector<glm::vec2> aBufferTexCord;
@@ -62,72 +62,43 @@ BOOL CMeshPrimitive::GLPrepare(CView * pView, CObject *)
 		std::copy(&(aBufferTexCord[0][0]), &(aBufferTexCord[0][0]) + (aBufferTexCord.size() * 2), itrTexCord);
 	}
 
-	std::vector<MYITR> aItrElem;
-	auto lElemSize = pModuleElem->GetItrList(aItrElem);
-	for (auto lelem = 0; lelem < lElemSize; ++lelem)
+	auto uiVBO = CreateVBO(aBuffer);
+
+	/////////////////////////////////////////////////////////////////////////
+
+	std::vector<MYITR> aItrMesh;
+	auto lMeshSize = pModuleMesh->GetItrList(aItrMesh);
+	for (auto lmesh = 0; lmesh < lMeshSize; ++lmesh)
 	{
-		auto& tElem = pModuleElem->GetAtNU(aItrElem[lelem]);
-		if (tElem.uiType == E_ELEMTYPE_TRI3)
+		std::vector<UINT> aBufferIndex;
+
+		auto& tMesh = pModuleMesh->GetAtNU(aItrMesh[lmesh]);
+		for (auto itrElem : tMesh.aItrElem)
 		{
-			aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[0]]);
-			aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[1]]);
-			aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[2]]);
+			auto& tElem = pModuleElem->GetAtNU(itrElem);
+			if (tElem.uiType == E_ELEMTYPE_TRI3)
+			{
+				aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[0]]);
+				aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[1]]);
+				aBufferIndex.push_back(mNodeIndex[tElem.aItrNode[2]]);
+			}
+			else
+			{
+				ASSERT(g_warning);
+			}
 		}
-		else
-		{
-			ASSERT(g_warning);
-		}
+
+		auto uiEBO = CreateEBO(aBufferIndex);
+
+		UINT uiNormalOffset = 3 * sizeof(float) * static_cast<UINT>(aBufferVertex.size());
+		UINT uiTexcelOffset = 3 * sizeof(float) * static_cast<UINT>(aBufferVertex.size() + aBufferNormal.size());
+		CreateVAO(uiVBO, uiEBO, static_cast<UINT>(aBufferIndex.size())
+				  , 3, 0
+				  , 3, uiNormalOffset
+				  , 2, uiTexcelOffset);
+
+		//auto uiTex = CreateTex2D(GL_RGB, )
 	}
-	   
-	glGenBuffers(1, &m_uiVBO);
-	glBindBuffer(GL_ARRAY_BUFFER, m_uiVBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * aBuffer.size(), &(aBuffer[0]), GL_STATIC_DRAW);
-
-	glGenBuffers(1, &m_uiEBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_uiEBO);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(UINT)* aBufferIndex.size(), &(aBufferIndex[0]), GL_STATIC_DRAW);
-
-	glGenVertexArrays(1, &m_uiVAO);
-	glBindVertexArray(m_uiVAO);
-	{
-		glBindBuffer(GL_ARRAY_BUFFER, m_uiVBO);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_uiEBO);
-
-		auto itvVtx = sizeof(float) * 3 * 0;
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)itvVtx);
-		glEnableVertexAttribArray(0);
-
-		auto itvNor = sizeof(float) * 3 * aBufferVertex.size();
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)itvNor);
-		glEnableVertexAttribArray(1);
-		
-		auto itvTex = sizeof(float) * 3 * (aBufferVertex.size() + aBufferNormal.size());
-		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, (void*)itvTex);
-		glEnableVertexAttribArray(2);
-	}
-	glBindVertexArray(0);
-
-	m_uiSize = static_cast<UINT>(aBufferIndex.size());
 
 	return TRUE;
-}
-
-BOOL CMeshPrimitive::GLIsValid()
-{
-	return m_uiSize;
-}
-
-void CMeshPrimitive::GLBind()
-{
-	glBindVertexArray(m_uiVAO);
-}
-
-void CMeshPrimitive::GLUnbind()
-{
-	glBindVertexArray(0);
-}
-
-void CMeshPrimitive::GLDraw()
-{
-	glDrawElements(GL_TRIANGLES, m_uiSize, GL_UNSIGNED_INT, 0);
 }
