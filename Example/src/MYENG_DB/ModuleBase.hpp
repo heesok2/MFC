@@ -8,7 +8,7 @@
 
 namespace mydb
 {
-	template <class TD>
+	template <class ENTITY_DATA>
 	class CModuleData : public mydb::CModule
 	{
 	public:
@@ -39,21 +39,22 @@ namespace mydb
 			return m_Dictionary.Find(key);
 		}
 
-		virtual BOOL Find(MYKEY key, TD& data)
+		virtual BOOL Lookup(MYKEY key, ENTITY_DATA& data)
 		{
 			auto itr = m_Dictionary.Find(key);
-			if (!ITR_IS_VALID(itr)) return FALSE;
+			if (!ITR_IS_VALID(itr)) 
+				return FALSE;
 
 			data = m_Dictionary.GetAtNU(itr);
 			return TRUE;
 		}
 
-		virtual MYITR InsertNU(const TD& data)
+		virtual MYITR InsertNU(const ENTITY_DATA& data)
 		{
 			return m_Dictionary.InsertNU(data);
 		}
 
-		virtual BOOL SetAtNU(MYITR itr, const TD& data)
+		virtual BOOL SetAtNU(MYITR itr, const ENTITY_DATA& data)
 		{
 			return m_Dictionary.SetAtNU(itr, data);
 		}
@@ -63,19 +64,19 @@ namespace mydb
 			return m_Dictionary.Remove(itr);
 		}
 
-		virtual const TD& GetAtNU(MYITR itr) const
+		virtual const ENTITY_DATA& GetAtNU(MYITR itr) const
 		{
 			return m_Dictionary.GetAtNU(itr);
 		}
 
-		virtual long GetItrList(std::vector<MYITR>& lstItr)
+		virtual long GetItrList(std::vector<MYITR>& aItr)
 		{
-			return m_Dictionary.GetList(lstItr);
+			return m_Dictionary.GetList(aItr);
 		}
 
-		virtual long GetDataList(std::vector<TD>& lstData)
+		virtual long GetDataList(std::vector<ENTITY_DATA>& aData)
 		{
-			return m_Dictionary.GetListData(lstData);
+			return m_Dictionary.GetListData(aData);
 		}
 
 		virtual MYKEY GetNewKey()
@@ -96,7 +97,8 @@ namespace mydb
 		}
 
 	protected:
-		CEntityDictionary<TD> m_Dictionary;
+		MYTYPE m_myType;
+		CEntityDictionary<ENTITY_DATA> m_Dictionary;
 
 	};
 }

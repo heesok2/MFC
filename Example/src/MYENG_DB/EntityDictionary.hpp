@@ -18,22 +18,23 @@ public:
 		ENTITY_DATA Data;
 
 		// Linked List
-		tagEntity* lPrev;
-		tagEntity* lNext;
+		tagEntity* pPrevD;
+		tagEntity* pNextD;
 
 		// Hashmap List
-		tagEntity* hPrev;
-		tagEntity* hNext;
+		tagEntity* pPrevH;
+		tagEntity* pNextH;
 
 	} TEntity, *LPEntity;
 
 public:
 	CEntityDictionary(long lHashNum = D_DEFAULT_HASH_NUM) 
-		: m_dbMaxKey(0),
-		m_lLinkedNum(0), m_pHead(nullptr), m_pTail(nullptr),
-		m_lHashNum(lHashNum), m_pHashmap(nullptr)
+		: m_max(0)
+		, m_lDataNum(0), m_pHead(nullptr), m_pTail(nullptr)
+		, m_lHashNum(lHashNum), m_pHashmap(nullptr)
 	{
-		if (m_lHashNum < D_DEFAULT_HASH_NUM) m_lHashNum = D_DEFAULT_HASH_NUM;
+		if (m_lHashNum < D_DEFAULT_HASH_NUM) 
+			m_lHashNum = D_DEFAULT_HASH_NUM;
 
 		m_pHashmap = new LPEntity[m_lHashNum];
 		memset(m_pHashmap, 0, sizeof(LPEntity)*m_lHashNum);
@@ -50,38 +51,36 @@ public:
 	void Clear()
 	{
 		DeleteAll();
-
-		// Hashmap 은 그대로 둔다.
 	}
 
 	BOOL IsEmpty()
 	{
-		return m_lLinkedNum == 0;
+		return m_lDataNum == 0;
 	}
 
 	long GetSize()
 	{
-		return m_lLinkedNum;
+		return m_lDataNum;
 	}
 
-	MYKEY GetNewKey() { return m_dbMaxKey + 1; }
+	MYKEY GetNewKey() { return m_max + 1; }
 
-	MYITR Find(MYKEY dbKey)
+	MYITR Find(MYKEY myKey)
 	{
-		if (!KEY_IS_VALID(dbKey))
+		if (!KEY_IS_VALID(myKey))
 		{
 			ASSERT(g_warning);
 			return (MYITR)nullptr;
 		}
 
-		auto hidx = D_HASH_INDEX(dbKey, m_lHashNum);
-		auto pEntity = m_pHashmap[hidx];
+		auto idxH = D_HASH_INDEX(myKey, m_lHashNum);
+		auto pEntity = m_pHashmap[idxH];
 		while (pEntity != nullptr)
 		{
-			if (pEntity->Data.GetKey() == dbKey)
+			if (pEntity->Data.GetKey() == myKey)
 				return (MYITR)pEntity;
 
-			pEntity = pEntity->hNext;
+			pEntity = pEntity->pNextH;
 		}
 
 		return (MYITR)nullptr;
@@ -91,6 +90,7 @@ public:
 	{
 		auto dbKey = data.GetKey();
 		auto itr = Find(dbKey);
+
 		if (ITR_IS_VALID(itr))
 		{
 			ASSERT(g_warning);
@@ -119,7 +119,7 @@ public:
 			return FALSE;
 		}
 
-		auto pEntity = (TEntity*)itr;
+		auto pEntity = (LPEntity)itr;
 
 		RemoveHash(pEntity);
 		pEntity->Data = data;
@@ -138,7 +138,7 @@ public:
 			return FALSE;
 		}
 
-		auto pEntity = (TEntity*)itr;
+		auto pEntity = (LPEntity)itr;
 
 		RemoveHash(pEntity);
 		RemoveData(pEntity);
@@ -151,54 +151,55 @@ public:
 		return ((LPEntity)itr)->Data;
 	}
 
-	long GetList(std::vector<MYITR>& lstIter)
+	long GetList(std::vector<MYITR>& aItr)
 	{
 		auto pEntity = m_pHead;
 		while (pEntity != nullptr)
 		{
-			lstIter.push_back((MYITR)pEntity);
-			pEntity = pEntity->lNext;
+			aItr.push_back((MYITR)pEntity);
+			pEntity = pEntity->pNextD;
 		}
 
-		return (long)lstIter.size();
+		return static_cast<long>(aItr.size());
 	}
 
-	long GetListData(std::vector<ENTITY_DATA>& lstData)
+	long GetListData(std::vector<ENTITY_DATA>& aData)
 	{
 		auto pEntity = m_pHead;
 		while (pEntity != nullptr)
 		{
-			lstData.push_back(pEntity->Data);
-			pEntity = pEntity->lNext;
+			aData.push_back(pEntity->Data);
+			pEntity = pEntity->pNextD;
 		}
 
-		return (long)lstData.size();
+		return static_cast<long>(aData.size());
 	}
 
 protected:
 	void DeleteAll()
 	{
-		memset(m_pHashmap, 0, sizeof(LPEntity)*m_lHashNum);
-
 		auto pEntity = m_pHead;
 		auto pNext = m_pHead;
 		while (pEntity != nullptr)
 		{
-			pNext = pEntity->lNext;
+			pNext = pEntity->pNextD;
 			_SAFE_DELETE(pEntity);
 			pEntity = pNext;
 		}
 
-		m_lLinkedNum = 0;
+		m_max = 0;
+
+		m_lDataNum = 0;
 		m_pHead = nullptr;
 		m_pTail = nullptr;
 
-		m_dbMaxKey = 0;
+		memset(m_pHashmap, 0, sizeof(LPEntity)*m_lHashNum);
 	}
 
 	void DeleteHashAll()
 	{
 		_SAFE_DELETE_ARRAY(m_pHashmap);
+
 		m_lHashNum = 0;
 	}
 
@@ -206,36 +207,36 @@ protected:
 	{
 		if (m_pHead == nullptr)
 		{
-			pEntity->lPrev = nullptr;
-			pEntity->lNext = nullptr;
+			pEntity->pPrevD = nullptr;
+			pEntity->pNextD = nullptr;
 
 			m_pHead = m_pTail = pEntity;
 		}
 		else
 		{
-			pEntity->lPrev = m_pTail;
-			pEntity->lNext = nullptr;
+			pEntity->pPrevD = m_pTail;
+			pEntity->pNextD = nullptr;
 
 			if (m_pTail != nullptr)
-				m_pTail->lNext = pEntity;
+				m_pTail->pNextD = pEntity;
 
 			m_pTail = pEntity;
 		}
 
-		m_lLinkedNum++;
+		m_lDataNum++;
 	}
 
 	void RemoveData(TEntity* pEntity)
 	{
-		if (pEntity->lPrev) pEntity->lPrev->lNext = pEntity->lNext;
-		else m_pHead = pEntity->lNext;
+		if (pEntity->pPrevD) pEntity->pPrevD->pNextD = pEntity->pNextD;
+		else m_pHead = pEntity->pNextD;
 
-		if (pEntity->lNext) pEntity->lNext->lPrev = pEntity->lPrev;
-		else m_pTail = pEntity->lPrev;
+		if (pEntity->pNextD) pEntity->pNextD->pPrevD = pEntity->pPrevD;
+		else m_pTail = pEntity->pPrevD;
 
 		_SAFE_DELETE(pEntity);
 
-		m_lLinkedNum--;
+		m_lDataNum--;
 	}
 
 	void InsertHash(TEntity* pEntity)
@@ -245,10 +246,10 @@ protected:
 		auto hidx = D_HASH_INDEX(dbKey, m_lHashNum);
 		auto pHmap = m_pHashmap[hidx];
 
-		pEntity->hPrev = nullptr;
-		pEntity->hNext = pHmap;
+		pEntity->pPrevH = nullptr;
+		pEntity->pNextH = pHmap;
 		if (pHmap != nullptr)
-			pHmap->hPrev = pEntity;
+			pHmap->pPrevH = pEntity;
 
 		m_pHashmap[hidx] = pEntity;
 	}
@@ -260,31 +261,31 @@ protected:
 		long hidx = D_HASH_INDEX(dbKey, m_lHashNum);
 		auto pHash = m_pHashmap[hidx];
 
-		if (pHash->hPrev == nullptr)
-			m_pHashmap[hidx] = pHash->hNext;
+		if (pHash->pPrevH == nullptr)
+			m_pHashmap[hidx] = pHash->pNextH;
 		else
-			pHash->hPrev->hNext = pHash->hNext;
+			pHash->pPrevH->pNextH = pHash->pNextH;
 
-		if (pHash->hNext != nullptr)
-			pHash->hNext->hPrev = pHash->hPrev;
+		if (pHash->pNextH != nullptr)
+			pHash->pNextH->pPrevH = pHash->pPrevH;
 	}
 
-	void SetMaxKey(MYKEY dbKey)
+	void SetMaxKey(MYKEY myKey)
 	{
-		if (m_lLinkedNum == 0)
+		if (m_lDataNum == 0)
 		{
-			m_dbMaxKey = dbKey;
+			m_max = myKey;
 		}
 		else
 		{
-			m_dbMaxKey = dbKey < m_dbMaxKey ? m_dbMaxKey : dbKey;
+			m_max = myKey < m_max ? m_max : myKey;
 		}
 	}
 
 protected:
-	MYKEY m_dbMaxKey;
+	MYKEY m_max;
 
-	long m_lLinkedNum;
+	long m_lDataNum;
 	LPEntity m_pHead;
 	LPEntity m_pTail;
 
