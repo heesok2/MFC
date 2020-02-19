@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Resource.h"
 #include "ExampleDlg.h"
+#include "ModernExample.h"
 
 #include "..\MYENG_BASE\DocBase.h"
 #include "..\MYENG_DB\Package.h"
@@ -15,8 +16,16 @@ enum E_EXAMPLE_COBX
 	E_COBX_UNKNOWN = -1
 	, E_COBX_MESH_FACE = 0
 	, E_COBX_MESH_BOX
+	, E_COBX_MODERN
 
 	, E_COBX_NUM
+};
+
+CString g_example_name[E_COBX_NUM] =
+{
+	_T("Mesh - Face")	// E_COBX_MESH_FACE
+	, _T("Mesh - Box")	// E_COBX_MESH_BOX
+	, _T("Modern C++")	// E_COBX_MODERN
 };
 
 CExampleDlg::CExampleDlg(CDocBase * pDoc, CWnd * pParent)
@@ -63,17 +72,11 @@ void CExampleDlg::SetText()
 
 void CExampleDlg::SetControl()
 {
-	CString aName[E_COBX_NUM] =
-	{
-		_T("Mesh - Face")		// E_COBX_MESH_FACE
-		, _T("Mesh - Box")		// E_COBX_MESH_BOX
-	};
-
 	m_cobx.ResetContent();
 
 	for (long indx = 0; indx < E_COBX_NUM; ++indx)
 	{
-		auto item = m_cobx.AddString(aName[indx]);
+		auto item = m_cobx.AddString(g_example_name[indx]);
 		m_cobx.SetItemData(item, indx);
 	}
 	
@@ -161,7 +164,16 @@ BOOL CExampleDlg::Execute()
 			ExecuteBox();
 		}
 		break;
+	case E_COBX_MODERN:
+		{
+			CModernExample example;
+			example.Example();
+		}
+		break;
 	default:
+		{
+			ASSERT(0);
+		}
 		break;
 	}
 

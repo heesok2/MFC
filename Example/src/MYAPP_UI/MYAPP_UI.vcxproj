@@ -213,6 +213,7 @@
   <ItemGroup>
     <ClCompile Include="AppDialogProvider.cpp" />
     <ClCompile Include="AppListCtrlDlg.cpp" />
+    <ClCompile Include="DeclTypeExample.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ExampleDlg.cpp" />
     <ClCompile Include="pch.cpp">
@@ -221,6 +222,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ModernExample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MYAPP_UI.def" />
@@ -229,11 +231,13 @@
   <ItemGroup>
     <ClInclude Include="AppDialogProvider.h" />
     <ClInclude Include="AppListCtrlDlg.h" />
+    <ClInclude Include="DeclTypeExample.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="ExampleDlg.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ModernExample.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>

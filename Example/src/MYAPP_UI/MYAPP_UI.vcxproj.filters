@@ -16,6 +16,9 @@
     <Filter Include="DIALOG\Example">
       <UniqueIdentifier>{20d19ff2-830e-412b-ae29-9ad327c1898c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MODERN C++">
+      <UniqueIdentifier>{85b164cc-da42-42cf-965e-80874c7629dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -32,6 +35,12 @@
     </ClCompile>
     <ClCompile Include="ExampleDlg.cpp">
       <Filter>DIALOG\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="ModernExample.cpp">
+      <Filter>MODERN C++</Filter>
+    </ClCompile>
+    <ClCompile Include="DeclTypeExample.cpp">
+      <Filter>MODERN C++</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +75,12 @@
     </ClInclude>
     <ClInclude Include="ExampleDlg.h">
       <Filter>DIALOG\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="ModernExample.h">
+      <Filter>MODERN C++</Filter>
+    </ClInclude>
+    <ClInclude Include="DeclTypeExample.h">
+      <Filter>MODERN C++</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
