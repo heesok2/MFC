@@ -9,12 +9,15 @@
 #include "..\MYENG_DB\ModuleElem.h"
 #include "..\MYENG_DB\ModuleMesh.h"
 
+#include "..\MYAPP_BASE\MyTarget.h"
+
 using namespace mydb;
 
 enum E_EXAMPLE_COBX
 {
 	E_COBX_UNKNOWN = -1
-	, E_COBX_MESH_FACE = 0
+	, E_COBX_TEST = 0
+	, E_COBX_MESH_FACE
 	, E_COBX_MESH_BOX
 	, E_COBX_MODERN
 
@@ -23,7 +26,8 @@ enum E_EXAMPLE_COBX
 
 CString g_example_name[E_COBX_NUM] =
 {
-	_T("Mesh - Face")	// E_COBX_MESH_FACE
+	_T("Test")			// E_COBX_TEST
+	, _T("Mesh - Face")	// E_COBX_MESH_FACE
 	, _T("Mesh - Box")	// E_COBX_MESH_BOX
 	, _T("Modern C++")	// E_COBX_MODERN
 };
@@ -154,6 +158,18 @@ BOOL CExampleDlg::Execute()
 
 	switch (itemData)
 	{
+	case E_COBX_TEST:
+		{
+			MyTarget target;
+			target.SetMyObject(1);
+
+			auto pObject = target.GetMyObject();
+			if (pObject != nullptr)
+			{
+				//pObject->GetTypeObject<MyObjectSteel>();
+			}
+		}
+		break;
 	case E_COBX_MESH_FACE:
 		{
 			ExecuteFace();

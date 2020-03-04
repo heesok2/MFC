@@ -112,7 +112,7 @@ void template_decltype()
 	func_array_num(arr);
 
 	func(func_exam); // template(void (*)(int, double)), parameter(void (*)(int, double))
-	func_ref(func_exam); // template(void (*)(int, double)), parameter(void (*)(int, double))
+	func_ref(func_exam); // template(void (*)(int, double)), parameter(void &)(int, double))
 
 }
 

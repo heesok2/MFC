@@ -219,6 +219,8 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="AppViewBase.cpp" />
     <ClCompile Include="MeshPrimitive.cpp" />
+    <ClCompile Include="MyObject.cpp" />
+    <ClCompile Include="MyTarget.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -237,6 +239,9 @@
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="AppViewBase.h" />
     <ClInclude Include="MeshPrimitive.h" />
+    <ClInclude Include="MyObject.h" />
+    <ClInclude Include="MyTarget.h" />
+    <ClInclude Include="MyObjectDefine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PhongRender.h" />
     <ClInclude Include="RenderDefine.h" />

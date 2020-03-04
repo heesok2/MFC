@@ -19,6 +19,9 @@
     <Filter Include="RENDER\Phone">
       <UniqueIdentifier>{fd3c3720-9c45-46fc-8ae1-d647887dc1db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{db546647-bc8a-4149-8ea7-3e06a4905a57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -38,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="MeshPrimitive.cpp">
       <Filter>RENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="MyObject.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTarget.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +87,15 @@
     </ClInclude>
     <ClInclude Include="MeshPrimitive.h">
       <Filter>RENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="MyObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTarget.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MyObjectDefine.h">
+      <Filter>Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
