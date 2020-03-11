@@ -42,6 +42,9 @@
     <ClCompile Include="DeclTypeExample.cpp">
       <Filter>MODERN C++</Filter>
     </ClCompile>
+    <ClCompile Include="TemplateExample.cpp">
+      <Filter>MODERN C++</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYAPP_UI.rc2">
@@ -80,6 +83,9 @@
       <Filter>MODERN C++</Filter>
     </ClInclude>
     <ClInclude Include="DeclTypeExample.h">
+      <Filter>MODERN C++</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateExample.h">
       <Filter>MODERN C++</Filter>
     </ClInclude>
   </ItemGroup>
