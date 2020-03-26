@@ -216,6 +216,7 @@
     <ClCompile Include="DeclTypeExample.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ExampleDlg.cpp" />
+    <ClCompile Include="MoveExample.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -223,6 +224,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ModernExample.cpp" />
+    <ClCompile Include="PointerExample.cpp" />
     <ClCompile Include="TemplateExample.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -236,7 +238,9 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="LinkLib.h" />
     <ClInclude Include="ExampleDlg.h" />
+    <ClInclude Include="MoveExample.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PointerExample.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ModernExample.h" />
     <ClInclude Include="targetver.h" />

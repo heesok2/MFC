@@ -84,7 +84,7 @@ void CExampleDlg::SetControl()
 		m_cobx.SetItemData(item, indx);
 	}
 	
-	m_cobx.SetCurSel(0);
+	m_cobx.SetCurSel(E_COBX_MODERN);
 }
 
 void CExampleDlg::Example()

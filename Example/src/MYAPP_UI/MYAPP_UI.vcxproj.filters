@@ -45,6 +45,12 @@
     <ClCompile Include="TemplateExample.cpp">
       <Filter>MODERN C++</Filter>
     </ClCompile>
+    <ClCompile Include="PointerExample.cpp">
+      <Filter>MODERN C++</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveExample.cpp">
+      <Filter>MODERN C++</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MYAPP_UI.rc2">
@@ -86,6 +92,12 @@
       <Filter>MODERN C++</Filter>
     </ClInclude>
     <ClInclude Include="TemplateExample.h">
+      <Filter>MODERN C++</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerExample.h">
+      <Filter>MODERN C++</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveExample.h">
       <Filter>MODERN C++</Filter>
     </ClInclude>
   </ItemGroup>
